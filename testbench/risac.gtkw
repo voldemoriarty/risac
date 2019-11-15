@@ -1,0 +1,117 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Thu Nov 14 05:13:05 2019
+[*]
+[dumpfile] "/home/saad/Desktop/assignment2/risac.vcd"
+[dumpfile_mtime] "Thu Nov 14 05:09:43 2019"
+[dumpfile_size] 47197
+[savefile] "/home/saad/Desktop/assignment2/risac.gtkw"
+[timestart] 965900
+[size] 1366 715
+[pos] -1 -1
+*-16.000000 160000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[sst_width] 309
+[signals_width] 289
+[sst_expanded] 1
+[sst_vpaned_height] 288
+@28
+testbench.clk
+testbench.rst_n
+@24
+testbench.cnt[31:0]
+@200
+-Hazard
+@28
+testbench.u_risac.rs1booked
+testbench.u_risac.rs2booked
+testbench.u_risac.dataHazard
+@200
+-Decode
+@22
+testbench.u_risac.aluOpDec[3:0]
+testbench.u_risac.immDec[31:0]
+@28
+testbench.u_risac.immSelDec
+testbench.u_risac.lDec
+testbench.u_risac.sDec
+@22
+testbench.u_risac.rdDec[4:0]
+@28
+testbench.u_risac.rdWeDec
+@22
+testbench.u_risac.rs1Dec[4:0]
+testbench.u_risac.rs2Dec[4:0]
+@28
+testbench.u_risac.validDec
+@200
+-OF
+@28
+testbench.u_risac.validOf
+testbench.u_risac.rs1booked
+testbench.u_risac.rs2booked
+@200
+-DBus
+@22
+testbench.iDbusData[31:0]
+@28
+testbench.iDbusWait
+@22
+testbench.oDbusAddr[31:0]
+testbench.oDbusByteEn[3:0]
+testbench.oDbusData[31:0]
+@28
+testbench.oDbusRead
+testbench.oDbusWe
+@200
+-IBus
+@22
+testbench.iIbusData[31:0]
+testbench.iIbusIAddr[31:0]
+@28
+testbench.iIbusWait
+@22
+testbench.oIbusAddr[31:0]
+@200
+-Internal
+-LSU
+@28
+testbench.u_risac.lOs
+testbench.u_risac.sOs
+@22
+testbench.u_risac.lsuAddrOs[31:0]
+testbench.u_risac.lsuByteEn[3:0]
+testbench.u_risac.lsuDataOs[31:0]
+testbench.u_risac.lsuRes[31:0]
+@28
+testbench.u_risac.lsuStall
+@200
+-ALU
+@22
+testbench.u_risac.aluIn1[31:0]
+testbench.u_risac.aluIn2[31:0]
+@800022
+testbench.u_risac.aluOpOs[3:0]
+@28
+(0)testbench.u_risac.aluOpOs[3:0]
+(1)testbench.u_risac.aluOpOs[3:0]
+(2)testbench.u_risac.aluOpOs[3:0]
+(3)testbench.u_risac.aluOpOs[3:0]
+@1001200
+-group_end
+@22
+testbench.u_risac.aluRes[31:0]
+@200
+-WB
+@28
+testbench.u_risac.rdWeEx
+@22
+testbench.u_risac.rdEx[4:0]
+testbench.u_risac.exRes[31:0]
+@200
+-IMM
+@22
+testbench.u_risac.immDec[31:0]
+testbench.and_mask[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

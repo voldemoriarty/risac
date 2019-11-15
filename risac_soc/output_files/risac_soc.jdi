@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="4ed78dd31938ae7cca62"/>
+  </project>
+  <file_info>
+    <file device="EP2C20F484C7" path="risac_soc.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="risac_soc_system:soc_system" name="soc_system">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME risac_soc_system HAS_SOPCINFO 1 GENERATION_ID 1573818879"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

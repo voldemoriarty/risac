@@ -1,0 +1,72 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=/home/saad/Desktop/assignment2/risac_soc/ --output-directory=/home/saad/Desktop/assignment2/risac_soc/risac_soc_system/ --report-file=bsf:/home/saad/Desktop/assignment2/risac_soc/risac_soc_system.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=/home/saad/Desktop/assignment2/risac_soc/risac_soc_system.qsys
+Progress: Loading risac_soc/risac_soc_system.qsys
+Progress: Reading input file
+Progress: Adding clock [clock_source 13.0]
+Progress: Parameterizing module clock
+Progress: Adding RV32I_Core [risac 1.0]
+Progress: Parameterizing module RV32I_Core
+Progress: Adding Memory [altera_avalon_onchip_memory2 13.0.1]
+Progress: Parameterizing module Memory
+Progress: Adding PLL [altpll 13.0]
+Progress: Parameterizing module PLL
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=/home/saad/Desktop/assignment2/risac_soc/ --output-directory=/home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:/home/saad/Desktop/assignment2/risac_soc/risac_soc_system.sopcinfo --report-file=html:/home/saad/Desktop/assignment2/risac_soc/risac_soc_system.html --report-file=qip:/home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/risac_soc_system.qip --report-file=cmp:/home/saad/Desktop/assignment2/risac_soc/risac_soc_system.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=/home/saad/Desktop/assignment2/risac_soc/risac_soc_system.qsys --language=VERILOG
+Progress: Loading risac_soc/risac_soc_system.qsys
+Progress: Reading input file
+Progress: Adding clock [clock_source 13.0]
+Progress: Parameterizing module clock
+Progress: Adding RV32I_Core [risac 1.0]
+Progress: Parameterizing module RV32I_Core
+Progress: Adding Memory [altera_avalon_onchip_memory2 13.0.1]
+Progress: Parameterizing module Memory
+Progress: Adding PLL [altpll 13.0]
+Progress: Parameterizing module PLL
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: risac_soc_system: Generating risac_soc_system "risac_soc_system" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 4 modules, 9 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 8 modules, 21 connections
+Info: merlin_domain_transform: After transform: 16 modules, 59 connections
+Info: merlin_router_transform: After transform: 20 modules, 71 connections
+Info: reset_adaptation_transform: After transform: 22 modules, 75 connections
+Info: merlin_network_to_switch_transform: After transform: 29 modules, 89 connections
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src1 and cmd_xbar_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux_001.src0 and rsp_xbar_mux_001.sink1
+Info: com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: 31 modules, 99 connections
+Info: merlin_mm_transform: After transform: 31 modules, 99 connections
+Info: RV32I_Core: "risac_soc_system" instantiated risac "RV32I_Core"
+Info: Memory: Starting RTL generation for module 'risac_soc_system_Memory'
+Info: Memory:   Generation command is [exec /media/saad/Softs/laltera/13.0sub/quartus/linux/perl/bin/perl -I /media/saad/Softs/laltera/13.0sub/quartus/common/ip/altera/common/perl/5.8.3 -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/europa -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/perl_lib -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/common -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=risac_soc_system_Memory --dir=/tmp/alt8215_6744300465263470631.dir/0005_Memory_gen/ --quartus_dir=/media/saad/Softs/laltera/13.0sub/quartus --verilog --config=/tmp/alt8215_6744300465263470631.dir/0005_Memory_gen//risac_soc_system_Memory_component_configuration.pl  --do_build_sim=0  ]
+Info: Memory: Done RTL generation for module 'risac_soc_system_Memory'
+Info: Memory: "risac_soc_system" instantiated altera_avalon_onchip_memory2 "Memory"
+Info: PLL: "risac_soc_system" instantiated altpll "PLL"
+Info: RV32I_Core_instruction_master_translator: "risac_soc_system" instantiated altera_merlin_master_translator "RV32I_Core_instruction_master_translator"
+Info: Memory_s1_translator: "risac_soc_system" instantiated altera_merlin_slave_translator "Memory_s1_translator"
+Info: RV32I_Core_instruction_master_translator_avalon_universal_master_0_agent: "risac_soc_system" instantiated altera_merlin_master_agent "RV32I_Core_instruction_master_translator_avalon_universal_master_0_agent"
+Info: Memory_s1_translator_avalon_universal_slave_0_agent: "risac_soc_system" instantiated altera_merlin_slave_agent "Memory_s1_translator_avalon_universal_slave_0_agent"
+Info: Memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: "risac_soc_system" instantiated altera_avalon_sc_fifo "Memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "risac_soc_system" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "risac_soc_system" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "risac_soc_system" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "risac_soc_system" instantiated altera_merlin_router "id_router_001"
+Info: rst_controller: "risac_soc_system" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "risac_soc_system" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "risac_soc_system" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "risac_soc_system" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_mux_001: "risac_soc_system" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "risac_soc_system" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: risac_soc_system: Done risac_soc_system" with 19 modules, 42 files, 572807 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
