@@ -1,5 +1,5 @@
 Analysis & Synthesis report for risac_soc
-Fri Nov 15 21:10:04 2019
+Fri Nov 15 22:59:09 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -22,7 +22,7 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
  14. Inverted Register Statistics
  15. Registers Added for RAM Pass-Through Logic
  16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_dfh1:auto_generated
+ 17. Source assignments for risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_kra1:auto_generated
  18. Source assignments for risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0
  19. Source assignments for risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_rx:the_risac_soc_system_uart_0_rx|altera_std_synchronizer:the_altera_std_synchronizer
  20. Source assignments for risac_soc_system:soc_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
@@ -87,11 +87,10 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
  79. Port Connectivity Checks: "risac_soc_system:soc_system|altera_merlin_master_translator:rv32i_core_data_master_translator"
  80. Port Connectivity Checks: "risac_soc_system:soc_system|altera_merlin_master_translator:rv32i_core_instruction_master_translator"
  81. Port Connectivity Checks: "risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0"
- 82. Port Connectivity Checks: "risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac"
- 83. Port Connectivity Checks: "risac_soc_system:soc_system"
- 84. Elapsed Time Per Partition
- 85. Analysis & Synthesis Messages
- 86. Analysis & Synthesis Suppressed Messages
+ 82. Port Connectivity Checks: "risac_soc_system:soc_system"
+ 83. Elapsed Time Per Partition
+ 84. Analysis & Synthesis Messages
+ 85. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -117,13 +116,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 15 21:10:04 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 15 22:59:09 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; risac_soc                                   ;
 ; Top-level Entity Name              ; risac_soc                                   ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 1,586                                       ;
-;     Total combinational functions  ; 1,357                                       ;
+; Total logic elements               ; 1,562                                       ;
+;     Total combinational functions  ; 1,333                                       ;
 ;     Dedicated logic registers      ; 706                                         ;
 ; Total registers                    ; 706                                         ;
 ; Total pins                         ; 12                                          ;
@@ -224,62 +223,62 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                            ;
-+------------------------------------------------------------------------------+-----------------+---------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
-; File Name with User-Entered Path                                             ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                                                                          ; Library          ;
-+------------------------------------------------------------------------------+-----------------+---------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
-; risac_soc_system/synthesis/risac_soc_system.v                                ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/risac_soc_system.v                                ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_merlin_arbitrator.sv            ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_arbitrator.sv            ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_rsp_xbar_mux_001.sv   ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_rsp_xbar_mux_001.sv   ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_rsp_xbar_demux.sv     ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_rsp_xbar_demux.sv     ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_mux.sv       ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_mux.sv       ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_demux_001.sv ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_demux_001.sv ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_demux.sv     ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_demux.sv     ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_reset_controller.v              ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_reset_controller.v              ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_reset_synchronizer.v            ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_reset_synchronizer.v            ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_id_router_001.sv      ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_id_router_001.sv      ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_id_router.sv          ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_id_router.sv          ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_addr_router_001.sv    ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_addr_router_001.sv    ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_addr_router.sv        ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_addr_router.sv        ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_avalon_sc_fifo.v                ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_avalon_sc_fifo.v                ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_merlin_slave_agent.sv           ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_slave_agent.sv           ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv    ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv    ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_merlin_master_agent.sv          ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_master_agent.sv          ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_merlin_slave_translator.sv      ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_slave_translator.sv      ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/altera_merlin_master_translator.sv     ; yes             ; User SystemVerilog HDL File           ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_master_translator.sv     ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_uart_0.v              ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_uart_0.v              ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_LEDR.v                ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_LEDR.v                ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v              ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v              ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac.v                                ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac.v                                ; risac_soc_system ;
-; risac_soc_system/synthesis/submodules/risac_avalon.v                         ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/submodules/risac_avalon.v                         ; risac_soc_system ;
-; risac_soc.v                                                                  ; yes             ; User Verilog HDL File                 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc.v                                                                  ;                  ;
-; risac_soc_system/synthesis/mem.hex                                           ; yes             ; User Hexadecimal (Intel-Format) File  ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/mem.hex                                           ;                  ;
-; altsyncram.tdf                                                               ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/altsyncram.tdf                                      ;                  ;
-; stratix_ram_block.inc                                                        ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/stratix_ram_block.inc                               ;                  ;
-; lpm_mux.inc                                                                  ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/lpm_mux.inc                                         ;                  ;
-; lpm_decode.inc                                                               ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/lpm_decode.inc                                      ;                  ;
-; aglobal130.inc                                                               ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/aglobal130.inc                                      ;                  ;
-; a_rdenreg.inc                                                                ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/a_rdenreg.inc                                       ;                  ;
-; altrom.inc                                                                   ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/altrom.inc                                          ;                  ;
-; altram.inc                                                                   ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/altram.inc                                          ;                  ;
-; altdpram.inc                                                                 ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/altdpram.inc                                        ;                  ;
-; db/altsyncram_dfh1.tdf                                                       ; yes             ; Auto-Generated Megafunction           ; /home/saad/Desktop/assignment2/risac_soc/db/altsyncram_dfh1.tdf                                                       ;                  ;
-; altera_std_synchronizer.v                                                    ; yes             ; Megafunction                          ; /media/saad/Softs/laltera/13.0sub/quartus/libraries/megafunctions/altera_std_synchronizer.v                           ;                  ;
-; db/altsyncram_37i1.tdf                                                       ; yes             ; Auto-Generated Megafunction           ; /home/saad/Desktop/assignment2/risac_soc/db/altsyncram_37i1.tdf                                                       ;                  ;
-+------------------------------------------------------------------------------+-----------------+---------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                        ;
++------------------------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------+------------------+
+; File Name with User-Entered Path                                             ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                     ; Library          ;
++------------------------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------+------------------+
+; sources/risac_soc.v                                                          ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v                                                          ;                  ;
+; risac_soc_system/synthesis/risac_soc_system.v                                ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/risac_soc_system.v                                ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_merlin_arbitrator.sv            ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_arbitrator.sv            ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_rsp_xbar_mux_001.sv   ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_rsp_xbar_mux_001.sv   ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_rsp_xbar_demux.sv     ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_rsp_xbar_demux.sv     ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_mux.sv       ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_mux.sv       ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_demux_001.sv ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_demux_001.sv ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_demux.sv     ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_cmd_xbar_demux.sv     ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_reset_controller.v              ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_reset_controller.v              ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_reset_synchronizer.v            ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_reset_synchronizer.v            ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_id_router_001.sv      ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_id_router_001.sv      ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_id_router.sv          ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_id_router.sv          ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_addr_router_001.sv    ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_addr_router_001.sv    ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_addr_router.sv        ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_addr_router.sv        ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_avalon_sc_fifo.v                ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_avalon_sc_fifo.v                ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_merlin_slave_agent.sv           ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_slave_agent.sv           ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv    ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv    ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_merlin_master_agent.sv          ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_master_agent.sv          ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_merlin_slave_translator.sv      ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_slave_translator.sv      ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/altera_merlin_master_translator.sv     ; yes             ; User SystemVerilog HDL File            ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_merlin_master_translator.sv     ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_uart_0.v              ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_uart_0.v              ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_LEDR.v                ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_LEDR.v                ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v              ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v              ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac.v                                ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v                                ; risac_soc_system ;
+; risac_soc_system/synthesis/submodules/risac_avalon.v                         ; yes             ; User Verilog HDL File                  ; /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_avalon.v                         ; risac_soc_system ;
+; altsyncram.tdf                                                               ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/altsyncram.tdf                                      ;                  ;
+; stratix_ram_block.inc                                                        ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/stratix_ram_block.inc                               ;                  ;
+; lpm_mux.inc                                                                  ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/lpm_mux.inc                                         ;                  ;
+; lpm_decode.inc                                                               ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/lpm_decode.inc                                      ;                  ;
+; aglobal130.inc                                                               ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/aglobal130.inc                                      ;                  ;
+; a_rdenreg.inc                                                                ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/a_rdenreg.inc                                       ;                  ;
+; altrom.inc                                                                   ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/altrom.inc                                          ;                  ;
+; altram.inc                                                                   ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/altram.inc                                          ;                  ;
+; altdpram.inc                                                                 ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/altdpram.inc                                        ;                  ;
+; db/altsyncram_kra1.tdf                                                       ; yes             ; Auto-Generated Megafunction            ; /home/saad/trashcan/velox/risac_soc/db/altsyncram_kra1.tdf                                                       ;                  ;
+; mem.hex                                                                      ; yes             ; Auto-Found Memory Initialization File  ; /home/saad/trashcan/velox/risac_soc/mem.hex                                                                      ;                  ;
+; altera_std_synchronizer.v                                                    ; yes             ; Megafunction                           ; /home/saad/intelFPGA/13.0sub/quartus/libraries/megafunctions/altera_std_synchronizer.v                           ;                  ;
+; db/altsyncram_37i1.tdf                                                       ; yes             ; Auto-Generated Megafunction            ; /home/saad/trashcan/velox/risac_soc/db/altsyncram_37i1.tdf                                                       ;                  ;
++------------------------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------+------------------+
 
 
 +-------------------------------------------------------+
@@ -287,16 +286,16 @@ applicable agreement for further details.
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 1,586   ;
+; Estimated Total logic elements              ; 1,562   ;
 ;                                             ;         ;
-; Total combinational functions               ; 1357    ;
+; Total combinational functions               ; 1333    ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 710     ;
-;     -- 3 input functions                    ; 480     ;
-;     -- <=2 input functions                  ; 167     ;
+;     -- 4 input functions                    ; 671     ;
+;     -- 3 input functions                    ; 497     ;
+;     -- <=2 input functions                  ; 165     ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 1227    ;
+;     -- normal mode                          ; 1203    ;
 ;     -- arithmetic mode                      ; 130     ;
 ;                                             ;         ;
 ; Total registers                             ; 706     ;
@@ -308,7 +307,7 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ; Maximum fan-out node                        ; clock50 ;
 ; Maximum fan-out                             ; 802     ;
-; Total fan-out                               ; 8751    ;
+; Total fan-out                               ; 8642    ;
 ; Average fan-out                             ; 4.03    ;
 +---------------------------------------------+---------+
 
@@ -318,23 +317,23 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                 ; Library Name ;
 +-------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |risac_soc                                                                                                  ; 1357 (1)          ; 706 (0)      ; 34816       ; 0            ; 0       ; 0         ; 12   ; 0            ; |risac_soc                                                                                                                                                                          ;              ;
-;    |risac_soc_system:soc_system|                                                                            ; 1356 (0)          ; 706 (0)      ; 34816       ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system                                                                                                                                              ;              ;
+; |risac_soc                                                                                                  ; 1333 (1)          ; 706 (0)      ; 34816       ; 0            ; 0       ; 0         ; 12   ; 0            ; |risac_soc                                                                                                                                                                          ;              ;
+;    |risac_soc_system:soc_system|                                                                            ; 1332 (0)          ; 706 (0)      ; 34816       ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system                                                                                                                                              ;              ;
 ;       |altera_avalon_sc_fifo:ledr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|                    ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_avalon_sc_fifo:ledr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo                                                             ;              ;
-;       |altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|                  ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo                                                           ;              ;
+;       |altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|                  ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo                                                           ;              ;
 ;       |altera_avalon_sc_fifo:uart_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|                  ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_avalon_sc_fifo:uart_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo                                                           ;              ;
-;       |altera_merlin_master_agent:rv32i_core_data_master_translator_avalon_universal_master_0_agent|        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_master_agent:rv32i_core_data_master_translator_avalon_universal_master_0_agent                                                 ;              ;
+;       |altera_merlin_master_agent:rv32i_core_data_master_translator_avalon_universal_master_0_agent|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_master_agent:rv32i_core_data_master_translator_avalon_universal_master_0_agent                                                 ;              ;
 ;       |altera_merlin_master_agent:rv32i_core_instruction_master_translator_avalon_universal_master_0_agent| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_master_agent:rv32i_core_instruction_master_translator_avalon_universal_master_0_agent                                          ;              ;
 ;       |altera_merlin_master_translator:rv32i_core_data_master_translator|                                   ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_master_translator:rv32i_core_data_master_translator                                                                            ;              ;
 ;       |altera_merlin_master_translator:rv32i_core_instruction_master_translator|                            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_master_translator:rv32i_core_instruction_master_translator                                                                     ;              ;
 ;       |altera_merlin_slave_agent:memory_s1_translator_avalon_universal_slave_0_agent|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_slave_agent:memory_s1_translator_avalon_universal_slave_0_agent                                                                ;              ;
 ;       |altera_merlin_slave_translator:ledr_s1_translator|                                                   ; 5 (5)             ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_slave_translator:ledr_s1_translator                                                                                            ;              ;
-;       |altera_merlin_slave_translator:memory_s1_translator|                                                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_slave_translator:memory_s1_translator                                                                                          ;              ;
+;       |altera_merlin_slave_translator:memory_s1_translator|                                                 ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_slave_translator:memory_s1_translator                                                                                          ;              ;
 ;       |altera_merlin_slave_translator:uart_0_s1_translator|                                                 ; 7 (7)             ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_merlin_slave_translator:uart_0_s1_translator                                                                                          ;              ;
 ;       |altera_reset_controller:rst_controller|                                                              ; 0 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_reset_controller:rst_controller                                                                                                       ;              ;
 ;          |altera_reset_synchronizer:alt_rst_sync_uq1|                                                       ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1                                                            ;              ;
-;       |risac_avalon:rv32i_core|                                                                             ; 1106 (0)          ; 554 (0)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core                                                                                                                      ;              ;
-;          |risac:u_risac|                                                                                    ; 1106 (1106)       ; 554 (554)    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac                                                                                                        ;              ;
+;       |risac_avalon:rv32i_core|                                                                             ; 1077 (0)          ; 554 (0)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core                                                                                                                      ;              ;
+;          |risac:u_risac|                                                                                    ; 1077 (1077)       ; 554 (554)    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac                                                                                                        ;              ;
 ;             |altsyncram:registers_rtl_0|                                                                    ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers_rtl_0                                                                             ;              ;
 ;                |altsyncram_37i1:auto_generated|                                                             ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers_rtl_0|altsyncram_37i1:auto_generated                                              ;              ;
 ;             |altsyncram:registers_rtl_1|                                                                    ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers_rtl_1                                                                             ;              ;
@@ -342,13 +341,13 @@ applicable agreement for further details.
 ;       |risac_soc_system_LEDR:ledr|                                                                          ; 12 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_LEDR:ledr                                                                                                                   ;              ;
 ;       |risac_soc_system_Memory:memory|                                                                      ; 1 (1)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_Memory:memory                                                                                                               ;              ;
 ;          |altsyncram:the_altsyncram|                                                                        ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram                                                                                     ;              ;
-;             |altsyncram_dfh1:auto_generated|                                                                ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_dfh1:auto_generated                                                      ;              ;
+;             |altsyncram_kra1:auto_generated|                                                                ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_kra1:auto_generated                                                      ;              ;
 ;       |risac_soc_system_addr_router_001:addr_router_001|                                                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_addr_router_001:addr_router_001                                                                                             ;              ;
-;       |risac_soc_system_cmd_xbar_demux_001:cmd_xbar_demux_001|                                              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_cmd_xbar_demux_001:cmd_xbar_demux_001                                                                                       ;              ;
-;       |risac_soc_system_cmd_xbar_mux:cmd_xbar_mux|                                                          ; 54 (50)           ; 5 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_cmd_xbar_mux:cmd_xbar_mux                                                                                                   ;              ;
-;          |altera_merlin_arbitrator:arb|                                                                     ; 4 (4)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb                                                                      ;              ;
+;       |risac_soc_system_cmd_xbar_demux_001:cmd_xbar_demux_001|                                              ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_cmd_xbar_demux_001:cmd_xbar_demux_001                                                                                       ;              ;
+;       |risac_soc_system_cmd_xbar_mux:cmd_xbar_mux|                                                          ; 56 (50)           ; 5 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_cmd_xbar_mux:cmd_xbar_mux                                                                                                   ;              ;
+;          |altera_merlin_arbitrator:arb|                                                                     ; 6 (6)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb                                                                      ;              ;
 ;       |risac_soc_system_rsp_xbar_demux:rsp_xbar_demux|                                                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_rsp_xbar_demux:rsp_xbar_demux                                                                                               ;              ;
-;       |risac_soc_system_rsp_xbar_mux_001:rsp_xbar_mux_001|                                                  ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_rsp_xbar_mux_001:rsp_xbar_mux_001                                                                                           ;              ;
+;       |risac_soc_system_rsp_xbar_mux_001:rsp_xbar_mux_001|                                                  ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_rsp_xbar_mux_001:rsp_xbar_mux_001                                                                                           ;              ;
 ;       |risac_soc_system_uart_0:uart_0|                                                                      ; 114 (0)           ; 89 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0                                                                                                               ;              ;
 ;          |risac_soc_system_uart_0_regs:the_risac_soc_system_uart_0_regs|                                    ; 34 (34)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_regs:the_risac_soc_system_uart_0_regs                                                 ;              ;
 ;          |risac_soc_system_uart_0_rx:the_risac_soc_system_uart_0_rx|                                        ; 47 (46)           ; 37 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_rx:the_risac_soc_system_uart_0_rx                                                     ;              ;
@@ -358,15 +357,15 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                   ;
-+----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------------------------------------------------------------------+
-; Name                                                                                                                                   ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                                                         ;
-+----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------------------------------------------------------------------+
-; risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers_rtl_0|altsyncram_37i1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; None                                                                        ;
-; risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers_rtl_1|altsyncram_37i1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; None                                                                        ;
-; risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_dfh1:auto_generated|ALTSYNCRAM         ; AUTO ; Single Port      ; 1024         ; 32           ; --           ; --           ; 32768 ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/mem.hex ;
-+----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                               ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------+
+; Name                                                                                                                                   ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF     ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------+
+; risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers_rtl_0|altsyncram_37i1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; None    ;
+; risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers_rtl_1|altsyncram_37i1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; None    ;
+; risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_kra1:auto_generated|ALTSYNCRAM         ; AUTO ; Single Port      ; 1024         ; 32           ; --           ; --           ; 32768 ; mem.hex ;
++----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -464,11 +463,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; risac_soc_system:soc_system|altera_merlin_master_agent:rv32i_core_instruction_master_translator_avalon_universal_master_0_agent|hold_waitrequest                                           ; Merged with risac_soc_system:soc_system|altera_merlin_master_agent:rv32i_core_data_master_translator_avalon_universal_master_0_agent|hold_waitrequest                                                ;
 ; risac_soc_system:soc_system|altera_avalon_sc_fifo:uart_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][74]                                                                  ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:uart_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][75]                                                                ;
 ; risac_soc_system:soc_system|altera_avalon_sc_fifo:uart_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][68]                                                                  ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:uart_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][75]                                                                ;
-; risac_soc_system:soc_system|altera_avalon_sc_fifo:ledr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][74]                                                                    ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:ledr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][75]                                                                  ;
 ; risac_soc_system:soc_system|altera_avalon_sc_fifo:ledr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][68]                                                                    ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:ledr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][75]                                                                  ;
-; risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][68]                                                                  ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][88]                                                                ;
+; risac_soc_system:soc_system|altera_avalon_sc_fifo:ledr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][74]                                                                    ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:ledr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][75]                                                                  ;
 ; risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][75]                                                                  ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][88]                                                                ;
 ; risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][74]                                                                  ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][88]                                                                ;
+; risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][68]                                                                  ; Merged with risac_soc_system:soc_system|altera_avalon_sc_fifo:memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][88]                                                                ;
 ; risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_rx:the_risac_soc_system_uart_0_rx|delayed_unxsync_rxdxx2                                                ; Merged with risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_rx:the_risac_soc_system_uart_0_rx|delayed_unxsync_rxdxx1                                              ;
 ; risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|rat[1][31]                                                                                                               ; Merged with risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|rat[0][31]                                                                                                             ;
 ; risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|rat[1][30]                                                                                                               ; Merged with risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|rat[0][30]                                                                                                             ;
@@ -784,23 +783,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|altera_merlin_slave_translator:ledr_s1_translator|wait_latency_counter[0]                                                                               ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|altera_merlin_slave_translator:uart_0_s1_translator|wait_latency_counter[0]                                                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[14]                                                                                                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[10]                                                                                                        ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_rx:the_risac_soc_system_uart_0_rx|unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out[9]         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_tx:the_risac_soc_system_uart_0_tx|unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out[6] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|rs1Data[23]                                                                                                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|rs2Data[17]                                                                                                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_tx:the_risac_soc_system_uart_0_tx|unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out[7] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|rs1Data[0]                                                                                                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|rs2Data[19]                                                                                                       ;
 ; 32:1               ; 5 bits    ; 105 LEs       ; 5 LEs                ; 100 LEs                ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|immDec[4]                                                                                                         ;
-; 13:1               ; 7 bits    ; 56 LEs        ; 49 LEs               ; 7 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[20]                                                                                                        ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[10]                                                                                                        ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[25]                                                                                                        ;
+; 13:1               ; 7 bits    ; 56 LEs        ; 49 LEs               ; 7 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[22]                                                                                                        ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[15]                                                                                                        ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[24]                                                                                                        ;
 ; 13:1               ; 4 bits    ; 32 LEs        ; 28 LEs               ; 4 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[4]                                                                                                         ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[28]                                                                                                        ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[2]                                                                                                         ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[29]                                                                                                        ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; Yes        ; |risac_soc|risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[3]                                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_dfh1:auto_generated ;
+; Source assignments for risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_kra1:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                           ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------------------+
@@ -911,72 +910,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +---------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: risac_soc_system:soc_system|risac_soc_system_Memory:memory ;
-+----------------+-----------------------------------------------------------------------------+----------+
-; Parameter Name ; Value                                                                       ; Type     ;
-+----------------+-----------------------------------------------------------------------------+----------+
-; INIT_FILE      ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/mem.hex ; String   ;
-+----------------+-----------------------------------------------------------------------------+----------+
++----------------+---------+------------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                         ;
++----------------+---------+------------------------------------------------------------------------------+
+; INIT_FILE      ; mem.hex ; String                                                                       ;
++----------------+---------+------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram ;
-+------------------------------------+-----------------------------------------------------------------------------+----------------+
-; Parameter Name                     ; Value                                                                       ; Type           ;
-+------------------------------------+-----------------------------------------------------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                                                           ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                                                                          ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                                                         ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                                                                          ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                                                         ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                                                           ; Untyped        ;
-; OPERATION_MODE                     ; SINGLE_PORT                                                                 ; Untyped        ;
-; WIDTH_A                            ; 32                                                                          ; Signed Integer ;
-; WIDTHAD_A                          ; 10                                                                          ; Signed Integer ;
-; NUMWORDS_A                         ; 1024                                                                        ; Signed Integer ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                                                ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                                                                        ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                                                                        ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                                                                        ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                                                                        ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                                                                        ; Untyped        ;
-; WIDTH_B                            ; 1                                                                           ; Untyped        ;
-; WIDTHAD_B                          ; 1                                                                           ; Untyped        ;
-; NUMWORDS_B                         ; 1                                                                           ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                                                                      ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                                      ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                                                      ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK1                                                                      ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                                                ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                                                                      ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                                                                        ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                                                                        ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                                                                        ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                                                                        ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                                                                        ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                                                                        ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 4                                                                           ; Signed Integer ;
-; WIDTH_BYTEENA_B                    ; 1                                                                           ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                                                        ; Untyped        ;
-; BYTE_SIZE                          ; 8                                                                           ; Signed Integer ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                   ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                                        ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                                        ; Untyped        ;
-; INIT_FILE                          ; /home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/mem.hex ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                                                      ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 1024                                                                        ; Signed Integer ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                                                      ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                                      ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                                                      ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                                      ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                                             ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                                             ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                                                                       ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                                       ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                                                           ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone II                                                                  ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_dfh1                                                             ; Untyped        ;
-+------------------------------------+-----------------------------------------------------------------------------+----------------+
++------------------------------------+----------------------+-----------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                  ;
++------------------------------------+----------------------+-----------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                        ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                               ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                               ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                                        ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                                                        ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                                                        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                               ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                               ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                               ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                               ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                               ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                               ;
+; WIDTH_B                            ; 1                    ; Untyped                                                               ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                               ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                               ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                               ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                               ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                               ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                               ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                               ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                               ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                               ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                               ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                               ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                               ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                               ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                               ;
+; WIDTH_BYTEENA_A                    ; 4                    ; Signed Integer                                                        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                               ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                               ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                               ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                               ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                               ;
+; INIT_FILE                          ; mem.hex              ; Untyped                                                               ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                               ;
+; MAXIMUM_DEPTH                      ; 1024                 ; Signed Integer                                                        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                               ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                               ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                               ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                               ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                               ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                               ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                               ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                               ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                               ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                               ;
+; CBXI_PARAMETER                     ; altsyncram_kra1      ; Untyped                                                               ;
++------------------------------------+----------------------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2187,15 +2186,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; iIbusIAddr ; Input ; Info     ; Stuck at GND                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "risac_soc_system:soc_system"                                                                                                                     ;
 +----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2211,7 +2201,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -2221,9 +2211,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Fri Nov 15 21:09:54 2019
+    Info: Processing started: Fri Nov 15 22:59:04 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off risac_soc -c risac_soc
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file sources/risac_soc.v
+    Info (12023): Found entity 1: risac_soc
+    Info (12023): Found entity 2: risac_soc_tb
 Info (12021): Found 1 design units, including 1 entities, in source file risac_soc_system/synthesis/risac_soc_system.v
     Info (12023): Found entity 1: risac_soc_system
 Info (12021): Found 2 design units, including 2 entities, in source file risac_soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
@@ -2281,28 +2274,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file risac_s
     Info (12023): Found entity 1: risac
 Info (12021): Found 1 design units, including 1 entities, in source file risac_soc_system/synthesis/submodules/risac_avalon.v
     Info (12023): Found entity 1: risac_avalon
-Info (12021): Found 1 design units, including 1 entities, in source file /home/saad/Desktop/assignment2/risac_avalon.v
+Info (12021): Found 1 design units, including 1 entities, in source file /home/saad/trashcan/velox/risac_avalon.v
     Info (12023): Found entity 1: risac_avalon
-Info (12021): Found 1 design units, including 1 entities, in source file /home/saad/Desktop/assignment2/risac.v
+Info (12021): Found 1 design units, including 1 entities, in source file /home/saad/trashcan/velox/risac.v
     Info (12023): Found entity 1: risac
-Info (12021): Found 2 design units, including 2 entities, in source file risac_soc.v
-    Info (12023): Found entity 1: risac_soc
-    Info (12023): Found entity 2: risac_soc_tb
 Info (12127): Elaborating entity "risac_soc" for the top level hierarchy
 Info (12128): Elaborating entity "risac_soc_system" for hierarchy "risac_soc_system:soc_system"
 Info (12128): Elaborating entity "risac_avalon" for hierarchy "risac_soc_system:soc_system|risac_avalon:rv32i_core"
 Info (12128): Elaborating entity "risac" for hierarchy "risac_soc_system:soc_system|risac_avalon:rv32i_core|risac:u_risac"
-Warning (10036): Verilog HDL or VHDL warning at risac.v(45): object "illegalDec" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at risac.v(248): object "pcEx" assigned a value but never read
-Warning (10240): Verilog HDL Always Construct warning at risac.v(26): inferring latch(es) for variable "pc", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "pc[0]" at risac.v(26)
-Info (10041): Inferred latch for "pc[1]" at risac.v(26)
+Warning (10036): Verilog HDL or VHDL warning at risac.v(24): object "readIbus" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at risac.v(59): object "illegalDec" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at risac.v(262): object "pcEx" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at risac.v(32): inferring latch(es) for variable "pc", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "pc[0]" at risac.v(32)
+Info (10041): Inferred latch for "pc[1]" at risac.v(32)
 Info (12128): Elaborating entity "risac_soc_system_Memory" for hierarchy "risac_soc_system:soc_system|risac_soc_system_Memory:memory"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram"
 Info (12130): Elaborated megafunction instantiation "risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram"
 Info (12133): Instantiated megafunction "risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram" with the following parameter:
     Info (12134): Parameter "byte_size" = "8"
-    Info (12134): Parameter "init_file" = "/home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/mem.hex"
+    Info (12134): Parameter "init_file" = "mem.hex"
     Info (12134): Parameter "lpm_type" = "altsyncram"
     Info (12134): Parameter "maximum_depth" = "1024"
     Info (12134): Parameter "numwords_a" = "1024"
@@ -2313,9 +2304,9 @@ Info (12133): Instantiated megafunction "risac_soc_system:soc_system|risac_soc_s
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "4"
     Info (12134): Parameter "widthad_a" = "10"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dfh1.tdf
-    Info (12023): Found entity 1: altsyncram_dfh1
-Info (12128): Elaborating entity "altsyncram_dfh1" for hierarchy "risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_dfh1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kra1.tdf
+    Info (12023): Found entity 1: altsyncram_kra1
+Info (12128): Elaborating entity "altsyncram_kra1" for hierarchy "risac_soc_system:soc_system|risac_soc_system_Memory:memory|altsyncram:the_altsyncram|altsyncram_kra1:auto_generated"
 Info (12128): Elaborating entity "risac_soc_system_LEDR" for hierarchy "risac_soc_system:soc_system|risac_soc_system_LEDR:ledr"
 Info (12128): Elaborating entity "risac_soc_system_uart_0" for hierarchy "risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0"
 Info (12128): Elaborating entity "risac_soc_system_uart_0_tx" for hierarchy "risac_soc_system:soc_system|risac_soc_system_uart_0:uart_0|risac_soc_system_uart_0_tx:the_risac_soc_system_uart_0_tx"
@@ -2413,24 +2404,24 @@ Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (17049): 31 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /home/saad/Desktop/assignment2/risac_soc/output_files/risac_soc.map.smsg
+Info (144001): Generated suppressed messages file /home/saad/trashcan/velox/risac_soc/output_files/risac_soc.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1738 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1713 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 1630 logic cells
+    Info (21061): Implemented 1605 logic cells
     Info (21064): Implemented 96 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 678 megabytes
-    Info: Processing ended: Fri Nov 15 21:10:04 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 651 megabytes
+    Info: Processing ended: Fri Nov 15 22:59:09 2019
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/saad/Desktop/assignment2/risac_soc/output_files/risac_soc.map.smsg.
+The suppressed messages can be found in /home/saad/trashcan/velox/risac_soc/output_files/risac_soc.map.smsg.
 
 

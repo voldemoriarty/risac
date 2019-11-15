@@ -2,7 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity risac_soc_system_Memory is
     generic(
-        INIT_FILE       : string  := "/home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/mem.hex"
+        INIT_FILE       : string  := "mem.hex"
     );
     port(
         address         : in     vl_logic_vector(9 downto 0);

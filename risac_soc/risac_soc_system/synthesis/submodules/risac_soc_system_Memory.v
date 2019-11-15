@@ -34,7 +34,7 @@ module risac_soc_system_Memory (
                                )
 ;
 
-  parameter INIT_FILE = "/home/saad/Desktop/assignment2/risac_soc/risac_soc_system/synthesis/mem.hex";
+  parameter INIT_FILE = "mem.hex";
 
 
   output  [ 31: 0] readdata;

@@ -8,6 +8,7 @@ entity risac is
         iIbusData       : in     vl_logic_vector(31 downto 0);
         iIbusIAddr      : in     vl_logic_vector(31 downto 0);
         iIbusWait       : in     vl_logic;
+        oIbusRead       : out    vl_logic;
         oDbusAddr       : out    vl_logic_vector(31 downto 0);
         oDbusWe         : out    vl_logic;
         oDbusData       : out    vl_logic_vector(31 downto 0);

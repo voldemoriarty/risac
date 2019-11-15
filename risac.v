@@ -4,6 +4,7 @@ module risac (
 	input		[31:0] 	iIbusData,
 	input		[31:0]	iIbusIAddr,
 	input						iIbusWait,
+	output          oIbusRead,
 	
 	output	[31:0]	oDbusAddr,
 	output					oDbusWe,
@@ -20,16 +21,31 @@ module risac (
 	reg [31:0]	pc;
 	reg dataHazard;
 	reg stallPipe;
+	reg readIbus;
 	
 	assign oIbusAddr = pc;
+	// wait for waitrequest to fall before zeroing
+	// read (i.e.) wait till a pending request is completed
+	assign oIbusRead = iIbusWait ? 1'b1 : !stallPipe && !dataHazard;
+
+	// read signal must always be asserted regardless of 
+	// wait
 
 	always @ (posedge clk or negedge rst_n) begin 
 		if (!rst_n) begin 
 			pc <= 'b0;
+			readIbus <= 'b1;
 		end	else if (!stallPipe && !dataHazard) begin 
-			// for now increment pc when the memory is ready
-			pc <= iIbusWait ? pc : pc + 3'd4;		
-		end 
+			// new data arrives when wait is 0
+			// so update pc when wait is 0
+			pc <= iIbusWait ? pc : pc + 3'd4;
+
+			// assert read regardless of wait
+			// but only when pc is updated
+			readIbus <= iIbusWait ? 1'b0 : 1'b1;
+		end else begin
+			readIbus <= 1'b0;
+		end
 	end
 
 	// ===========================================================

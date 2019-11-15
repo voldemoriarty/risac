@@ -18,16 +18,15 @@ module risac_avalon (
 	input		[00:0] avDB_waitrequest
 );
 
-	assign avIB_read = 1'b1;
-
 	risac u_risac (
 		.clk        (clk),
 		.rst_n      (rst_n),
 		
 		.oIbusAddr  (avIB_address),
 		.iIbusData  (avIB_readdata),
-		.iIbusIAddr ('b0),
+		.iIbusIAddr (avIB_address),
 		.iIbusWait  (avIB_waitrequest),
+		.oIbusRead  (avIB_read),
 
 		.oDbusAddr  (avDB_address),
 		.oDbusWe    (avDB_write),

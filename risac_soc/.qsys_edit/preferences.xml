@@ -11,13 +11,12 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="360" />
-   <clocksource preferredWidth="360" />
-   <frequency preferredWidth="340" />
+   <clockname preferredWidth="545" />
+   <clocksource preferredWidth="544" />
+   <frequency preferredWidth="525" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Library/Interface Protocols,Project,Library/Interface Protocols/Serial,Library" />
- <window width="1386" height="764" x="-10" y="14" />
+ <library expandedCategories="Library,Project" />
+ <window width="1940" height="1072" x="-10" y="18" />
  <hdlexample language="VERILOG" />
 </preferences>

@@ -8,10 +8,10 @@ entity risac_soc_system_addr_router_001_default_decode is
         DEFAULT_DESTID  : integer := 1
     );
     port(
-        default_destination_id: out    vl_logic_vector(0 downto 0);
-        default_wr_channel: out    vl_logic_vector(1 downto 0);
-        default_rd_channel: out    vl_logic_vector(1 downto 0);
-        default_src_channel: out    vl_logic_vector(1 downto 0)
+        default_destination_id: out    vl_logic_vector(1 downto 0);
+        default_wr_channel: out    vl_logic_vector(2 downto 0);
+        default_rd_channel: out    vl_logic_vector(2 downto 0);
+        default_src_channel: out    vl_logic_vector(2 downto 0)
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of DEFAULT_CHANNEL : constant is 1;
