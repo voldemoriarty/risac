@@ -21,20 +21,22 @@ module risac (
   reg [31:0]	pc;
   reg dataHazard;
   reg stallPipe;
-  reg readIbus;
+  reg pcChanged;
   
   assign oIbusAddr = pc;
   // wait for waitrequest to fall before zeroing
   // read (i.e.) wait till a pending request is completed
-  assign oIbusRead = iIbusWait ? 1'b1 : !stallPipe && !dataHazard;
+  assign oIbusRead = iIbusWait ? 1'b1 : pcChanged;
 
   // read signal must always be asserted regardless of 
   // wait
 
+  // 1 -> 
+
   always @ (posedge clk or negedge rst_n) begin 
     if (!rst_n) begin 
       pc <= 'b0;
-      readIbus <= 'b1;
+      pcChanged <= 'b1;
     end	else if (!stallPipe && !dataHazard) begin 
       // new data arrives when wait is 0
       // so update pc when wait is 0
@@ -42,9 +44,15 @@ module risac (
 
       // assert read regardless of wait
       // but only when pc is updated
-      readIbus <= iIbusWait ? 1'b0 : 1'b1;
+      // also dont deassert when wait is high
+      // pcChanged <= iIbusWait ? 1'b0 : 1'b1;
+      if (!iIbusWait) begin 
+        pcChanged <= 1'b1;
+      end else begin 
+        pcChanged <= 1'b0;
+      end
     end else begin
-      readIbus <= 1'b0;
+      pcChanged <= 1'b0;
     end
   end
 

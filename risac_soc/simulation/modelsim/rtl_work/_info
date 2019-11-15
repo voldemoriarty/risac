@@ -310,34 +310,34 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules|/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/altera_reset_synchronizer.v|
 !s101 -O0
 vrisac
-INEeM72FL`=9OTNf:FRi?K2
+!i10b 1
+!s100 >zgIfOU4AYNho:<h<^L8c0
+IG?HQazb9ERgFDLH7C2FRQ2
 Vb6fShB_Ta[ci5l9I>Ac0>3
+!s105 risac_v_unit
 S1
 R1
-Z17 w1573838928
+w1573845203
 8/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
 F/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
 L0 1
 R3
 r1
+!s85 0
 31
+!s108 1573845208.312600
+!s107 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules|-O0|/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v|
+!s101 -O0
 R4
 R6
 R5
-!i10b 1
-!s100 jYLcki^TVa9B=IoSH[>h:3
-!s105 risac_v_unit
-!s85 0
-!s108 1573840780.271720
-!s107 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules|/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v|
-!s101 -O0
 vrisac_avalon
 ICOP^Q=02iWRKn51@oMf]13
 VGbk^5QN7UKP@WPU6Mm1Z21
 S1
 R1
-R17
+Z17 w1573838928
 8/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_avalon.v
 F/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_avalon.v
 L0 1
@@ -356,8 +356,6 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules|/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_avalon.v|
 !s101 -O0
 vrisac_soc
-!i10b 1
-!s100 =1CUNToOe7ZD7[?9EE`BI2
 IfkUTa<ob=<Q<5i^VP9W>l2
 V[X>J5CP;EUDf;GGO0RSPY2
 Z18 !s105 risac_soc_v_unit
@@ -369,15 +367,17 @@ Z21 F/home/saad/trashcan/velox/risac_soc/sources/risac_soc.v
 L0 3
 R3
 r1
-!s85 0
 31
 Z22 !s108 1573840780.626789
 Z23 !s107 /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v|
 Z24 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/velox/risac_soc/sources|/home/saad/trashcan/velox/risac_soc/sources/risac_soc.v|
-!s101 -O0
 R4
 Z25 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/sources -O0
 R5
+!i10b 1
+!s100 =1CUNToOe7ZD7[?9EE`BI2
+!s85 0
+!s101 -O0
 vrisac_soc_system
 IgC;J@eBTh7zG14PQPm[1L0
 Vk;7oXh::k5WnJdGQKCO;D1
@@ -949,8 +949,6 @@ R5
 !s85 0
 !s101 -O0
 vrisac_soc_tb
-!i10b 1
-!s100 o9UmWzBM5J1^XHb<P8>H?2
 Ic2V0I@nV1iYI1nHkHm^>N1
 VLdJnn21m3WMSVPSTNoHP83
 R18
@@ -962,12 +960,14 @@ R21
 L0 17
 R3
 r1
-!s85 0
 31
 R22
 R23
 R24
-!s101 -O0
 R4
 R25
 R5
+!i10b 1
+!s100 o9UmWzBM5J1^XHb<P8>H?2
+!s85 0
+!s101 -O0

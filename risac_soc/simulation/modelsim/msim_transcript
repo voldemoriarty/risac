@@ -705,3 +705,2219 @@ run
 add dataflow \
 sim:/risac_soc_tb/uut/soc_system/rv32i_core/avIB_read 
 # WARNING: No extended dataflow license exists
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(375): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+run
+run
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+run
+#               670000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000001c --> 0000001c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+run
+#               850000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000024 --> 00000024
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               970000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000028 --> 00000028
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(375): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               430000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               550000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+add wave -position end  sim:/risac_soc_tb/uut/soc_system/rv32i_core/u_risac/readIbus
+restart
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               430000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+restart
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(375): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               110000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               150000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               230000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               270000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(375): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(375): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(375): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               430000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Error: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(53): near "else": syntax error, unexpected else
+# ** Error: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(73): (vlog-2730) Undefined variable: 'aluOpDec'.
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(382): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# /home/saad/intelFPGA/13.0sub/modelsim_ase/linuxaloem/vlog failed.
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(381): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               430000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               550000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               610000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000018 --> 00000018
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               670000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000001c --> 0000001c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               730000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000001c --> 0000001c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               790000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000020 --> 00000020
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               850000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000024 --> 00000024
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               890000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000024 --> 00000024
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(381): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+# Warning in wave window restart: (vish-4014) No objects found matching '/risac_soc_tb/uut/soc_system/rv32i_core/u_risac/readIbus'. 
+run
+run
+#               110000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               150000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               230000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               270000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(381): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               430000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(381): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               430000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(383): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               110000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               150000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               230000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               270000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+add wave -position end  sim:/risac_soc_tb/uut/soc_system/rv32i_core/u_risac/pcChanged
+restart
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               110000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               150000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               230000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               270000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(383): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               110000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               150000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               230000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               270000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(383): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               110000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               150000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               230000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               270000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(383): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               430000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(383): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               110000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               150000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               230000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               270000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+run
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules -O0 /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v
+# ** Note: (vlog-1901) OptionFile "/home/saad/csu_extend_tfsp/simulation/modelsim/vlog.opt" not found. Ignored.
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# -- Compiling module risac
+# ** Warning: /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac.v(383): (vlog-2644) Conflicting semantics, "-vlog01compat" switch disables SystemVerilog support.
+# 
+# Top level modules:
+# 	risac
+restart
+# Loading work.risac
+# Loading sv_std.std
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.risac_soc_system_addr_router
+# Loading work.risac_soc_system_addr_router_default_decode
+# Loading work.risac_soc_system_addr_router_001
+# Loading work.risac_soc_system_addr_router_001_default_decode
+# Loading work.risac_soc_system_id_router
+# Loading work.risac_soc_system_id_router_default_decode
+# Loading work.risac_soc_system_id_router_001
+# Loading work.risac_soc_system_id_router_001_default_decode
+# Loading work.risac_soc_system_cmd_xbar_demux
+# Loading work.risac_soc_system_cmd_xbar_demux_001
+# Loading work.risac_soc_system_cmd_xbar_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.risac_soc_system_rsp_xbar_demux
+# Loading work.risac_soc_system_rsp_xbar_mux_001
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Too few port connections. Expected 5, found 3.
+#         Region: /risac_soc_tb/uut/soc_system
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_rxd'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/sources/risac_soc.v(13): [TFMPC] - Missing connection for port 'uart_txd'.
+# ** Warning: (vsim-3017) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Too few port connections. Expected 23, found 7.
+#         Region: /risac_soc_tb/uut/soc_system/memory/the_altsyncram
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'wren_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'data_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'address_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'byteena_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_a'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'addressstall_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'q_b'.
+# ** Warning: (vsim-3722) /home/saad/trashcan/velox/risac_soc/risac_soc_system/synthesis/submodules/risac_soc_system_Memory.v(62): [TFMPC] - Missing connection for port 'eccstatus'.
+run
+run
+#               130000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000000 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               190000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000004 --> 00000004
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               250000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000008 --> 00000008
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               310000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      0000000c --> 0000000c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               370000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               430000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000010 --> 00000010
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#               490000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+run
+#               550000: risac_soc_tb.uut.soc_system.rv32i_core_instruction_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000014 --> 00000014
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        0 --> 0
+# av_read         1 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/saad/trashcan/velox/risac_soc/simulation/modelsim/wave.do

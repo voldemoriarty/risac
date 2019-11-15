@@ -21,11 +21,12 @@ add wave -noupdate -label pc -radix hexadecimal /risac_soc_tb/uut/soc_system/rv3
 add wave -noupdate -label iIbusWait /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/iIbusWait
 add wave -noupdate -label stallPipe /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/stallPipe
 add wave -noupdate -label dataHazard /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/dataHazard
-add wave -noupdate -label lsuAddrOs /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/lsuAddrOs
-add wave -noupdate -label rs1Data /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/rs1Data
-add wave -noupdate -label rs2Data /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/rs2Data
+add wave -noupdate -label lsuAddrOs -radix hexadecimal /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/lsuAddrOs
+add wave -noupdate -label rs1Data -radix hexadecimal /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/rs1Data
+add wave -noupdate -label rs2Data -radix hexadecimal /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/rs2Data
+add wave -noupdate -label pcChanged /risac_soc_tb/uut/soc_system/rv32i_core/u_risac/pcChanged
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {490000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {542771 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 192
 configure wave -valuecolwidth 100
@@ -41,4 +42,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {267744 ps} {739324 ps}
+WaveRestoreZoom {0 ps} {471580 ps}

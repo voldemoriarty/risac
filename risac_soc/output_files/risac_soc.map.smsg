@@ -6,5 +6,5 @@ Info (10281): Verilog HDL Declaration information at risac_soc_system_addr_route
 Info (10281): Verilog HDL Declaration information at risac_soc_system_addr_router_001.sv(49): object "DEFAULT_RD_CHANNEL" differs only in case from object "default_rd_channel" in the same scope
 Info (10281): Verilog HDL Declaration information at risac_soc_system_addr_router.sv(48): object "DEFAULT_WR_CHANNEL" differs only in case from object "default_wr_channel" in the same scope
 Info (10281): Verilog HDL Declaration information at risac_soc_system_addr_router.sv(49): object "DEFAULT_RD_CHANNEL" differs only in case from object "default_rd_channel" in the same scope
-Info (10281): Verilog HDL Declaration information at risac.v(133): object "rat" differs only in case from object "RAT" in the same scope
-Info (10281): Verilog HDL Declaration information at risac.v(135): object "rat" differs only in case from object "RAT" in the same scope
+Info (10281): Verilog HDL Declaration information at risac.v(143): object "rat" differs only in case from object "RAT" in the same scope
+Info (10281): Verilog HDL Declaration information at risac.v(143): object "rat" differs only in case from object "RAT" in the same scope
