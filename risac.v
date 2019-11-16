@@ -28,11 +28,6 @@ module risac (
   // read (i.e.) wait till a pending request is completed
   assign oIbusRead = iIbusWait ? 1'b1 : pcChanged;
 
-  // read signal must always be asserted regardless of 
-  // wait
-
-  // 1 -> 
-
   always @ (posedge clk or negedge rst_n) begin 
     if (!rst_n) begin 
       pc <= 'b0;
@@ -67,12 +62,13 @@ module risac (
   reg					immSelDec;
   reg 				rdWeDec;
   reg					illegalDec;
-  reg					lDec, sDec;
+  reg					lDec, sDec, luipcDec, luiDec;
 
   always @ (posedge clk or negedge rst_n) begin 
     if (!rst_n) begin 
       {aluOpDec, rs1Dec, rs2Dec, immDec, validDec, immSelDec, rdShiftDec} <= 'b0;
-      {rdWeDec, illegalDec, pcDec, lDec, sDec, rs1ShiftDec, rs2ShiftDec} <= 'b0;
+      {rdWeDec, illegalDec, pcDec, lDec, sDec, rs1ShiftDec, rs2ShiftDec} <= 'b0; 
+      {luipcDec, luiDec} <= 'b0;
     end else if (!stallPipe && !dataHazard) begin 
       // the address of the currently being decoded instruction
       pcDec			<= iIbusIAddr;
@@ -81,7 +77,11 @@ module risac (
       validDec	<= ~iIbusWait;
 
       // decode the instruction regardless of validity
-      
+
+      // lui and auipc are special
+      luipcDec <= iIbusData[4:2] == 3'b101;
+      luiDec   <= iIbusData[5:2] == 4'b1101;
+
       // alu op is always [14:12]
       aluOpDec[2:0]	<= iIbusData[14:12];
       aluOpDec[3]		<= iIbusData[30];
@@ -96,12 +96,13 @@ module risac (
 
       // always write to rd except when storing or branching
       // we cater only stores for now 
-      rdWeDec		<= iIbusData[6:0] != 7'b0100011;
+      rdWeDec		<= (iIbusData[6:2] != 5'b01000);
       
       // select imm when instr[6:4] == 001
       // in rv32i, no other instruction has opcode[6:4] == 001 other than those
       // that use imm
-      immSelDec	<= (iIbusData[6:4] == 3'b001);
+      // lui also uses imm
+      immSelDec	<= (iIbusData[6:4] == 3'b001) | (iIbusData[6:2] == 5'b01101);
 
       // for the imm, use the opcode
       case (iIbusData[6:2]) // the last 2 bits are always 1 anyway
@@ -110,11 +111,15 @@ module risac (
       5'b00000: immDec <= { {21{iIbusData[31]}}, iIbusData[30:20] };
       // itype alu
       5'b00100: immDec <= { {21{iIbusData[31]}}, iIbusData[30:20] };
-      //jalr
+      // jalr
       5'b11001: immDec <= { {21{iIbusData[31]}}, iIbusData[30:20] };
       
       // SType: store
       5'b01000: immDec <= { {21{iIbusData[31]}}, iIbusData[30:25], iIbusData[11:7] };
+
+      // lui
+      // auipc
+      5'b01101: immDec <= { iIbusData[31:12], 12'b0 };
 
       endcase
 
@@ -142,6 +147,7 @@ module risac (
   // data hazard handling mech
   reg [31:0]  rat [0:1];
   reg 				stallDataHazard;
+  reg         falseAlarm;
 
   reg 				validEx, rdWeEx;
 
@@ -151,6 +157,7 @@ module risac (
     if (!rst_n) begin 
       rat[0] <= 'b0;
       rat[1] <= 'b0;
+      falseAlarm <= 'b0;
     end else if (!stallPipe) begin
       // update rat
       // set rd'th bit to 1 in rat[0..1]
@@ -161,6 +168,22 @@ module risac (
       // the zero register is always clean
       rat[0][0] <= 1'b0;
       rat[1][0] <= 1'b0;
+
+      // on the condition that if rat[rd] is already 1 then 
+      // 1. add x2, x1, x3
+      // 2. add x2, x2, x4
+      // when 1 is written back, rat[2] is set to 1 instead of 0
+      // because 2 will force it
+      // in this case, we must allow only 1 instruction to pass
+      // we use a false alarm bit for this
+
+      // raise false alarm when rdDec == rdEx and all the valid conditions
+      // also set false alarm to zero if it is one
+      if (falseAlarm) begin 
+        falseAlarm <= 1'b0;
+      end else if (rdWeDec && validDec && rdWeEx) begin 
+        falseAlarm <= rdEx == rdDec;
+      end
 
       for (idx = 1; idx < 32; idx = idx + 1) begin
         // if the register to be updated [(rdDecWe == 1) and (rdShiftDec[idx] == 1)]
@@ -184,12 +207,17 @@ module risac (
   reg rs2booked;
   always @ (*) begin 
     // check if rs1 and rs2 are 'booked'
-    rs1booked = |(rs1ShiftDec & rat[0]);
+    rs1booked = |(rs1ShiftDec & rat[0]) && ~luipcDec;
     rs2booked = |(rs2ShiftDec & rat[1]) && ~immSelDec;
 
-    // rs1booked = rat[0][rs1Dec];
-    // rs2booked = rat[1][rs2Dec] && ~immSelDec;
-    dataHazard = rs1booked | rs2booked;
+    // rs1booked = rat[0][rs1Dec] && ~luipcDec && !(rdWeEx && rdShiftEx[rs1Dec] && validEx);
+    // rs2booked = rat[1][rs2Dec] && ~immSelDec && !(rdWeEx && rdShiftEx[rs2Dec] && validEx);
+    
+    // data hazard occurs when rs1 or rs2 is booked and nothing is being written
+    // to the regfile 
+    // if there is data being written to the reg file then no need to stall, let it
+    // pass
+    dataHazard = falseAlarm ? 1'b0 : (rs1booked) | (rs2booked);
   end
   
   // when the data hazard occurs, set valid to zero and stall previous stages
@@ -199,22 +227,30 @@ module risac (
   reg [31:0]	immOf, pcOf;
   reg [3:0]		aluOpOf;
   reg [4:0]		rdOf;
-  reg 				lOf, sOf;
+  reg 				lOf, sOf, luipcOf;
 
   always @ (posedge clk or negedge rst_n) begin 
     if (!rst_n) begin 
       {rs1Data, rs2Data, validOf, rdWeOf, immOf} <= 'b0;
-      {pcOf, immSelOf, aluOpOf, rdOf, lOf, sOf} <= 'b0;
+      {pcOf, immSelOf, aluOpOf, rdOf, lOf, sOf, luipcOf} <= 'b0;
       // !do not reset the registers!!
 
     end else if (!stallPipe) begin 
       // propogation
-      {validOf, rdWeOf, immOf} <= {validDec & ~dataHazard, rdWeDec, immDec};
-      {pcOf, immSelOf, aluOpOf, rdOf} <= {pcDec, immSelDec, aluOpDec, rdDec};
-      {lOf, sOf} <= {lDec, sDec};
+      {rdWeOf, immOf} <= {rdWeDec, immDec};
+      {immSelOf, rdOf} <= {immSelDec, rdDec};
+      {lOf, sOf, luipcOf} <= {lDec, sDec, luipcDec};
+
+      if (falseAlarm) begin 
+        validOf <= validDec;
+      end else begin 
+        validOf <= validDec & ~dataHazard;
+      end 
 
       rs1Data <= rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec];
       rs2Data	<= rs2Dec == 5'b0 ? 32'b0 : registers [rs2Dec];
+      aluOpOf <= luipcDec ? 4'b0 : aluOpDec;
+      pcOf    <= luiDec ? 32'b0 : pcDec;
     end
   end
 
@@ -245,8 +281,9 @@ module risac (
       lsuAddrOs <= rs1Data + immOf;
       lsuDataOs <= rs2Data;
 
-      // for now aluIn1 is just rs1Data
-      aluIn1	<= rs1Data;
+      // when lui comes, the imm is the value 
+      // so zero aluIn1 and set operation to add
+      aluIn1	<= luipcOf ? pcOf : rs1Data;
 
       // aluIn2 is between imm and rs2Data
       aluIn2	<= immSelOf ? immOf : rs2Data;
