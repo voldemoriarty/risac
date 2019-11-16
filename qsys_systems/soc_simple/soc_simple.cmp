@@ -1,7 +1,9 @@
 	component soc_simple is
 		port (
-			clk_clk       : in std_logic := 'X'; -- clk
-			reset_reset_n : in std_logic := 'X'  -- reset_n
+			clk_clk       : in  std_logic                    := 'X'; -- clk
+			leds_export   : out std_logic_vector(7 downto 0);        -- export
+			locked_export : out std_logic;                           -- export
+			reset_reset_n : in  std_logic                    := 'X'  -- reset_n
 		);
 	end component soc_simple;
 

@@ -1,8 +1,23 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in,(SLAVE)unsaved.clk) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace inst soc_simple.on_chip_memory -pg 1 -lvl 5 -y 30
+preplace inst soc_simple.leds -pg 1 -lvl 5 -y 210
+preplace inst soc_simple.clock -pg 1 -lvl 1 -y 270
+preplace inst soc_simple.jtag_uart -pg 1 -lvl 5 -y 110
+preplace inst soc_simple.rv32i_core -pg 1 -lvl 3 -y 250
+preplace inst soc_simple.pio_pipeline_bridge -pg 1 -lvl 4 -y 250
+preplace inst soc_simple.PLL_50_160 -pg 1 -lvl 2 -y 330
+preplace inst soc_simple.jtag_uart_pipeline_bridge -pg 1 -lvl 4 -y 110
+preplace inst soc_simple -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)leds.external_connection,(SLAVE)soc_simple.leds) 1 0 5 NJ 200 NJ 200 NJ 200 NJ 200 NJ
+preplace netloc FAN_OUT<net_container>soc_simple</net_container>(SLAVE)jtag_uart_pipeline_bridge.reset,(SLAVE)jtag_uart.reset,(SLAVE)on_chip_memory.reset1,(SLAVE)pio_pipeline_bridge.reset,(SLAVE)PLL_50_160.reset,(SLAVE)leds.reset,(SLAVE)rv32i_core.reset_sink,(MASTER)clock.clk_reset) 1 1 4 280 280 460 240 750 60 970
+preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)soc_simple.reset,(SLAVE)clock.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)soc_simple.locked,(SLAVE)PLL_50_160.locked) 1 0 2 NJ 340 NJ
+preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)soc_simple.clk,(SLAVE)clock.clk_in) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>soc_simple</net_container>(SLAVE)pio_pipeline_bridge.s0,(SLAVE)on_chip_memory.s1,(MASTER)rv32i_core.data_master,(SLAVE)jtag_uart_pipeline_bridge.s0,(MASTER)rv32i_core.instruction_master) 1 3 2 710 80 N
+preplace netloc FAN_OUT<net_container>soc_simple</net_container>(SLAVE)pio_pipeline_bridge.clk,(SLAVE)jtag_uart.clk,(SLAVE)leds.clk,(SLAVE)on_chip_memory.clk1,(MASTER)PLL_50_160.outclk0,(SLAVE)jtag_uart_pipeline_bridge.clk,(SLAVE)rv32i_core.clock) 1 2 3 440 220 730 40 1010
+preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(MASTER)clock.clk,(SLAVE)PLL_50_160.refclk) 1 1 1 260
+preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(MASTER)pio_pipeline_bridge.m0,(SLAVE)leds.s1) 1 4 1 N
+preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(MASTER)jtag_uart_pipeline_bridge.m0,(SLAVE)jtag_uart.avalon_jtag_slave) 1 4 1 990
+levelinfo -pg 1 0 50 1210
+levelinfo -hier soc_simple 60 90 310 490 820 1050 1200
