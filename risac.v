@@ -124,6 +124,12 @@ module risac (
       // auipc
       5'b01101: immDec <= { iIbusData[31:12], 12'b0 };
 
+      // jal
+      5'b11011: immDec <= { {12{iIbusData[31]}}, iIbusData[19:12], iIbusData[20], iIbusData[30:25], iIbusData[24:21], 1'b0 };
+
+      // btype, all conditional branches
+      5'b11000: immDec <= { {20{iIbusData[31]}}, iIbusData[7], iIbusData[30:25], iIbusData[11:8], 1'b0 };
+
       endcase
 
       // load when all zero opcode
@@ -283,6 +289,9 @@ module risac (
     end else if (!stallPipe) begin 
       {pcOs, validOs, rdWeOs, rdOs} <= {pcOf, validOf, rdWeOf, rdOf};
       {lOs, sOs} <= {lOf, sOf};
+
+      // the branch unit
+      // 
 
       branch <= branchOf;
 
