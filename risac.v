@@ -18,7 +18,9 @@ module risac (
   // ===========================================================
   // the instruction address generation logic
   // pc contains the byte address
-  reg [31:0]	pc;
+  reg [31:0] pc;
+  reg [31:0] branchTarget;
+  reg branch;
   reg dataHazard;
   reg stallPipe;
   reg pcChanged;
@@ -35,7 +37,7 @@ module risac (
     end	else if (!stallPipe && !dataHazard) begin 
       // new data arrives when wait is 0
       // so update pc when wait is 0
-      pc <= iIbusWait ? pc : pc + 3'd4;
+      pc <= iIbusWait ? pc : (branch ? branchTarget : pc + 3'd4);
 
       // assert read regardless of wait
       // but only when pc is updated
@@ -63,12 +65,13 @@ module risac (
   reg 				rdWeDec;
   reg					illegalDec;
   reg					lDec, sDec, luipcDec, luiDec;
+  reg         branchDec;
 
   always @ (posedge clk or negedge rst_n) begin 
     if (!rst_n) begin 
       {aluOpDec, rs1Dec, rs2Dec, immDec, validDec, immSelDec, rdShiftDec} <= 'b0;
       {rdWeDec, illegalDec, pcDec, lDec, sDec, rs1ShiftDec, rs2ShiftDec} <= 'b0; 
-      {luipcDec, luiDec} <= 'b0;
+      {luipcDec, luiDec, branchDec} <= 'b0;
     end else if (!stallPipe && !dataHazard) begin 
       // the address of the currently being decoded instruction
       pcDec			<= iIbusIAddr;
@@ -228,11 +231,12 @@ module risac (
   reg [3:0]		aluOpOf;
   reg [4:0]		rdOf;
   reg 				lOf, sOf, luipcOf;
+  reg         branchOf;
 
   always @ (posedge clk or negedge rst_n) begin 
     if (!rst_n) begin 
       {rs1Data, rs2Data, validOf, rdWeOf, immOf} <= 'b0;
-      {pcOf, immSelOf, aluOpOf, rdOf, lOf, sOf, luipcOf} <= 'b0;
+      {pcOf, immSelOf, aluOpOf, rdOf, lOf, sOf, luipcOf, branchOf} <= 'b0;
       // !do not reset the registers!!
 
     end else if (!stallPipe) begin 
@@ -240,6 +244,7 @@ module risac (
       {rdWeOf, immOf} <= {rdWeDec, immDec};
       {immSelOf, rdOf} <= {immSelDec, rdDec};
       {lOf, sOf, luipcOf} <= {lDec, sDec, luipcDec};
+      branchOf <= branchDec;
 
       if (falseAlarm) begin 
         validOf <= validDec;
@@ -274,9 +279,12 @@ module risac (
     if (!rst_n) begin 
       {pcOs, aluOpOs, validOs, rdWeOs, rdOs} <= 'b0;
       {aluIn1, aluIn2, lOs, sOs, lsuAddrOs, lsuDataOs} <= 'b0;
+      {branch, branchTarget} <= 'b0;
     end else if (!stallPipe) begin 
       {pcOs, validOs, rdWeOs, rdOs} <= {pcOf, validOf, rdWeOf, rdOf};
       {lOs, sOs} <= {lOf, sOf};
+
+      branch <= branchOf;
 
       lsuAddrOs <= rs1Data + immOf;
       lsuDataOs <= rs2Data;
