@@ -30,7 +30,7 @@ module risac (
   // read (i.e.) wait till a pending request is completed
   assign oIbusRead = iIbusWait ? 1'b1 : pcChanged;
 
-  always @ (posedge clk or negedge rst_n) begin 
+  always @ (posedge clk or negedge rst_n) begin: IF
     if (!rst_n) begin 
       pc <= 'b0;
       pcChanged <= 'b1;
@@ -66,12 +66,13 @@ module risac (
   reg					illegalDec;
   reg					lDec, sDec, luipcDec, luiDec;
   reg         branchDec;
+  reg         branchType;
 
-  always @ (posedge clk or negedge rst_n) begin 
+  always @ (posedge clk or negedge rst_n) begin: DEC
     if (!rst_n) begin 
       {aluOpDec, rs1Dec, rs2Dec, immDec, validDec, immSelDec, rdShiftDec} <= 'b0;
       {rdWeDec, illegalDec, pcDec, lDec, sDec, rs1ShiftDec, rs2ShiftDec} <= 'b0; 
-      {luipcDec, luiDec, branchDec} <= 'b0;
+      {luipcDec, luiDec, branchDec, branchType} <= 'b0;
     end else if (!stallPipe && !dataHazard) begin 
       // the address of the currently being decoded instruction
       pcDec			<= iIbusIAddr;
@@ -80,6 +81,15 @@ module risac (
       validDec	<= ~iIbusWait;
 
       // decode the instruction regardless of validity
+
+      // branch instructions
+      // only branch opcodes begin with 110
+      branchDec   <= iIbusData[6:4] == 3'b110;
+      // for unconditional branches, the next 2 bits are zero
+      // branchType: zero for unconditional, 1 for conditional
+      // for all branches, pc <= pc + offset
+      // except jalr, pc <= rs1 + offset 
+      branchType  <= iIbusData[3:2] == 2'b00;
 
       // lui and auipc are special
       luipcDec <= iIbusData[4:2] == 3'b101;
@@ -97,15 +107,20 @@ module risac (
       rdDec				<= iIbusData[11:7];
       rdShiftDec 	<= 1 << iIbusData[11:7];
 
-      // always write to rd except when storing or branching
-      // we cater only stores for now 
-      rdWeDec		<= (iIbusData[6:2] != 5'b01000);
+      // always write to rd except when storing or conditional branching
+      // all instructions except stores and conditional branches have 4:2 
+      // not equal to zero
+      rdWeDec		<= (iIbusData[4:2] != 3'b000);
       
       // select imm when instr[6:4] == 001
       // in rv32i, no other instruction has opcode[6:4] == 001 other than those
       // that use imm
       // lui also uses imm
-      immSelDec	<= (iIbusData[6:4] == 3'b001) | (iIbusData[6:2] == 5'b01101);
+      // jalr and jal also use imm
+      immSelDec	<=  (iIbusData[6:4] == 3'b001) | 
+                    (iIbusData[6:2] == 5'b01101) | 
+                    (iIbusData[6:2] == 5'b11011) |
+                    (iIbusData[6:2] == 5'b11001);
 
       // for the imm, use the opcode
       case (iIbusData[6:2]) // the last 2 bits are always 1 anyway
@@ -214,7 +229,7 @@ module risac (
   // combinational part 
   reg rs1booked;
   reg rs2booked;
-  always @ (*) begin 
+  always @ (*) begin: HAZARD_DETECTION
     // check if rs1 and rs2 are 'booked'
     rs1booked = |(rs1ShiftDec & rat[0]) && ~luipcDec;
     rs2booked = |(rs2ShiftDec & rat[1]) && ~immSelDec;
@@ -239,7 +254,7 @@ module risac (
   reg 				lOf, sOf, luipcOf;
   reg         branchOf;
 
-  always @ (posedge clk or negedge rst_n) begin 
+  always @ (posedge clk or negedge rst_n) begin: OF
     if (!rst_n) begin 
       {rs1Data, rs2Data, validOf, rdWeOf, immOf} <= 'b0;
       {pcOf, immSelOf, aluOpOf, rdOf, lOf, sOf, luipcOf, branchOf} <= 'b0;
@@ -247,10 +262,10 @@ module risac (
 
     end else if (!stallPipe) begin 
       // propogation
-      {rdWeOf, immOf} <= {rdWeDec, immDec};
+      {rdWeOf} <= {rdWeDec};
       {immSelOf, rdOf} <= {immSelDec, rdDec};
       {lOf, sOf, luipcOf} <= {lDec, sDec, luipcDec};
-      branchOf <= branchDec;
+      branchOf <= branchDec & ~branchType;
 
       if (falseAlarm) begin 
         validOf <= validDec;
@@ -260,8 +275,9 @@ module risac (
 
       rs1Data <= rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec];
       rs2Data	<= rs2Dec == 5'b0 ? 32'b0 : registers [rs2Dec];
-      aluOpOf <= luipcDec ? 4'b0 : aluOpDec;
+      aluOpOf <= luipcDec | (branchDec & ~branchType) ? 4'b0 : aluOpDec;
       pcOf    <= luiDec ? 32'b0 : pcDec;
+      immOf   <= (branchDec & ~branchType) ? 32'd4 : immDec;
     end
   end
 
@@ -281,7 +297,7 @@ module risac (
   reg 				lOs, sOs;
   reg [31:0]	lsuAddrOs, lsuDataOs;
 
-  always @ (posedge clk or negedge rst_n) begin 
+  always @ (posedge clk or negedge rst_n) begin: OS
     if (!rst_n) begin 
       {pcOs, aluOpOs, validOs, rdWeOs, rdOs} <= 'b0;
       {aluIn1, aluIn2, lOs, sOs, lsuAddrOs, lsuDataOs} <= 'b0;
@@ -300,7 +316,7 @@ module risac (
 
       // when lui comes, the imm is the value 
       // so zero aluIn1 and set operation to add
-      aluIn1	<= luipcOf ? pcOf : rs1Data;
+      aluIn1	<= (luipcOf | branchOf) ? pcOf : rs1Data;
 
       // aluIn2 is between imm and rs2Data
       aluIn2	<= immSelOf ? immOf : rs2Data;
@@ -326,7 +342,7 @@ module risac (
   reg [31:0]	pcEx;
   reg [4:0]		rdEx;
 
-  always @ (posedge clk or negedge rst_n) begin 
+  always @ (posedge clk or negedge rst_n) begin: EX
     if (!rst_n) begin 
       {pcEx, validEx, rdWeEx, rdEx, rdShiftEx} <= 'b0;
     end else if (!stallPipe) begin
@@ -340,7 +356,7 @@ module risac (
   // the alu causes no stalls
   reg [31:0]	aluRes;
 
-  always @ (posedge clk or negedge rst_n) begin 
+  always @ (posedge clk or negedge rst_n) begin: EX_ALU
     if (!rst_n) begin 
       aluRes <= 'b0;
     end else begin 
@@ -377,7 +393,7 @@ module risac (
   // wait only asserted when reading, writing does not assert wait
   // from m4k, reads have min latency of 1
 
-  always @ (*) begin 
+  always @ (*) begin: EX_LSU_BYTEENABLE_GENERATOR
     lsuStall = iDbusWait & (lOs | sOs) & validOs;
   
     case (aluOpOs[1:0]) 
@@ -388,7 +404,7 @@ module risac (
     endcase
   end
 
-  always @ (posedge clk or negedge rst_n) begin 
+  always @ (posedge clk or negedge rst_n) begin: EX_LSU
     if (!rst_n) begin 
       lsuRes 	<= 'b0;
       lEx 		<= 'b0;
@@ -414,7 +430,7 @@ module risac (
   // IF doesn't stall, it keeps sending invalid instructions
   // which don't affect anything
 
-  always @ (*) begin 
+  always @ (*) begin: EX_LSU_STALL_GENERATOR
     stallPipe = lsuStall;
   end	
 
@@ -423,11 +439,11 @@ module risac (
 
   // mux the result from various stages
   // for now, if load instruction, then select lsuRes
-  always @ (*) begin 
+  always @ (*) begin: WB_MUX
     exRes	= lEx ? lsuRes : aluRes;
   end
 
-  always @ (posedge clk) begin 
+  always @ (posedge clk) begin: WB_REGISTER_FILE
     // do not reset the register file
     // write back if valid only
     if (validEx && rdWeEx) begin 
