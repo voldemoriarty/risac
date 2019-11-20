@@ -258,13 +258,13 @@ module risac (
   reg [4:0]		rdOf;
   reg 				lOf, sOf, luipcOf;
   reg         branchOf, compareOf;
-  reg [31:0]	bTargetOf;
+  reg [31:0]	bTargetOf, branchOffset;
 
   always @ (posedge clk or negedge rst_n) begin: OF
     if (!rst_n) begin 
       {rs1Data, rs2Data, validOf, rdWeOf, immOf} <= 'b0;
       {pcOf, immSelOf, aluOpOf, rdOf, lOf, sOf, luipcOf, branchOf} <= 'b0;
-      {compareOf, bTargetOf} <= 'b0;
+      {compareOf, bTargetOf, branchOffset} <= 'b0;
       // !do not reset the registers!!
 
     end else if (!stallPipe) begin 
@@ -282,6 +282,7 @@ module risac (
       compareOf<= branchDec & branchType;
       
       bTargetOf<= jalr ? (rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec]) : pcDec;
+      branchOffset <= immDec;
 
       if (falseAlarm) begin 
         validOf <= validDec;
@@ -340,7 +341,7 @@ module risac (
     if (!rst_n) begin 
       invalidRegister <= 'b0;
     end else if (!stallPipe) begin 
-      invalidRegister[0] <= (compareResult & compareOf & validOf);
+      invalidRegister[0] <= (compareResult & compareOf | branchOf) & validOf;
       invalidRegister[1] <= invalidRegister[0];
       invalidRegister[2] <= invalidRegister[1];
     end
@@ -360,7 +361,7 @@ module risac (
       // and if it was conditional then branch if the condition met
 
       branch <= branchOf | (compareResult & compareOf);
-			branchTarget <= bTargetOf + immOf;
+			branchTarget <= bTargetOf + branchOffset;
 			validOs <= (|invalidRegister) ? 1'b0 : validOf;
 
       lsuAddrOs <= rs1Data + immOf;
