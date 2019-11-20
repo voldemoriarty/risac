@@ -67,12 +67,13 @@ module risac (
   reg					lDec, sDec, luipcDec, luiDec;
   reg         branchDec;
   reg         branchType;
+  reg					jalr;
 
   always @ (posedge clk or negedge rst_n) begin: DEC
     if (!rst_n) begin 
       {aluOpDec, rs1Dec, rs2Dec, immDec, validDec, immSelDec, rdShiftDec} <= 'b0;
       {rdWeDec, illegalDec, pcDec, lDec, sDec, rs1ShiftDec, rs2ShiftDec} <= 'b0; 
-      {luipcDec, luiDec, branchDec, branchType} <= 'b0;
+      {luipcDec, luiDec, branchDec, branchType, jalr} <= 'b0;
     end else if (!stallPipe && !dataHazard) begin 
       // the address of the currently being decoded instruction
       pcDec			<= iIbusIAddr;
@@ -85,11 +86,12 @@ module risac (
       // branch instructions
       // only branch opcodes begin with 110
       branchDec   <= iIbusData[6:4] == 3'b110;
-      // for unconditional branches, the next 2 bits are zero
+      // for conditional branches, the next 2 bits are zero
       // branchType: zero for unconditional, 1 for conditional
       // for all branches, pc <= pc + offset
       // except jalr, pc <= rs1 + offset 
       branchType  <= iIbusData[3:2] == 2'b00;
+      jalr <= iIbusData[3:2] == 2'b01;
 
       // lui and auipc are special
       luipcDec <= iIbusData[4:2] == 3'b101;
@@ -229,13 +231,16 @@ module risac (
   // combinational part 
   reg rs1booked;
   reg rs2booked;
-  always @ (*) begin: HAZARD_DETECTION
+  always @ (*) begin: DATA_HAZARD_DETECTION
     // check if rs1 and rs2 are 'booked'
+    // TODO: maybe take a look at this again
+    // rs1 is booked if rat[0] is set and the instruction is not
+    // lui, auipc
     rs1booked = |(rs1ShiftDec & rat[0]) && ~luipcDec;
+    // rs2 is booked if rat[1] is set and the instruction is not 
+    // one that uses imm
     rs2booked = |(rs2ShiftDec & rat[1]) && ~immSelDec;
 
-    // rs1booked = rat[0][rs1Dec] && ~luipcDec && !(rdWeEx && rdShiftEx[rs1Dec] && validEx);
-    // rs2booked = rat[1][rs2Dec] && ~immSelDec && !(rdWeEx && rdShiftEx[rs2Dec] && validEx);
     
     // data hazard occurs when rs1 or rs2 is booked and nothing is being written
     // to the regfile 
@@ -252,12 +257,14 @@ module risac (
   reg [3:0]		aluOpOf;
   reg [4:0]		rdOf;
   reg 				lOf, sOf, luipcOf;
-  reg         branchOf;
+  reg         branchOf, compareOf;
+  reg [31:0]	bTargetOf;
 
   always @ (posedge clk or negedge rst_n) begin: OF
     if (!rst_n) begin 
       {rs1Data, rs2Data, validOf, rdWeOf, immOf} <= 'b0;
       {pcOf, immSelOf, aluOpOf, rdOf, lOf, sOf, luipcOf, branchOf} <= 'b0;
+      {compareOf, bTargetOf} <= 'b0;
       // !do not reset the registers!!
 
     end else if (!stallPipe) begin 
@@ -265,7 +272,16 @@ module risac (
       {rdWeOf} <= {rdWeDec};
       {immSelOf, rdOf} <= {immSelDec, rdDec};
       {lOf, sOf, luipcOf} <= {lDec, sDec, luipcDec};
+
+      // branch handles
+      // branchOf signal is high when the branch is unconditional
+      // e.g. jal, jalr
       branchOf <= branchDec & ~branchType;
+      // compareOf is high when the branch is a conditional branch
+      // e.g. bne, ...
+      compareOf<= branchDec & branchType;
+      
+      bTargetOf<= jalr ? (rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec]) : pcDec;
 
       if (falseAlarm) begin 
         validOf <= validDec;
@@ -296,20 +312,56 @@ module risac (
   reg [4:0]		rdOs;
   reg 				lOs, sOs;
   reg [31:0]	lsuAddrOs, lsuDataOs;
-
+  
+  // the branch compare signals
+	reg					compareResult;
+	
+	
+	// the branch comparators
+	always @ (*) begin: BRANCH_COMPARATOR
+    case (aluOpOf[2:0])
+    3'b000: 	compareResult = rs1Data == rs2Data;
+    3'b001: 	compareResult = rs1Data != rs2Data;
+    3'b100: 	compareResult = $signed(rs1Data) <  $signed(rs2Data);
+    3'b101: 	compareResult = $signed(rs1Data) >= $signed(rs2Data);
+    3'b110: 	compareResult = rs1Data <  rs2Data;
+    3'b111: 	compareResult = rs1Data >= rs2Data;
+    default: compareResult = 1'b0;
+    endcase
+  end
+	
+	// the branch hazard handling technique
+	// invalidate 3 instructions if the branch
+	// is taken
+	
+	reg [2:0] invalidRegister;
+	
+	always @ (posedge clk or negedge rst_n) begin: BRANCH_HANDLER
+    if (!rst_n) begin 
+      invalidRegister <= 'b0;
+    end else if (!stallPipe) begin 
+      invalidRegister[0] <= (compareResult & compareOf & validOf);
+      invalidRegister[1] <= invalidRegister[0];
+      invalidRegister[2] <= invalidRegister[1];
+    end
+  end
+	
   always @ (posedge clk or negedge rst_n) begin: OS
     if (!rst_n) begin 
       {pcOs, aluOpOs, validOs, rdWeOs, rdOs} <= 'b0;
       {aluIn1, aluIn2, lOs, sOs, lsuAddrOs, lsuDataOs} <= 'b0;
       {branch, branchTarget} <= 'b0;
     end else if (!stallPipe) begin 
-      {pcOs, validOs, rdWeOs, rdOs} <= {pcOf, validOf, rdWeOf, rdOf};
+      {pcOs, rdWeOs, rdOs} <= {pcOf, rdWeOf, rdOf};
       {lOs, sOs} <= {lOf, sOf};
 
       // the branch unit
-      // 
+      // branch only if instruction was unconditional branch
+      // and if it was conditional then branch if the condition met
 
-      branch <= branchOf;
+      branch <= branchOf | (compareResult & compareOf);
+			branchTarget <= bTargetOf + immOf;
+			validOs <= (|invalidRegister) ? 1'b0 : validOf;
 
       lsuAddrOs <= rs1Data + immOf;
       lsuDataOs <= rs2Data;
