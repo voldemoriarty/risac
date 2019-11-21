@@ -207,14 +207,14 @@ module risac (
       // also set false alarm to zero if it is one
       if (falseAlarm) begin 
         falseAlarm <= 1'b0;
-      end else if (rdWeDec && validDec && rdWeEx) begin 
+      end else if (rdWeDec && validDec && rdWeEx && validEx) begin 
         falseAlarm <= rdEx == rdDec;
       end
 
       for (idx = 1; idx < 32; idx = idx + 1) begin
         // if the register to be updated [(rdDecWe == 1) and (rdShiftDec[idx] == 1)]
         // then set the rat to 1 
-        if (rdWeDec && rdShiftDec[idx] && validDec) begin 
+        if (rdWeDec && rdShiftDec[idx] && validDec && !dataHazard) begin 
           rat[0][idx] <= 1'b1;
           rat[1][idx] <= 1'b1;
         end

@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Wed Nov 20 12:06:07 2019
+[*] Thu Nov 21 05:34:27 2019
 [*]
 [dumpfile] "/home/saad/trashcan/risac/testbench/risac.vcd"
-[dumpfile_mtime] "Wed Nov 20 11:19:01 2019"
-[dumpfile_size] 51539
+[dumpfile_mtime] "Wed Nov 20 16:03:49 2019"
+[dumpfile_size] 89799
 [savefile] "/home/saad/trashcan/risac/testbench/risac.gtkw"
-[timestart] 0
+[timestart] 662300
 [size] 1366 715
 [pos] -1 -1
-*-16.000000 149400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-16.000000 732000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [sst_width] 309
 [signals_width] 289
@@ -28,6 +28,8 @@ testbench.u_risac.branchDec
 testbench.u_risac.branchOf
 @22
 testbench.u_risac.branchTarget[31:0]
+@28
+testbench.u_risac.invalidRegister[2:0]
 @200
 -Hazard
 @28
@@ -40,8 +42,17 @@ testbench.u_risac.falseAlarm
 @28
 testbench.u_risac.validEx
 testbench.u_risac.rdWeEx
-@22
+@c00024
 testbench.u_risac.rdEx[4:0]
+@28
+(0)testbench.u_risac.rdEx[4:0]
+(1)testbench.u_risac.rdEx[4:0]
+(2)testbench.u_risac.rdEx[4:0]
+(3)testbench.u_risac.rdEx[4:0]
+(4)testbench.u_risac.rdEx[4:0]
+@1401204
+-group_end
+@22
 testbench.u_risac.exRes[31:0]
 @200
 -Decode
@@ -52,22 +63,23 @@ testbench.u_risac.immDec[31:0]
 testbench.u_risac.immSelDec
 testbench.u_risac.lDec
 testbench.u_risac.sDec
-@22
+@24
 testbench.u_risac.rdDec[4:0]
 @28
 testbench.u_risac.rdWeDec
-@22
+@24
 testbench.u_risac.rs1Dec[4:0]
+@25
 testbench.u_risac.rs2Dec[4:0]
 @28
 testbench.u_risac.validDec
 testbench.u_risac.branchDec
 testbench.u_risac.branchType
-@29
 testbench.u_risac.jalr
 @200
 -OF
 @22
+testbench.u_risac.bTargetOf[31:0]
 testbench.u_risac.rs1Data[31:0]
 testbench.u_risac.rs2Data[31:0]
 testbench.u_risac.aluOpOf[3:0]
