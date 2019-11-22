@@ -26,6 +26,7 @@ SZ = $(TOOLCHAIN)size
 .PHONY: clean
 .PHONY: elf
 .PHONY: asm
+.PHONY: sim
 
 %.o: %.c
 	$(CC) $(CFLAGS) $<
@@ -42,6 +43,9 @@ $(TGT).bin: $(TGT).elf
 $(TGT).hex: $(TGT).elf
 	$(OC) -O ihex $< $@
 
+$(TGT).vh: $(TGT).elf 
+	$(OC) -O verilog $< $@
+
 size: $(TGT).elf
 	$(SZ) $<
 
@@ -49,7 +53,11 @@ elf: $(TGT).elf
 
 asm: $(ASMS)
 
-all: $(TGT).elf $(TGT).bin $(TGT).hex
+sim: $(TGT).vh
+	cp $< ../testbench/
+
+all: $(TGT).elf $(TGT).bin $(TGT).hex $(TGT).vh
+
 
 clean:
 	rm *.hex *.bin *.elf *.o *.s
