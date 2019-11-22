@@ -56,9 +56,9 @@ module testbench();
   integer i;
   initial begin 
     // prepare a vcd dump
-    $dumpfile("risac.vcd");
+    $dumpfile("risac2.vcd");
     $dumpvars(0, testbench);
-    $readmemh("memb.vh", mem);
+    $readmemh("program.vh", mem);
 
     $display ("\n======================");
     $display ("RISCV Virtual Terminal");
@@ -85,7 +85,7 @@ module testbench();
 
   always @ (oIbusAddr) begin 
     iIbusWait <= 1'b0;
-    iIbusData <= {mem [oIbusAddr], mem [oIbusAddr+1], mem [oIbusAddr+2], mem [oIbusAddr+3]};
+    iIbusData <= {mem [oIbusAddr+3], mem [oIbusAddr+2], mem [oIbusAddr+1], mem [oIbusAddr]};
     iIbusIAddr<= oIbusAddr;
   end
 

@@ -1,0 +1,91 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Fri Nov 22 19:13:09 2019
+[*]
+[dumpfile] "/home/saad/trashcan/risac/testbench/risac2.vcd"
+[dumpfile_mtime] "Fri Nov 22 18:55:58 2019"
+[dumpfile_size] 17910
+[savefile] "/home/saad/trashcan/risac/testbench/risac2.gtkw"
+[timestart] 0
+[size] 1366 715
+[pos] -33 -33
+*-16.000000 174900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[sst_width] 206
+[signals_width] 225
+[sst_expanded] 1
+[sst_vpaned_height] 182
+@28
+testbench.u_risac.clk
+testbench.u_risac.rst_n
+@200
+-IBus
+@22
+testbench.u_risac.iIbusData[31:0]
+testbench.u_risac.iIbusIAddr[31:0]
+@28
+testbench.u_risac.iIbusWait
+@22
+testbench.u_risac.oIbusAddr[31:0]
+@28
+testbench.u_risac.oIbusRead
+@200
+-DBus
+@22
+testbench.u_risac.iDbusData[31:0]
+@28
+testbench.u_risac.iDbusWait
+@22
+testbench.u_risac.oDbusAddr[31:0]
+testbench.u_risac.oDbusByteEn[3:0]
+testbench.u_risac.oDbusData[31:0]
+@28
+testbench.u_risac.oDbusRead
+testbench.u_risac.oDbusWe
+@200
+-Hazard
+@28
+testbench.u_risac.rs1booked
+testbench.u_risac.rs2booked
+testbench.u_risac.dataHazard
+testbench.u_risac.falseAlarm
+@200
+-Branch
+@22
+testbench.u_risac.branchTarget[31:0]
+@28
+testbench.u_risac.branchOf
+@29
+testbench.u_risac.compareOf
+@28
+testbench.u_risac.compareResult
+@200
+-Decode
+@22
+testbench.u_risac.aluOpDec[3:0]
+@28
+testbench.u_risac.branchDec
+testbench.u_risac.illegalDec
+@22
+testbench.u_risac.immDec[31:0]
+@28
+testbench.u_risac.immSelDec
+testbench.u_risac.lDec
+testbench.u_risac.sDec
+testbench.u_risac.luiDec
+testbench.u_risac.luipcDec
+@22
+testbench.u_risac.pcDec[31:0]
+testbench.u_risac.rdDec[4:0]
+testbench.u_risac.rdShiftDec[31:0]
+@28
+testbench.u_risac.rdWeDec
+@22
+testbench.u_risac.rs1Dec[4:0]
+testbench.u_risac.rs1ShiftDec[31:0]
+testbench.u_risac.rs2Dec[4:0]
+testbench.u_risac.rs2ShiftDec[31:0]
+@28
+testbench.u_risac.validDec
+[pattern_trace] 1
+[pattern_trace] 0
