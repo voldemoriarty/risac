@@ -138,9 +138,9 @@ module risac (
       5'b01000: immDec <= { {21{iIbusData[31]}}, iIbusData[30:25], iIbusData[11:7] };
 
       // lui
-      // auipc
       5'b01101: immDec <= { iIbusData[31:12], 12'b0 };
-
+      // auipc
+      5'b00101: immDec <= { iIbusData[31:12], 12'b0 };
       // jal
       5'b11011: immDec <= { {12{iIbusData[31]}}, iIbusData[19:12], iIbusData[20], iIbusData[30:25], iIbusData[24:21], 1'b0 };
 
