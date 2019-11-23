@@ -16,6 +16,8 @@ module testbench();
   reg		[31:0]	iDbusData;
   reg						iDbusWait;
 
+  wire  [31:0]  rat0, rat1;
+
   risac u_risac (
     .clk          (clk),
     .rst_n        (rst_n),
@@ -38,6 +40,8 @@ module testbench();
     .iDbusWait    (iDbusWait)
   );
 
+  assign rat0 = u_risac.rat[0];
+  assign rat1 = u_risac.rat[1];
 
   reg [7:0] mem [0:4095]; // 4K ram
   reg [31:0] cnt = 0;

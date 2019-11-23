@@ -34,7 +34,7 @@ module risac (
     if (!rst_n) begin 
       pc <= 'b0;
       pcChanged <= 'b1;
-    end	else if (!stallPipe && !dataHazard) begin 
+    end	else if (!stallPipe && !dataHazard | branch) begin 
       // new data arrives when wait is 0
       // so update pc when wait is 0
       pc <= iIbusWait ? pc : (branch ? branchTarget : pc + 3'd4);
@@ -174,8 +174,10 @@ module risac (
   reg [31:0]  rat [0:1];
   reg 				stallDataHazard;
   reg         falseAlarm;
+  reg [1:0]   sourceEqual;
 
   reg 				validEx, rdWeEx;
+	reg [2:0]   invalidRegister;
 
   integer idx;
 
@@ -184,6 +186,7 @@ module risac (
       rat[0] <= 'b0;
       rat[1] <= 'b0;
       falseAlarm <= 'b0;
+      sourceEqual <= 'b0;
     end else if (!stallPipe) begin
       // update rat
       // set rd'th bit to 1 in rat[0..1]
@@ -206,15 +209,35 @@ module risac (
       // raise false alarm when rdDec == rdEx and all the valid conditions
       // also set false alarm to zero if it is one
       if (falseAlarm) begin 
-        falseAlarm <= 1'b0;
+        falseAlarm <= 'b0;
+        sourceEqual<= 'b0;
       end else if (rdWeDec && validDec && rdWeEx && validEx) begin 
         falseAlarm <= rdEx == rdDec;
+        sourceEqual<= {(rs1Dec == rdEx), (rs2Dec == rdDec)};
       end
 
       for (idx = 1; idx < 32; idx = idx + 1) begin
+        // there is also a false alarm when after a branch instruction is decoded,
+        // another instruction sets the rat which is invalidated after the branch is taken
+        // but the rat remains there and is not fixed
+
+        // the code below fixes this by zeroing the rat set by the instructions currently in
+        // of and dec
+        if (branch) begin 
+          if (rdOf == idx && validOf && rdWeOf) begin 
+            // the possible instructions that set the rat are now in of
+            // the instruction in dec can set the rat
+            rat[0][idx] <= 1'b0;
+            rat[1][idx] <= 1'b0;
+          end 
+          else if (rdDec == idx && validDec && rdWeDec) begin 
+            rat[0][idx] <= 1'b0;
+            rat[1][idx] <= 1'b0;
+          end
+        end 
         // if the register to be updated [(rdDecWe == 1) and (rdShiftDec[idx] == 1)]
         // then set the rat to 1 
-        if (rdWeDec && rdShiftDec[idx] && validDec && !dataHazard) begin 
+        else if (rdWeDec && rdShiftDec[idx] && validDec && !dataHazard && !(|invalidRegister[1:0])) begin 
           rat[0][idx] <= 1'b1;
           rat[1][idx] <= 1'b1;
         end
@@ -223,7 +246,7 @@ module risac (
         else if (rdWeEx && rdShiftEx[idx] && validEx) begin 
           rat[0][idx] <= 1'b0;
           rat[1][idx] <= 1'b0;
-        end				
+        end			
       end
     end
   end
@@ -246,7 +269,7 @@ module risac (
     // to the regfile 
     // if there is data being written to the reg file then no need to stall, let it
     // pass
-    dataHazard = falseAlarm ? 1'b0 : (rs1booked) | (rs2booked);
+    dataHazard = falseAlarm ? (rs1booked & sourceEqual[1]) | (rs2booked & sourceEqual[2]) : ((rs1booked) | (rs2booked));
   end
   
   // when the data hazard occurs, set valid to zero and stall previous stages
@@ -335,13 +358,12 @@ module risac (
 	// invalidate 3 instructions if the branch
 	// is taken
 	
-	reg [2:0] invalidRegister;
 	
 	always @ (posedge clk or negedge rst_n) begin: BRANCH_HANDLER
     if (!rst_n) begin 
       invalidRegister <= 'b0;
     end else if (!stallPipe) begin 
-      invalidRegister[0] <= (compareResult & compareOf | branchOf) & validOf;
+      invalidRegister[0] <= ((compareResult & compareOf) | branchOf) & validOf;
       invalidRegister[1] <= invalidRegister[0];
       invalidRegister[2] <= invalidRegister[1];
     end
@@ -360,7 +382,7 @@ module risac (
       // branch only if instruction was unconditional branch
       // and if it was conditional then branch if the condition met
 
-      branch <= branchOf | (compareResult & compareOf);
+      branch <= (branchOf | (compareResult & compareOf)) & validOf;
 			branchTarget <= bTargetOf + branchOffset;
 			validOs <= (|invalidRegister) ? 1'b0 : validOf;
 

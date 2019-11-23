@@ -1,20 +1,20 @@
 [*]
-[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Fri Nov 22 19:13:09 2019
+[*] GTKWave Analyzer v3.3.101 (w)1999-2019 BSI
+[*] Sat Nov 23 08:28:34 2019
 [*]
 [dumpfile] "/home/saad/trashcan/risac/testbench/risac2.vcd"
-[dumpfile_mtime] "Fri Nov 22 18:55:58 2019"
-[dumpfile_size] 17910
+[dumpfile_mtime] "Sat Nov 23 08:24:54 2019"
+[dumpfile_size] 17496
 [savefile] "/home/saad/trashcan/risac/testbench/risac2.gtkw"
 [timestart] 0
-[size] 1366 715
-[pos] -33 -33
-*-16.000000 174900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1878 1022
+[pos] -1 -1
+*-16.750656 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
-[sst_width] 206
-[signals_width] 225
+[sst_width] 210
+[signals_width] 274
 [sst_expanded] 1
-[sst_vpaned_height] 182
+[sst_vpaned_height] 290
 @28
 testbench.u_risac.clk
 testbench.u_risac.rst_n
@@ -49,16 +49,29 @@ testbench.u_risac.rs1booked
 testbench.u_risac.rs2booked
 testbench.u_risac.dataHazard
 testbench.u_risac.falseAlarm
+testbench.u_risac.validOf
+testbench.u_risac.validDec
+@22
+testbench.u_risac.rdDec[4:0]
+@29
+testbench.u_risac.rdWeDec
 @200
 -Branch
 @22
 testbench.u_risac.branchTarget[31:0]
 @28
-testbench.u_risac.branchOf
-@29
+testbench.u_risac.branch
 testbench.u_risac.compareOf
-@28
 testbench.u_risac.compareResult
+@200
+-WB
+@24
+testbench.u_risac.exRes[31:0]
+@22
+testbench.u_risac.rdEx[4:0]
+@28
+testbench.u_risac.rdWeEx
+testbench.u_risac.validEx
 @200
 -Decode
 @22
@@ -70,8 +83,6 @@ testbench.u_risac.illegalDec
 testbench.u_risac.immDec[31:0]
 @28
 testbench.u_risac.immSelDec
-testbench.u_risac.lDec
-testbench.u_risac.sDec
 testbench.u_risac.luiDec
 testbench.u_risac.luipcDec
 @22
@@ -87,5 +98,30 @@ testbench.u_risac.rs2Dec[4:0]
 testbench.u_risac.rs2ShiftDec[31:0]
 @28
 testbench.u_risac.validDec
+@200
+-OF
+@28
+testbench.u_risac.validOf
+testbench.u_risac.branchOf
+@22
+testbench.u_risac.aluOpOf[3:0]
+testbench.u_risac.bTargetOf[31:0]
+@28
+testbench.u_risac.compareOf
+@22
+testbench.u_risac.immOf[31:0]
+@28
+testbench.u_risac.immSelOf
+testbench.u_risac.lOf
+testbench.u_risac.luipcOf
+@22
+testbench.u_risac.pcOf[31:0]
+testbench.u_risac.rdOf[4:0]
+@28
+testbench.u_risac.rdWeOf
+testbench.u_risac.sOf
+testbench.u_risac.compareOf
+testbench.u_risac.lOf
+testbench.u_risac.sOf
 [pattern_trace] 1
 [pattern_trace] 0
