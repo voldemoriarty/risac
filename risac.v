@@ -269,7 +269,7 @@ module risac (
     // to the regfile 
     // if there is data being written to the reg file then no need to stall, let it
     // pass
-    dataHazard = falseAlarm ? (rs1booked & sourceEqual[1]) | (rs2booked & sourceEqual[2]) : ((rs1booked) | (rs2booked));
+    dataHazard = falseAlarm ? (rs1booked & sourceEqual[1]) | (rs2booked & sourceEqual[0]) : ((rs1booked) | (rs2booked));
   end
   
   // when the data hazard occurs, set valid to zero and stall previous stages
