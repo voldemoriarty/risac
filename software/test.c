@@ -18,10 +18,10 @@ inline void _puts (volatile char* uart, const char* msg, const int len) {
 
 // the (fake) entry point
 int main () {
-	volatile int *leds = (int*) (0x80000);
+	volatile int *leds = (int*) (0x100000);
 	
 	// altera jtag uart
-	volatile int *uart = (int*) (0x10000);
+	volatile int *uart = (int*) (0x200000);
 
 	int count = 0;
 
