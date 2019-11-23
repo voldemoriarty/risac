@@ -42,6 +42,7 @@ $(TGT).bin: $(TGT).elf
 
 $(TGT).hex: $(TGT).elf
 	$(OC) -O ihex $< $@
+	cp $@ -v ../de10nano/hex/
 
 $(TGT).vh: $(TGT).elf 
 	$(OC) -O verilog $< $@
