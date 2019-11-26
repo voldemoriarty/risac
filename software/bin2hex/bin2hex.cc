@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
 	fout << "-- This file was generated using bin2hex utility\n"
 					"-- bin file: "
 			 << argv[1] << 
-			 		"WIDTH=32;\n"
+			 		"\nWIDTH=32;\n"
 					"DEPTH=1024;\n"
 					"ADDRESS_RADIX=HEX;\n"
 					"DATA_RADIX=HEX;\n"
