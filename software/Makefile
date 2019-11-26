@@ -21,6 +21,7 @@ TOOLCHAIN = riscv32-unknown-elf-
 CC = $(TOOLCHAIN)gcc
 OC = $(TOOLCHAIN)objcopy
 SZ = $(TOOLCHAIN)size
+BM = ./bin2hex/bin2hex
 
 .PHONY: all
 .PHONY: clean
@@ -40,8 +41,8 @@ $(TGT).elf: $(OBJS)
 $(TGT).bin: $(TGT).elf 
 	$(OC) -O binary $< $@
 
-$(TGT).hex: $(TGT).elf
-	$(OC) -O ihex $< $@
+$(TGT).mif: $(TGT).bin
+	$(BM) $< $@
 	cp $@ -v ../de10nano/hex/
 
 $(TGT).vh: $(TGT).elf 
@@ -57,8 +58,8 @@ asm: $(ASMS)
 sim: $(TGT).vh
 	cp $< ../testbench/
 
-all: $(TGT).elf $(TGT).bin $(TGT).hex $(TGT).vh
+all: $(TGT).elf $(TGT).bin $(TGT).mif $(TGT).vh
 
 
 clean:
-	rm *.hex *.bin *.elf *.o *.s
+	rm *.mif *.bin *.elf *.o *.s

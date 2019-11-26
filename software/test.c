@@ -11,27 +11,20 @@ inline void delay () {
 }
 
 inline void _puts (volatile char* uart, const char* msg, const int len) {
+	volatile unsigned int *status = (volatile unsigned int *)uart;
 	for (int i = 0; i < len; ++i) {
+		while (status[1] >> 16 == 0);
 		*uart = msg[i];
 	}
 }
 
 // the (fake) entry point
 int main () {
-	volatile int *leds = (int*) (0x100000);
-	
-	// altera jtag uart
-	volatile int *uart = (int*) (0x200000);
-
-	int count = 0;
-
-	_puts((volatile char*)uart, "Hello, World!\n", 15);
-
+	volatile char *leds = (volatile char *)0x2000000;
 	while (1) {
-		delay();
-		delay();
-		*leds = count++;
-	}
+        volatile char *uart = (volatile char *)0x1000000;
+        _puts(uart, "Hello, World!\r\n", 16);
+    }
 }
 
 void _start () {
