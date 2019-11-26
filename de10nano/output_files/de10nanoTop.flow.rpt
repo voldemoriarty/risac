@@ -1,5 +1,5 @@
 Flow report for de10nanoTop
-Tue Nov 26 12:29:17 2019
+Tue Nov 26 12:52:03 2019
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Standard Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 26 12:29:17 2019           ;
+; Flow Status                     ; Successful - Tue Nov 26 12:52:03 2019           ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Standard Edition ;
 ; Revision Name                   ; de10nanoTop                                     ;
 ; Top-level Entity Name           ; de10nanoTop                                     ;
@@ -153,7 +153,13 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; 00:00:07     ; 1.0                     ; 1026 MB             ; 00:00:08                           ;
 ; Timing Analyzer      ; 00:00:17     ; 3.1                     ; 1462 MB             ; 00:00:47                           ;
 ; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 1278 MB             ; 00:00:04                           ;
-; Total                ; 00:01:46     ; --                      ; --                  ; 00:02:47                           ;
+; MIF/HEX Update       ; 00:00:06     ; 1.0                     ; 1294 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 1027 MB             ; 00:00:08                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 1281 MB             ; 00:00:04                           ;
+; MIF/HEX Update       ; 00:00:06     ; 1.0                     ; 1295 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 1027 MB             ; 00:00:08                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 1286 MB             ; 00:00:04                           ;
+; Total                ; 00:02:22     ; --                      ; --                  ; 00:03:23                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -168,6 +174,12 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
 ; Timing Analyzer      ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
 ; EDA Netlist Writer   ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
+; MIF/HEX Update       ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
+; Assembler            ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
+; EDA Netlist Writer   ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
+; MIF/HEX Update       ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
+; Assembler            ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
+; EDA Netlist Writer   ; saad-lab-desktop ; Ubuntu 19.10 ; 19         ; x86_64         ;
 +----------------------+------------------+--------------+------------+----------------+
 
 
@@ -179,6 +191,12 @@ quartus_cdb --read_settings_files=on --write_settings_files=off de10nanoTop -c d
 quartus_fit --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop --recompile=on
 quartus_asm --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
 quartus_sta de10nanoTop -c de10nanoTop
+quartus_eda --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
+quartus_cdb de10nanoTop -c de10nanoTop --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off de10nanoTop -c de10nanoTop
+quartus_eda --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
+quartus_cdb de10nanoTop -c de10nanoTop --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off de10nanoTop -c de10nanoTop
 quartus_eda --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
 
 
