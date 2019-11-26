@@ -13,7 +13,7 @@ inline void delay () {
 void _puts (volatile char* uart, const char* msg, const int len) {
 	volatile unsigned int *status = (volatile unsigned int *)uart;
 	for (int i = 0; i < len; ++i) {
-		while (status[1] >> 16 == 0);
+		// while (status[1] >> 16 == 0);
 		*uart = msg[i];
 	}
 }
@@ -22,10 +22,11 @@ void _puts (volatile char* uart, const char* msg, const int len) {
 int main () {
 	volatile char *leds = (volatile char *)0x2000000;
 	*leds = 0x55;
-	while (1) {
+	// while (1) {
 		volatile char *uart = (volatile char *)0x1000000;
 		_puts(uart, "Hello, World!\r\n", 16);
-  }
+  // }
+	while (1);
 }
 
 void _start () {
