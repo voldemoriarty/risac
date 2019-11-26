@@ -73,7 +73,7 @@ module testbench();
 
 
 
-    #5000 
+    #10000 
     // dump memory to output 
     $display ("======================\n"); 
     
@@ -86,11 +86,15 @@ module testbench();
   // ==========================
   // the instruction bus
   // ==========================
-
+  reg [31:0] instr;
   always @ (oIbusAddr) begin 
-    iIbusWait <= 1'b0;
-    iIbusData <= {mem [oIbusAddr+3], mem [oIbusAddr+2], mem [oIbusAddr+1], mem [oIbusAddr]};
-    iIbusIAddr<= oIbusAddr;
+    iIbusWait = 1'b0;
+    instr = {mem [oIbusAddr+3], mem [oIbusAddr+2], mem [oIbusAddr+1], mem [oIbusAddr]};
+    if (instr === 32'hxxxxxxxx) begin 
+      instr = 32'b0;
+    end
+    iIbusData = instr;
+    iIbusIAddr = oIbusAddr;
   end
 
 
@@ -99,7 +103,7 @@ module testbench();
 
   always @ (cnt) begin 
     // the virtual console 
-    if (oDbusWe && oDbusAddr == 32'h10000 && oDbusByteEn[0]) begin 
+    if (oDbusWe && oDbusAddr == 32'h1000000 && oDbusByteEn[0]) begin 
       $write("%c", oDbusData[7:0]);		
     end
   end 
@@ -118,7 +122,11 @@ module testbench();
     end
     
     if (oDbusRead) begin 
+      if (oDbusAddr == 32'h1000004) begin  
+      iDbusData = 32'h00402000;      
+      end else begin 
       iDbusData = {mem[oDbusAddr + 3], mem[oDbusAddr + 2], mem[oDbusAddr + 1], mem[oDbusAddr]};
+      end
     end
   end
 

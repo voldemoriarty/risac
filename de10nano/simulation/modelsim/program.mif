@@ -1,0 +1,34 @@
+-- This file was generated using bin2hex utility
+-- bin file: program.bin
+WIDTH=32;
+DEPTH=1024;
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+CONTENT BEGIN
+0 : 1117;
+1 : 10113;
+2 : 40006f;
+3 : ff010113;
+4 : 112623;
+5 : 4000ef;
+6 : 5500713;
+7 : 20007b7;
+8 : e78023;
+9 : 5400593;
+a : 6400613;
+b : 1000737;
+c : 58693;
+d : 472783;
+e : 107d793;
+f : fe078ce3;
+10 : 6c783;
+11 : 168693;
+12 : f70023;
+13 : fec694e3;
+14 : fe1ff06f;
+15 : 6c6c6548;
+16 : 57202c6f;
+17 : 646c726f;
+18 : a0d21;
+[19..3ff] : 0;
+END;

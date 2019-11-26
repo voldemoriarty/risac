@@ -36,7 +36,7 @@ module soc_simple_on_chip_memory (
                                  )
 ;
 
-  parameter INIT_FILE = "hex/onchip_memory.hex";
+  parameter INIT_FILE = "hex/program.mif";
 
 
   output  [ 31: 0] readdata;
@@ -70,7 +70,6 @@ wire             wren;
 
   defparam the_altsyncram.byte_size = 8,
            the_altsyncram.init_file = INIT_FILE,
-           the_altsyncram.lpm_hint = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=MEM",
            the_altsyncram.lpm_type = "altsyncram",
            the_altsyncram.maximum_depth = 1024,
            the_altsyncram.numwords_a = 1024,

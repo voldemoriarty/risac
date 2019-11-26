@@ -1,5 +1,5 @@
 Assembler report for de10nanoTop
-Sat Nov 16 12:15:00 2019
+Tue Nov 26 12:28:55 2019
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Standard Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Nov 16 12:15:00 2019 ;
+; Assembler Status      ; Successful - Tue Nov 26 12:28:55 2019 ;
 ; Revision Name         ; de10nanoTop                           ;
 ; Top-level Entity Name ; de10nanoTop                           ;
 ; Family                ; Cyclone V                             ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------+
 ; File Name                                                       ;
 +-----------------------------------------------------------------+
-; /home/saad/trashcan/velox/de10nano/output_files/de10nanoTop.sof ;
+; /home/saad/trashcan/risac/de10nano/output_files/de10nanoTop.sof ;
 +-----------------------------------------------------------------+
 
 
@@ -78,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------------+
 ; Option         ; Setting                  ;
 +----------------+--------------------------+
-; JTAG usercode  ; 0x00FC5C60               ;
-; Checksum       ; 0x00FC5C60               ;
+; JTAG usercode  ; 0x015FFC3A               ;
+; Checksum       ; 0x015FFC3A               ;
 +----------------+--------------------------+
 
 
@@ -89,14 +89,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Standard Edition
-    Info: Processing started: Sat Nov 16 12:14:54 2019
+    Info: Processing started: Tue Nov 26 12:28:48 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 976 megabytes
-    Info: Processing ended: Sat Nov 16 12:15:00 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 1026 megabytes
+    Info: Processing ended: Tue Nov 26 12:28:55 2019
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 

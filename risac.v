@@ -79,7 +79,7 @@ module risac (
       pcDec			<= iIbusIAddr;
 
       // the instruction is valid if there is not wait signal
-      validDec	<= ~iIbusWait;
+      validDec	<= ~iIbusWait & ~branch;
 
       // decode the instruction regardless of validity
 
@@ -234,6 +234,10 @@ module risac (
             rat[0][idx] <= 1'b0;
             rat[1][idx] <= 1'b0;
           end
+          else if (rdEx == idx && validEx && rdWeEx) begin 
+            rat[0][idx] <= 1'b0;
+            rat[1][idx] <= 1'b0;
+          end
         end 
         // if the register to be updated [(rdDecWe == 1) and (rdShiftDec[idx] == 1)]
         // then set the rat to 1 
@@ -308,9 +312,9 @@ module risac (
       branchOffset <= immDec;
 
       if (falseAlarm) begin 
-        validOf <= validDec;
+        validOf <= validDec & ~branch;
       end else begin 
-        validOf <= validDec & ~dataHazard;
+        validOf <= validDec & ~dataHazard & ~branch;
       end 
 
       rs1Data <= rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec];
@@ -382,7 +386,7 @@ module risac (
       // branch only if instruction was unconditional branch
       // and if it was conditional then branch if the condition met
 
-      branch <= (branchOf | (compareResult & compareOf)) & validOf;
+      branch <= (branchOf | (compareResult & compareOf)) & validOf & ~branch;
 			branchTarget <= bTargetOf + branchOffset;
 			validOs <= (|invalidRegister) ? 1'b0 : validOf;
 
@@ -483,7 +487,7 @@ module risac (
     if (!rst_n) begin 
       lsuRes 	<= 'b0;
       lEx 		<= 'b0;
-    end	else if (!stallPipe) begin 
+    end	else begin 
       lEx 		<= lOs;
       if (aluOpOs[1]) begin  // lw
         lsuRes <= iDbusData;

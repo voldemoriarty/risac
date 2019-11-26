@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.101 (w)1999-2019 BSI
-[*] Sat Nov 23 09:06:46 2019
+[*] Tue Nov 26 06:22:26 2019
 [*]
 [dumpfile] "/home/saad/trashcan/risac/testbench/risac2.vcd"
-[dumpfile_mtime] "Sat Nov 23 08:56:22 2019"
-[dumpfile_size] 105112
+[dumpfile_mtime] "Tue Nov 26 06:21:50 2019"
+[dumpfile_size] 199342
 [savefile] "/home/saad/trashcan/risac/testbench/risac2.gtkw"
 [timestart] 0
 [size] 1878 1022
 [pos] -1 -1
-*-16.750656 4511400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-16.750656 258000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [sst_width] 210
 [signals_width] 288
@@ -50,8 +50,13 @@ testbench.u_risac.rs2booked
 testbench.u_risac.dataHazard
 testbench.u_risac.falseAlarm
 testbench.u_risac.validOf
-testbench.u_risac.validDec
+testbench.u_risac.rdWeOf
+testbench.u_risac.rdWeEx
 @22
+testbench.u_risac.rdOf[4:0]
+@28
+testbench.u_risac.validDec
+@23
 testbench.u_risac.rdDec[4:0]
 @28
 testbench.u_risac.rdWeDec
@@ -63,9 +68,7 @@ testbench.rat0[31:0]
 testbench.u_risac.branchTarget[31:0]
 @28
 testbench.u_risac.branch
-@29
 testbench.u_risac.compareOf
-@28
 testbench.u_risac.compareResult
 testbench.u_risac.invalidRegister[2:0]
 @200
