@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
 	}
 
 	if (num_values < total_size) {
-		fout << '[' << std::hex << num_values << ".." << total_size << "] : 0\n"; 
+		fout << '[' << std::hex << num_values << ".." << total_size << "] : 0;\n"; 
 	}
 
 	fout << "END;\n";
