@@ -21,6 +21,7 @@ inline void _puts (volatile char* uart, const char* msg, const int len) {
 // the (fake) entry point
 int main () {
 	volatile char *leds = (volatile char *)0x2000000;
+	*leds = 0x55;
 	while (1) {
         volatile char *uart = (volatile char *)0x1000000;
         _puts(uart, "Hello, World!\r\n", 16);
