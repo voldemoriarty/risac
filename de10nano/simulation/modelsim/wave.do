@@ -3,6 +3,7 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate -radix hexadecimal /tb/clk
 add wave -noupdate -radix hexadecimal /tb/rstn
 add wave -noupdate -radix hexadecimal /tb/leds
+add wave -noupdate -radix ascii /tb/str
 add wave -noupdate -divider {Inst Bus}
 add wave -noupdate -label readdata -radix hexadecimal /tb/uut/rV_system/rv32i_core/avIB_readdata
 add wave -noupdate -label address -radix hexadecimal /tb/uut/rV_system/rv32i_core/avIB_address
@@ -39,4 +40,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {816458 ps} {1535976 ps}
+WaveRestoreZoom {0 ps} {719518 ps}
