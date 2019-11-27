@@ -10,7 +10,7 @@ inline void delay () {
 	for (volatile unsigned i = 0; i < 100000; ++i);
 }
 
-void _puts (volatile char* uart, const char* msg, const int len) {
+inline void _puts (volatile char* uart, const char* msg, const int len) {
 	volatile unsigned int *status = (volatile unsigned int *)uart;
 	for (int i = 0; i < len; ++i) {
 		// while (status[1] >> 16 == 0);
@@ -22,10 +22,8 @@ void _puts (volatile char* uart, const char* msg, const int len) {
 int main () {
 	volatile char *leds = (volatile char *)0x2000000;
 	*leds = 0x55;
-	// while (1) {
-		volatile char *uart = (volatile char *)0x1000000;
-		_puts(uart, "Hello, World!\r\n", 16);
-  // }
+	volatile char *uart = (volatile char *)0x1000000;
+	_puts(uart, "Welcome Dr Awais\r\n", 19);
 	while (1);
 }
 

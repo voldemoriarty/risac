@@ -2,19 +2,19 @@ Info: Starting: Create block symbol file (.bsf)
 Info: qsys-generate /home/saad/trashcan/risac/qsys_systems/soc_simple.qsys --block-symbol-file --output-directory=/home/saad/trashcan/risac/qsys_systems/soc_simple --family="Cyclone V" --part=5CSEBA6U23I7
 Progress: Loading qsys_systems/soc_simple.qsys
 Progress: Reading input file
-Progress: Adding PLL_50_150 [altera_pll 19.1]
+Progress: Adding PLL_50_150 [altera_pll 16.0]
 Progress: Parameterizing module PLL_50_150
-Progress: Adding clock [clock_source 19.1]
+Progress: Adding clock [clock_source 16.0]
 Progress: Parameterizing module clock
-Progress: Adding jtag_uart [altera_avalon_jtag_uart 19.1]
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 16.0]
 Progress: Parameterizing module jtag_uart
-Progress: Adding jtag_uart_pipeline_bridge [altera_avalon_mm_bridge 19.1]
+Progress: Adding jtag_uart_pipeline_bridge [altera_avalon_mm_bridge 16.0]
 Progress: Parameterizing module jtag_uart_pipeline_bridge
-Progress: Adding leds [altera_avalon_pio 19.1]
+Progress: Adding leds [altera_avalon_pio 16.0]
 Progress: Parameterizing module leds
-Progress: Adding on_chip_memory [altera_avalon_onchip_memory2 19.1]
+Progress: Adding on_chip_memory [altera_avalon_onchip_memory2 16.0]
 Progress: Parameterizing module on_chip_memory
-Progress: Adding pio_pipeline_bridge [altera_avalon_mm_bridge 19.1]
+Progress: Adding pio_pipeline_bridge [altera_avalon_mm_bridge 16.0]
 Progress: Parameterizing module pio_pipeline_bridge
 Progress: Adding rv32i_core [risac 1.0]
 Progress: Parameterizing module rv32i_core
@@ -33,19 +33,19 @@ Info: Starting: Create HDL design files for synthesis
 Info: qsys-generate /home/saad/trashcan/risac/qsys_systems/soc_simple.qsys --synthesis=VERILOG --output-directory=/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis --family="Cyclone V" --part=5CSEBA6U23I7
 Progress: Loading qsys_systems/soc_simple.qsys
 Progress: Reading input file
-Progress: Adding PLL_50_150 [altera_pll 19.1]
+Progress: Adding PLL_50_150 [altera_pll 16.0]
 Progress: Parameterizing module PLL_50_150
-Progress: Adding clock [clock_source 19.1]
+Progress: Adding clock [clock_source 16.0]
 Progress: Parameterizing module clock
-Progress: Adding jtag_uart [altera_avalon_jtag_uart 19.1]
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 16.0]
 Progress: Parameterizing module jtag_uart
-Progress: Adding jtag_uart_pipeline_bridge [altera_avalon_mm_bridge 19.1]
+Progress: Adding jtag_uart_pipeline_bridge [altera_avalon_mm_bridge 16.0]
 Progress: Parameterizing module jtag_uart_pipeline_bridge
-Progress: Adding leds [altera_avalon_pio 19.1]
+Progress: Adding leds [altera_avalon_pio 16.0]
 Progress: Parameterizing module leds
-Progress: Adding on_chip_memory [altera_avalon_onchip_memory2 19.1]
+Progress: Adding on_chip_memory [altera_avalon_onchip_memory2 16.0]
 Progress: Parameterizing module on_chip_memory
-Progress: Adding pio_pipeline_bridge [altera_avalon_mm_bridge 19.1]
+Progress: Adding pio_pipeline_bridge [altera_avalon_mm_bridge 16.0]
 Progress: Parameterizing module pio_pipeline_bridge
 Progress: Adding rv32i_core [risac 1.0]
 Progress: Parameterizing module rv32i_core
@@ -72,16 +72,16 @@ Info: Interconnect is inserted between master pio_pipeline_bridge.m0 and slave l
 Info: Interconnect is inserted between master pio_pipeline_bridge.m0 and slave leds.s1 because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
 Info: PLL_50_150: "soc_simple" instantiated altera_pll "PLL_50_150"
 Info: jtag_uart: Starting RTL generation for module 'soc_simple_jtag_uart'
-Info: jtag_uart:   Generation command is [exec /home/saad/intelFPGA/19.1/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_simple_jtag_uart --dir=/tmp/alt8226_6660426212439305345.dir/0051_jtag_uart_gen/ --quartus_dir=/home/saad/intelFPGA/19.1/quartus --verilog --config=/tmp/alt8226_6660426212439305345.dir/0051_jtag_uart_gen//soc_simple_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec /media/saad/Softs/laltera/16.0/quartus/linux64/perl/bin/perl -I /media/saad/Softs/laltera/16.0/quartus/linux64/perl/lib -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin/europa -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin/perl_lib -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin -I /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_simple_jtag_uart --dir=/tmp/alt8227_164201741760447315.dir/0002_jtag_uart_gen/ --quartus_dir=/media/saad/Softs/laltera/16.0/quartus --verilog --config=/tmp/alt8227_164201741760447315.dir/0002_jtag_uart_gen//soc_simple_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'soc_simple_jtag_uart'
 Info: jtag_uart: "soc_simple" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: jtag_uart_pipeline_bridge: "soc_simple" instantiated altera_avalon_mm_bridge "jtag_uart_pipeline_bridge"
 Info: leds: Starting RTL generation for module 'soc_simple_leds'
-Info: leds:   Generation command is [exec /home/saad/intelFPGA/19.1/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_simple_leds --dir=/tmp/alt8226_6660426212439305345.dir/0053_leds_gen/ --quartus_dir=/home/saad/intelFPGA/19.1/quartus --verilog --config=/tmp/alt8226_6660426212439305345.dir/0053_leds_gen//soc_simple_leds_component_configuration.pl  --do_build_sim=0  ]
+Info: leds:   Generation command is [exec /media/saad/Softs/laltera/16.0/quartus/linux64/perl/bin/perl -I /media/saad/Softs/laltera/16.0/quartus/linux64/perl/lib -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin/europa -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin/perl_lib -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin -I /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_simple_leds --dir=/tmp/alt8227_164201741760447315.dir/0004_leds_gen/ --quartus_dir=/media/saad/Softs/laltera/16.0/quartus --verilog --config=/tmp/alt8227_164201741760447315.dir/0004_leds_gen//soc_simple_leds_component_configuration.pl  --do_build_sim=0  ]
 Info: leds: Done RTL generation for module 'soc_simple_leds'
 Info: leds: "soc_simple" instantiated altera_avalon_pio "leds"
 Info: on_chip_memory: Starting RTL generation for module 'soc_simple_on_chip_memory'
-Info: on_chip_memory:   Generation command is [exec /home/saad/intelFPGA/19.1/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_simple_on_chip_memory --dir=/tmp/alt8226_6660426212439305345.dir/0054_on_chip_memory_gen/ --quartus_dir=/home/saad/intelFPGA/19.1/quartus --verilog --config=/tmp/alt8226_6660426212439305345.dir/0054_on_chip_memory_gen//soc_simple_on_chip_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: on_chip_memory:   Generation command is [exec /media/saad/Softs/laltera/16.0/quartus/linux64/perl/bin/perl -I /media/saad/Softs/laltera/16.0/quartus/linux64/perl/lib -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin/europa -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin/perl_lib -I /media/saad/Softs/laltera/16.0/quartus/sopc_builder/bin -I /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /media/saad/Softs/laltera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_simple_on_chip_memory --dir=/tmp/alt8227_164201741760447315.dir/0005_on_chip_memory_gen/ --quartus_dir=/media/saad/Softs/laltera/16.0/quartus --verilog --config=/tmp/alt8227_164201741760447315.dir/0005_on_chip_memory_gen//soc_simple_on_chip_memory_component_configuration.pl  --do_build_sim=0  ]
 Info: on_chip_memory: Done RTL generation for module 'soc_simple_on_chip_memory'
 Info: on_chip_memory: "soc_simple" instantiated altera_avalon_onchip_memory2 "on_chip_memory"
 Info: rv32i_core: "soc_simple" instantiated risac "rv32i_core"

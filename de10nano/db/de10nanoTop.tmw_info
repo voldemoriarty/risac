@@ -1,7 +1,6 @@
-start_rapid_recompile:s:00:00:21
-start_analysis_synthesis_rr:s:00:00:01-start_rapid_recompile
-start_analysis_elaboration_rr:s-start_rapid_recompile
-start_partition_merge_rr:s:00:00:00-start_rapid_recompile
-start_fitter_rr:s:00:00:00-start_rapid_recompile
-start_assembler_rr:s:00:00:09-start_rapid_recompile
-start_timing_analyzer_rr:s:00:00:00-start_rapid_recompile
+start_analysis_synthesis:s-start_full_compilation
+start_analysis_elaboration:s-start_full_compilation
+start_fitter:s-start_full_compilation
+start_assembler:s-start_full_compilation
+start_timing_analyzer:s-start_full_compilation
+start_eda_netlist_writer:s:00:00:16

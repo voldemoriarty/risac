@@ -24,7 +24,9 @@ module risac (
   reg dataHazard;
   reg stallPipe;
   reg pcChanged;
+  reg [4:0]		rdOf;
   
+
   assign oIbusAddr = pc;
   // wait for waitrequest to fall before zeroing
   // read (i.e.) wait till a pending request is completed
@@ -68,6 +70,8 @@ module risac (
   reg         branchDec;
   reg         branchType;
   reg					jalr;
+  reg [4:0]		rdEx;
+  reg					validOf, rdWeOf, immSelOf;	
 
   always @ (posedge clk or negedge rst_n) begin: DEC
     if (!rst_n) begin 
@@ -279,10 +283,8 @@ module risac (
   // when the data hazard occurs, set valid to zero and stall previous stages
 
   // propogate the rdWe, valid, aluOp, immSel, pc and imm signals
-  reg					validOf, rdWeOf, immSelOf;	
   reg [31:0]	immOf, pcOf;
   reg [3:0]		aluOpOf;
-  reg [4:0]		rdOf;
   reg 				lOf, sOf, luipcOf;
   reg         branchOf, compareOf;
   reg [31:0]	bTargetOf, branchOffset;
@@ -419,7 +421,6 @@ module risac (
 
   // propogate the valid, pc, rdWe
   reg [31:0]	pcEx;
-  reg [4:0]		rdEx;
 
   always @ (posedge clk or negedge rst_n) begin: EX
     if (!rst_n) begin 
@@ -525,7 +526,7 @@ module risac (
   always @ (posedge clk) begin: WB_REGISTER_FILE
     // do not reset the register file
     // write back if valid only
-    if (validEx && rdWeEx) begin 
+    if (validEx && (rdWeEx | lEx)) begin 
       registers[rdEx] <= exRes;
     end
   end

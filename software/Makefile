@@ -44,6 +44,7 @@ $(TGT).bin: $(TGT).elf
 $(TGT).mif: $(TGT).bin
 	$(BM) $< $@
 	cp $@ -v ../de10nano/hex/
+	cp $@ -v ../de10nano/simulation/modelsim/hex/
 
 $(TGT).vh: $(TGT).elf 
 	$(OC) -O verilog $< $@

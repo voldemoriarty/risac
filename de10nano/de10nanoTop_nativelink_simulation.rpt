@@ -4,8 +4,8 @@ Info: Start Nativelink Simulation process
 
 Sim Mode              :  RTL
 Family                :  cyclonev
-Quartus root          :  /home/saad/intelFPGA/19.1/quartus/linux64/
-Quartus sim root      :  /home/saad/intelFPGA/19.1/quartus/eda/sim_lib
+Quartus root          :  /media/saad/Softs/laltera/16.0/quartus/linux64/
+Quartus sim root      :  /media/saad/Softs/laltera/16.0/quartus/eda/sim_lib
 Simulation Tool       :  modelsim-altera
 Simulation Language   :  verilog
 Simulation Mode       :  GUI
@@ -16,7 +16,6 @@ Sim dir               :  simulation/modelsim
 =======================================================
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
-Sourced NativeLink script /home/saad/intelFPGA/19.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File de10nanoTop_run_msim_rtl_verilog.do already exists - backing up current file as de10nanoTop_run_msim_rtl_verilog.do.bak
+Sourced NativeLink script /media/saad/Softs/laltera/16.0/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File de10nanoTop_run_msim_rtl_verilog.do already exists - backing up current file as de10nanoTop_run_msim_rtl_verilog.do.bak1
 Info: Spawning ModelSim-Altera Simulation software 
-Info: NativeLink simulation flow was successful
