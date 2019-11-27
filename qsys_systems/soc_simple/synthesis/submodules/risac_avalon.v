@@ -33,7 +33,7 @@ module risac_avalon (
     .oDbusData  (avDB_writedata),
     .oDbusRead  (avDB_read),
     .oDbusByteEn(avDB_byteenable),
-    .iDbusData  (avDB_readdata),
+    .iDbusData  (avDB_readdata >> (avDB_address[1:0] * 8)),
     .iDbusWait	(avDB_waitrequest)
   );
   
