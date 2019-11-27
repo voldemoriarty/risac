@@ -11,27 +11,27 @@
    <SOPCModuleParameter>
     <C>2</C>
     <Name>DESIGN_HASH</Name>
-    <Value>dd7ab549acbe9b6aa03e</Value>
+    <Value>6b1b99d0da6542992774</Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>3</C>
     <Name>NODE_COUNT</Name>
-    <Value>2</Value>
+    <Value>1</Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>4</C>
     <Name>MAX_WIDTH</Name>
-    <Value>33</Value>
+    <Value>24</Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>5</C>
     <Name>SETTINGS</Name>
-    <Value>{fabric sld dir agent mfr_code 110 type_code 128 version 1 instance -1 ir_width 1 prefer_host { } psig f63706bb} {fabric sld dir agent mfr_code 110 type_code 0 version 6 instance 0 ir_width 10 psig f63706bb} </Value>
+    <Value>{fabric sld dir agent mfr_code 110 type_code 128 version 1 instance -1 ir_width 1 prefer_host { } psig f63706bb} </Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>6</C>
     <Name>CLOCKS</Name>
-    <Value>{id {} } {id {} } </Value>
+    <Value>{id {} } </Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>7</C>
@@ -41,7 +41,7 @@
    <SOPCModuleParameter>
     <C>8</C>
     <Name>EP_INFOS</Name>
-    <Value>{hpath {soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|altera_sld_agent_endpoint:inst|altera_fabric_endpoint:ep} } {hpath {sld_signaltap:auto_signaltap_0} } </Value>
+    <Value>{hpath {soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|altera_sld_agent_endpoint:inst|altera_fabric_endpoint:ep} } </Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>9</C>
@@ -56,7 +56,7 @@
    <SOPCModuleParameter>
     <C>11</C>
     <Name>COMPOSED_SETTINGS</Name>
-    <Value>{fabric sld dir agent mfr_code 110 type_code 128 version 1 instance 0 ir_width 1 prefer_host {} } {fabric sld dir agent mfr_code 110 type_code 0 version 6 instance 0 ir_width 10 prefer_host {} } </Value>
+    <Value>{fabric sld dir agent mfr_code 110 type_code 128 version 1 instance 0 ir_width 1 prefer_host {} } </Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>12</C>
@@ -74,7 +74,7 @@
     <Value>Unknown</Value>
    </SOPCModuleParameter>
   </SOPCModule>
-  <SystemID>665574131</SystemID>
+  <SystemID>779290028</SystemID>
  </SOPCSystem>
  <SchemaVersion>schema_2013-01-18</SchemaVersion>
 </ProgramExecution>
