@@ -13,7 +13,7 @@ inline void delay () {
 inline void _puts (volatile char* uart, const char* msg, const int len) {
 	volatile unsigned int *status = (volatile unsigned int *)uart;
 	for (int i = 0; i < len; ++i) {
-		// while (status[1] >> 16 == 0);
+		while (status[1] >> 16 == 0);
 		*uart = msg[i];
 	}
 }
