@@ -283,23 +283,23 @@ R6
 Z22 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/verilog
 nde10nano@top
 vrisac
-R1
+!s110 1574914215
 !i10b 1
-!s100 g;S9`b^>G1boQYABO1>4`2
-Ia1_a_bEn_P:NR?kDFkgNL0
+!s100 fn`XP>Ph<oXPbAZXceePH2
+I0BJWRGFn^=WVX^`B83cLN1
 R2
 R0
-R3
-8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac.v
-F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac.v
+w1574914199
+8/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac.v
+F/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac.v
 L0 1
 R4
 r1
 !s85 0
 31
-R5
-!s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac.v|
+!s108 1574914215.000000
+!s107 /home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac.v|
 !i113 1
 R6
 R7

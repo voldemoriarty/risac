@@ -116,7 +116,7 @@ module risac (
       // always write to rd except when storing or conditional branching
       // all instructions except stores and conditional branches have 4:2 
       // not equal to zero
-      rdWeDec		<= (iIbusData[4:2] != 3'b000);
+      rdWeDec		<= (iIbusData[4:2] != 3'b000) | (iIbusData[6:2] == 5'b00000);
       
       // select imm when instr[6:4] == 001
       // in rv32i, no other instruction has opcode[6:4] == 001 other than those
