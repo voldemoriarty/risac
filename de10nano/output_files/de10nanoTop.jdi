@@ -22,7 +22,7 @@
     </sld_info>
     <sld_info hpath="soc_simple:rV_system" name="rV_system">
       <assignment_values>
-        <assignment_value text="QSYS_NAME soc_simple HAS_SOPCINFO 1 GENERATION_ID 1574836986"/>
+        <assignment_value text="QSYS_NAME soc_simple HAS_SOPCINFO 1 GENERATION_ID 1574914196"/>
       </assignment_values>
       <parameters/>
     </sld_info>
