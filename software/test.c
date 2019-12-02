@@ -19,7 +19,7 @@ int main () {
 	volatile char *leds = (volatile char *)0x2000000;
 	*leds = 0x50;
 	volatile char *uart = (volatile char *)0x1000000;
-	const char msg[] = "ello\r\n";
+	const char msg[] = "Howdy friend, how goes the hunt for souls?\r\n";
 	_puts(uart, msg, sizeof(msg));
 	while (1);
 }

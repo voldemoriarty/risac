@@ -5,11 +5,12 @@
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
-   <name preferredWidth="282" />
+   <name preferredWidth="285" />
    <inputclock preferredWidth="168" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
+ <library
+   expandedCategories="Project,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Basic Functions,Library/Interface Protocols/Serial,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Basic Functions/Bridges and Adaptors,Library,Library/Interface Protocols,Library/Basic Functions/Simulation; Debug and Verification" />
  <window width="1366" height="746" x="0" y="22" />
  <hdlexample language="VERILOG" />
 </preferences>

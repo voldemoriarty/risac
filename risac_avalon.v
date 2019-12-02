@@ -28,13 +28,35 @@ module risac_avalon (
       read <= cpu_read;
     end
   end
+
+  // edge detector for the waitrequest signal
+  reg wr_old;
+  always @ (posedge clk or negedge rst_n) begin 
+    if (!rst_n) begin 
+      wr_old <= 1'b0;
+    end else begin 
+      wr_old <= avIB_waitrequest;
+    end
+  end
+
+  wire wr_negedge = ~avIB_waitrequest & wr_old;
+
+  // save the data in the line
+  reg [31:0] ibusdata_old;
+  always @ (posedge clk or negedge rst_n) begin 
+    if (!rst_n) begin 
+      ibusdata_old <= 'b0;
+    end else if (wr_negedge) begin 
+      ibusdata_old <= avIB_readdata;
+    end
+  end
   
   risac u_risac (
     .clk        (clk),
     .rst_n      (rst_n),
     
     .oIbusAddr  (avIB_address),
-    .iIbusData  (avIB_readdata),
+    .iIbusData  (wr_negedge ? avIB_readdata : ibusdata_old),
     .iIbusIAddr (avIB_address),
     .iIbusWait  (avIB_waitrequest),
     .oIbusRead  (cpu_read),

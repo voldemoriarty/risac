@@ -32,14 +32,36 @@ module risac (
   // read (i.e.) wait till a pending request is completed
   assign oIbusRead = iIbusWait ? 1'b1 : pcChanged;
 
+  reg [31:0] branchTarget2;
+  reg use2;
+
   always @ (posedge clk or negedge rst_n) begin: IF
     if (!rst_n) begin 
       pc <= 'b0;
       pcChanged <= 'b1;
-    end	else if (!stallPipe && !dataHazard | branch) begin 
+      branchTarget2 <= 'b0;
+      use2 <= 'b0;
+    end	else if ((!stallPipe && !dataHazard) | branch) begin 
       // new data arrives when wait is 0
       // so update pc when wait is 0
-      pc <= iIbusWait ? pc : (branch ? branchTarget : pc + 3'd4);
+      // pc <= iIbusWait ? pc : (branch ? (use2 ? branchTarget2 : branchTarget) : pc + 3'd4);
+
+      if (!iIbusWait) begin 
+        if (use2) begin 
+          pc <= branchTarget2;
+        end else if (branch) begin
+          pc <= branchTarget;
+        end else begin 
+          pc <= pc + 3'd4;
+        end
+      end
+
+      if (branch && iIbusWait) begin 
+        branchTarget2 <= branchTarget;
+        use2 <= 1'b1;
+      end else if (use2 && !iIbusWait) begin 
+        use2 <= 1'b0;
+      end
 
       // assert read regardless of wait
       // but only when pc is updated
@@ -83,7 +105,7 @@ module risac (
       pcDec			<= iIbusIAddr;
 
       // the instruction is valid if there is not wait signal
-      validDec	<= ~iIbusWait & ~branch;
+      validDec	<= ~iIbusWait & ~(branch | use2);
 
       // decode the instruction regardless of validity
 
@@ -314,9 +336,9 @@ module risac (
       branchOffset <= immDec;
 
       if (falseAlarm) begin 
-        validOf <= validDec & ~branch;
+        validOf <= validDec & ~(branch | use2);
       end else begin 
-        validOf <= validDec & ~dataHazard & ~branch;
+        validOf <= validDec & ~dataHazard & ~(branch | use2);
       end 
 
       rs1Data <= rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec];
@@ -387,8 +409,8 @@ module risac (
       // the branch unit
       // branch only if instruction was unconditional branch
       // and if it was conditional then branch if the condition met
-
-      branch <= (branchOf | (compareResult & compareOf)) & validOf & ~branch;
+      
+      branch <= (branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2);
 			branchTarget <= bTargetOf + branchOffset;
 			validOs <= (|invalidRegister) ? 1'b0 : validOf;
 
