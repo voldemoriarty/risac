@@ -17,7 +17,18 @@ module risac_avalon (
   output  [00:0] avDB_write,
   input		[00:0] avDB_waitrequest
 );
+  reg   read;
+  wire  cpu_read;
+  assign avIB_read = read;
 
+  always @ (negedge clk or negedge rst_n) begin 
+    if (!rst_n) begin 
+      read <= 'b0;
+    end else begin 
+      read <= cpu_read;
+    end
+  end
+  
   risac u_risac (
     .clk        (clk),
     .rst_n      (rst_n),
@@ -26,7 +37,7 @@ module risac_avalon (
     .iIbusData  (avIB_readdata),
     .iIbusIAddr (avIB_address),
     .iIbusWait  (avIB_waitrequest),
-    .oIbusRead  (avIB_read),
+    .oIbusRead  (cpu_read),
 
     .oDbusAddr  (avDB_address),
     .oDbusWe    (avDB_write),

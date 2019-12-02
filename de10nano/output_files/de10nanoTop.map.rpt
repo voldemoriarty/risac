@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de10nanoTop
-Thu Nov 28 13:02:59 2019
+Fri Nov 29 19:38:23 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -142,7 +142,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 28 13:02:58 2019       ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov 29 19:38:23 2019       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; de10nanoTop                                 ;
 ; Top-level Entity Name           ; de10nanoTop                                 ;
@@ -351,14 +351,14 @@ agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                        ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 912                                                                                          ;
+; Estimate of Logic utilization (ALMs needed) ; 911                                                                                          ;
 ;                                             ;                                                                                              ;
-; Combinational ALUT usage for logic          ; 1343                                                                                         ;
+; Combinational ALUT usage for logic          ; 1341                                                                                         ;
 ;     -- 7 input functions                    ; 6                                                                                            ;
-;     -- 6 input functions                    ; 302                                                                                          ;
-;     -- 5 input functions                    ; 292                                                                                          ;
-;     -- 4 input functions                    ; 249                                                                                          ;
-;     -- <=3 input functions                  ; 494                                                                                          ;
+;     -- 6 input functions                    ; 300                                                                                          ;
+;     -- 5 input functions                    ; 291                                                                                          ;
+;     -- 4 input functions                    ; 248                                                                                          ;
+;     -- <=3 input functions                  ; 496                                                                                          ;
 ;                                             ;                                                                                              ;
 ; Dedicated logic registers                   ; 1166                                                                                         ;
 ;                                             ;                                                                                              ;
@@ -373,8 +373,8 @@ agreement for further details.
 ;                                             ;                                                                                              ;
 ; Maximum fan-out node                        ; soc_simple:rV_system|soc_simple_PLL_50_150:pll_50_150|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 1165                                                                                         ;
-; Total fan-out                               ; 12104                                                                                        ;
-; Average fan-out                             ; 4.57                                                                                         ;
+; Total fan-out                               ; 12089                                                                                        ;
+; Average fan-out                             ; 4.56                                                                                         ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------+
 
 
@@ -383,7 +383,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                     ; Entity Name                                ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+--------------+
-; |de10nanoTop                                                                                                                            ; 1343 (1)          ; 1166 (0)     ; 35840             ; 0          ; 10   ; 0            ; |de10nanoTop                                                                                                                                                                                                                                                                                                                                            ; de10nanoTop                                ; work         ;
+; |de10nanoTop                                                                                                                            ; 1341 (1)          ; 1166 (0)     ; 35840             ; 0          ; 10   ; 0            ; |de10nanoTop                                                                                                                                                                                                                                                                                                                                            ; de10nanoTop                                ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 93 (1)            ; 75 (0)       ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                                    ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 92 (0)            ; 75 (0)       ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input                ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 92 (0)            ; 75 (0)       ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                                ; alt_sld_fab  ;
@@ -392,14 +392,14 @@ agreement for further details.
 ;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 91 (57)           ; 70 (42)      ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                               ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 15 (15)           ; 9 (9)        ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                                 ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 19 (19)           ; 19 (19)      ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                             ; altera_sld   ;
-;    |soc_simple:rV_system|                                                                                                               ; 1249 (0)          ; 1091 (0)     ; 35840             ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system                                                                                                                                                                                                                                                                                                                       ; soc_simple                                 ; soc_simple   ;
+;    |soc_simple:rV_system|                                                                                                               ; 1247 (0)          ; 1091 (0)     ; 35840             ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system                                                                                                                                                                                                                                                                                                                       ; soc_simple                                 ; soc_simple   ;
 ;       |altera_avalon_mm_bridge:jtag_uart_pipeline_bridge|                                                                               ; 4 (4)             ; 49 (49)      ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|altera_avalon_mm_bridge:jtag_uart_pipeline_bridge                                                                                                                                                                                                                                                                     ; altera_avalon_mm_bridge                    ; soc_simple   ;
 ;       |altera_avalon_mm_bridge:pio_pipeline_bridge|                                                                                     ; 3 (3)             ; 35 (35)      ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|altera_avalon_mm_bridge:pio_pipeline_bridge                                                                                                                                                                                                                                                                           ; altera_avalon_mm_bridge                    ; soc_simple   ;
 ;       |altera_reset_controller:rst_controller|                                                                                          ; 6 (5)             ; 16 (10)      ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|altera_reset_controller:rst_controller                                                                                                                                                                                                                                                                                ; altera_reset_controller                    ; soc_simple   ;
 ;          |altera_reset_synchronizer:alt_rst_req_sync_uq1|                                                                               ; 1 (1)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1                                                                                                                                                                                                                                 ; altera_reset_synchronizer                  ; soc_simple   ;
 ;          |altera_reset_synchronizer:alt_rst_sync_uq1|                                                                                   ; 0 (0)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1                                                                                                                                                                                                                                     ; altera_reset_synchronizer                  ; soc_simple   ;
-;       |risac_avalon:rv32i_core|                                                                                                         ; 976 (9)           ; 807 (0)      ; 2048              ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core                                                                                                                                                                                                                                                                                               ; risac_avalon                               ; soc_simple   ;
-;          |risac:u_risac|                                                                                                                ; 967 (967)         ; 807 (807)    ; 2048              ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac                                                                                                                                                                                                                                                                                 ; risac                                      ; soc_simple   ;
+;       |risac_avalon:rv32i_core|                                                                                                         ; 974 (9)           ; 807 (0)      ; 2048              ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core                                                                                                                                                                                                                                                                                               ; risac_avalon                               ; soc_simple   ;
+;          |risac:u_risac|                                                                                                                ; 965 (965)         ; 807 (807)    ; 2048              ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac                                                                                                                                                                                                                                                                                 ; risac                                      ; soc_simple   ;
 ;             |altsyncram:registers[0][31]__1|                                                                                            ; 0 (0)             ; 0 (0)        ; 1024              ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers[0][31]__1                                                                                                                                                                                                                                                  ; altsyncram                                 ; work         ;
 ;                |altsyncram_5io1:auto_generated|                                                                                         ; 0 (0)             ; 0 (0)        ; 1024              ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers[0][31]__1|altsyncram_5io1:auto_generated                                                                                                                                                                                                                   ; altsyncram_5io1                            ; work         ;
 ;             |altsyncram:registers[0][31]__2|                                                                                            ; 0 (0)             ; 0 (0)        ; 1024              ; 0          ; 0    ; 0            ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|altsyncram:registers[0][31]__2                                                                                                                                                                                                                                                  ; altsyncram                                 ; work         ;
@@ -1262,7 +1262,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; deserialization_factor               ; 4                      ; Signed Integer                                             ;
 ; data_rate                            ; 0                      ; Signed Integer                                             ;
 ; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                                             ;
-; output_clock_frequency0              ; 50.000000 MHz          ; String                                                     ;
+; output_clock_frequency0              ; 160.000000 MHz         ; String                                                     ;
 ; phase_shift0                         ; 0 ps                   ; String                                                     ;
 ; duty_cycle0                          ; 50                     ; Signed Integer                                             ;
 ; output_clock_frequency1              ; 0 MHz                  ; String                                                     ;
@@ -3292,7 +3292,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SCLR      ; 232                         ;
 ;     ENA CLR SLD       ; 169                         ;
 ;     plain             ; 51                          ;
-; arriav_lcell_comb     ; 1250                        ;
+; arriav_lcell_comb     ; 1248                        ;
 ;     arith             ; 171                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 69                          ;
@@ -3300,13 +3300,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 32                          ;
 ;     extend            ; 6                           ;
 ;         7 data inputs ; 6                           ;
-;     normal            ; 1073                        ;
+;     normal            ; 1071                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 116                         ;
-;         3 data inputs ; 151                         ;
-;         4 data inputs ; 238                         ;
-;         5 data inputs ; 270                         ;
+;         2 data inputs ; 115                         ;
+;         3 data inputs ; 152                         ;
+;         4 data inputs ; 237                         ;
+;         5 data inputs ; 269                         ;
 ;         6 data inputs ; 285                         ;
 ; boundary_port         ; 37                          ;
 ; generic_pll           ; 1                           ;
@@ -3322,7 +3322,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -3332,7 +3332,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Thu Nov 28 13:02:11 2019
+    Info: Processing started: Fri Nov 29 19:37:42 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de10nanoTop -c de10nanoTop
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -3426,7 +3426,7 @@ Info (12133): Instantiated megafunction "soc_simple:rV_system|soc_simple_PLL_50_
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
     Info (12134): Parameter "number_of_clocks" = "1"
-    Info (12134): Parameter "output_clock_frequency0" = "50.000000 MHz"
+    Info (12134): Parameter "output_clock_frequency0" = "160.000000 MHz"
     Info (12134): Parameter "phase_shift0" = "0 ps"
     Info (12134): Parameter "duty_cycle0" = "50"
     Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
@@ -3651,7 +3651,7 @@ Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "soc_si
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "soc_simple:rV_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: /home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "soc_simple:rV_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: /home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/altera_reset_controller.v Line: 220
 Info (11170): Start IP generation for the debug fabric within sld_hub.
-Info (11172): 2019.11.28.13:02:39 Progress: Loading slda2caf71c/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2019.11.29.19:38:06 Progress: Loading slda2caf71c/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -3680,17 +3680,17 @@ Info (17049): 46 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/saad/trashcan/risac/de10nano/output_files/de10nanoTop.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 14 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2218 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2216 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 2090 logic cells
+    Info (21061): Implemented 2088 logic cells
     Info (21064): Implemented 112 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1462 megabytes
-    Info: Processing ended: Thu Nov 28 13:02:59 2019
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:01:18
+    Info: Peak virtual memory: 1455 megabytes
+    Info: Processing ended: Fri Nov 29 19:38:23 2019
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:01:21
 
 
 +------------------------------------------+
