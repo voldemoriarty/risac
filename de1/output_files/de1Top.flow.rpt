@@ -1,0 +1,194 @@
+Flow report for de1Top
+Mon Dec  2 21:16:57 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Mon Dec  2 21:16:52 2019       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; de1Top                                      ;
+; Top-level Entity Name              ; de1Top                                      ;
+; Family                             ; Cyclone II                                  ;
+; Device                             ; EP2C20F484C7                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 2,567 / 18,752 ( 14 % )                     ;
+;     Total combinational functions  ; 2,262 / 18,752 ( 12 % )                     ;
+;     Dedicated logic registers      ; 1,386 / 18,752 ( 7 % )                      ;
+; Total registers                    ; 1386                                        ;
+; Total pins                         ; 20 / 315 ( 6 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 35,840 / 239,616 ( 15 % )                   ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                              ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/02/2019 21:16:07 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; de1Top              ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                  ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-----------------------------------+----------------+
+; Assignment Name                     ; Value                                                                  ; Default Value ; Entity Name                       ; Section Id     ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-----------------------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 0.157530336721995                                                      ; --            ; --                                ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                            ; --            ; --                                ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                              ; <None>        ; --                                ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; altera_avalon_sc_fifo             ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; altera_avalon_st_pipeline_stage   ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; altera_merlin_master_agent        ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; altera_merlin_master_translator   ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; altera_merlin_slave_agent         ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; altera_merlin_slave_translator    ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; altera_reset_controller           ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1                    ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_Green_LEDs         ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_JTAG_UART          ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_RAM                ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_Red_LEDs           ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_addr_router        ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_addr_router_001    ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_cmd_xbar_demux     ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_cmd_xbar_demux_001 ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_cmd_xbar_mux       ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_id_router          ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_id_router_001      ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_rsp_xbar_demux     ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                                   ; --            ; soc_simple_de1_rsp_xbar_mux_001   ; --             ;
+; IP_TOOL_NAME                        ; ALTPLL                                                                 ; --            ; --                                ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_sc_fifo                                                  ; --            ; altera_avalon_sc_fifo             ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_st_pipeline_stage                                        ; --            ; altera_avalon_st_pipeline_stage   ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_master_agent                                             ; --            ; altera_merlin_master_agent        ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_master_translator                                        ; --            ; altera_merlin_master_translator   ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_slave_agent                                              ; --            ; altera_merlin_slave_agent         ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_slave_translator                                         ; --            ; altera_merlin_slave_translator    ; --             ;
+; IP_TOOL_NAME                        ; altera_reset_controller                                                ; --            ; altera_reset_controller           ; --             ;
+; IP_TOOL_NAME                        ; Qsys                                                                   ; --            ; soc_simple_de1                    ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                                      ; --            ; soc_simple_de1_Green_LEDs         ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_jtag_uart                                                ; --            ; soc_simple_de1_JTAG_UART          ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_onchip_memory2                                           ; --            ; soc_simple_de1_RAM                ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                                      ; --            ; soc_simple_de1_Red_LEDs           ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                                   ; --            ; soc_simple_de1_addr_router        ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                                   ; --            ; soc_simple_de1_addr_router_001    ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                            ; --            ; soc_simple_de1_cmd_xbar_demux     ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                            ; --            ; soc_simple_de1_cmd_xbar_demux_001 ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                              ; --            ; soc_simple_de1_cmd_xbar_mux       ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                                   ; --            ; soc_simple_de1_id_router          ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                                   ; --            ; soc_simple_de1_id_router_001      ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                            ; --            ; soc_simple_de1_rsp_xbar_demux     ; --             ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                              ; --            ; soc_simple_de1_rsp_xbar_mux_001   ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; --                                ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; altera_avalon_sc_fifo             ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; altera_avalon_st_pipeline_stage   ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; altera_merlin_master_agent        ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; altera_merlin_master_translator   ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; altera_merlin_slave_agent         ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; altera_merlin_slave_translator    ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; altera_reset_controller           ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1                    ; --             ;
+; IP_TOOL_VERSION                     ; 13.0.1                                                                 ; --            ; soc_simple_de1_Green_LEDs         ; --             ;
+; IP_TOOL_VERSION                     ; 13.0.1                                                                 ; --            ; soc_simple_de1_JTAG_UART          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0.1                                                                 ; --            ; soc_simple_de1_RAM                ; --             ;
+; IP_TOOL_VERSION                     ; 13.0.1                                                                 ; --            ; soc_simple_de1_Red_LEDs           ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_addr_router        ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_addr_router_001    ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_cmd_xbar_demux     ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_cmd_xbar_demux_001 ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_cmd_xbar_mux       ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_id_router          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_id_router_001      ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_rsp_xbar_demux     ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                                                   ; --            ; soc_simple_de1_rsp_xbar_mux_001   ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                     ; --            ; --                                ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                      ; --            ; --                                ; --             ;
+; MISC_FILE                           ; ../qsys_systems/soc_simple_de1/synthesis/../../soc_simple_de1.cmp      ; --            ; --                                ; --             ;
+; MISC_FILE                           ; ../qsys_systems/soc_simple_de1/synthesis/../../soc_simple_de1.qsys     ; --            ; --                                ; --             ;
+; MISC_FILE                           ; ip/system_pll_inst.v                                                   ; --            ; --                                ; --             ;
+; MISC_FILE                           ; ip/system_pll_bb.v                                                     ; --            ; --                                ; --             ;
+; MISC_FILE                           ; ip/system_pll.ppf                                                      ; --            ; --                                ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                               ; --            ; --                                ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                  ; --            ; --                                ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                 ; --            ; --                                ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                           ; --            ; --                                ; --             ;
+; SLD_INFO                            ; QSYS_NAME soc_simple_de1 HAS_SOPCINFO 1 GENERATION_ID 1575302699       ; --            ; soc_simple_de1                    ; --             ;
+; SOPCINFO_FILE                       ; ../qsys_systems/soc_simple_de1/synthesis/../../soc_simple_de1.sopcinfo ; --            ; --                                ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                     ; --            ; --                                ; --             ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-----------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 688 MB              ; 00:00:13                           ;
+; Fitter                    ; 00:00:22     ; 1.2                     ; 748 MB              ; 00:00:28                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 542 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:38     ; --                      ; --                  ; 00:00:43                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                           ;
++---------------------------+------------------+--------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
++---------------------------+------------------+--------------+------------+----------------+
+; Analysis & Synthesis      ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
+; Fitter                    ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
+; TimeQuest Timing Analyzer ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
++---------------------------+------------------+--------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off de1Top -c de1Top
+quartus_fit --read_settings_files=on --write_settings_files=off de1Top -c de1Top
+quartus_sta de1Top -c de1Top
+
+
+

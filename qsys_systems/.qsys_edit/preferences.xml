@@ -3,14 +3,22 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="143" />
+   <connections preferredWidth="95" />
    <irq preferredWidth="34" />
    <name preferredWidth="285" />
    <inputclock preferredWidth="168" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Project,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Basic Functions,Library/Interface Protocols/Serial,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Basic Functions/Bridges and Adaptors,Library,Library/Interface Protocols,Library/Basic Functions/Simulation; Debug and Verification" />
- <window width="1366" height="746" x="0" y="22" />
+   expandedCategories="Library,Library/Peripherals,Library/Peripherals/Microcontroller Peripherals,Project" />
+ <window width="1386" height="764" x="-10" y="14" />
  <hdlexample language="VERILOG" />
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="360" />
+   <clocksource preferredWidth="360" />
+   <frequency preferredWidth="340" />
+  </columns>
+ </clocktable>
+ <generation block_symbol_file="0" />
 </preferences>

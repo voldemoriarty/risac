@@ -1,0 +1,9 @@
+	component soc_simple_de1 is
+		port (
+			clk_clk       : in  std_logic                    := 'X'; -- clk
+			reset_reset_n : in  std_logic                    := 'X'; -- reset_n
+			ledg_export   : out std_logic_vector(7 downto 0);        -- export
+			ledr_export   : out std_logic_vector(9 downto 0)         -- export
+		);
+	end component soc_simple_de1;
+
