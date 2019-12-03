@@ -6,6 +6,13 @@
  * 3. use objcopy to get an intel hex format file
  */
 
+
+/**
+ * Write a string of characters to the ALTERA JTAG UART IP
+ * @param uart: contains address of jtag uart peripheral
+ * @param msg:	string to write
+ * @param len:	length in bytes
+ */
 void _puts (volatile char* uart, const char* msg, const int len) {
 	volatile unsigned int *status = (volatile unsigned int *)uart;
 	for (int i = 0; i < len; ++i) {
@@ -13,9 +20,12 @@ void _puts (volatile char* uart, const char* msg, const int len) {
 		*uart = msg[i];
 	}
 }
+
 /**
  * Convert an integer to hexadecimal string
  * buff must have atleast 8 bytes
+ * @param buff:	buffer to store the ascii characters
+ * @param num:	32bit number to convert
  */
 void _itoa (char *buff, int num) {
 	union {
@@ -41,21 +51,28 @@ void _itoa (char *buff, int num) {
 	buff[7] = lut [number.bytes[0] & 0xf];
 }
 
+/**
+ * Prints a 32bit number in hexadecimal in the 0xnumber format
+ * @param uart:	address of Altera JTAG UART IP
+ * @param num:	32bit number
+ */
+
+void putnum32(volatile char* uart, int num) {
+	char buffer[8];
+	_itoa(buffer, num);
+	_puts(uart, "0x", 2);
+	_puts(uart, buffer, 8);
+}
+
 // the (fake) entry point
 int main () {
 	volatile char *leds = (volatile char *)0x2000000;
 	*leds = 0x50;
 	volatile char *uart = (volatile char *)0x1000000;
 	
-	char buffer[10];
-
-	buffer[8] = '\r';
-	buffer[9] = '\n';
-	
 	for (int i = 0xff; i < 0xff + 2; ++i) {
-		_itoa(buffer, i);
-		_puts(uart, "0x", 2);
-		_puts(uart, buffer, 10);
+		putnum32(uart, i);
+		_puts(uart, "\r\n", 2);
 	}
 	while (1);
 }
