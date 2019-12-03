@@ -1,0 +1,68 @@
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=/home/saad/trashcan/risac/qsys_systems/ --output-directory=/home/saad/trashcan/risac/qsys_systems/soc_simple_de1/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:/home/saad/trashcan/risac/qsys_systems/soc_simple_de1.sopcinfo --report-file=html:/home/saad/trashcan/risac/qsys_systems/soc_simple_de1.html --report-file=qip:/home/saad/trashcan/risac/qsys_systems/soc_simple_de1/synthesis/soc_simple_de1.qip --report-file=cmp:/home/saad/trashcan/risac/qsys_systems/soc_simple_de1.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=/home/saad/trashcan/risac/qsys_systems/soc_simple_de1.qsys --language=VERILOG
+Progress: Loading qsys_systems/soc_simple_de1.qsys
+Progress: Reading input file
+Progress: Adding core_clock [clock_source 13.0]
+Progress: Parameterizing module core_clock
+Progress: Adding rv32i_core [risac 1.0]
+Progress: Parameterizing module rv32i_core
+Progress: Adding RAM [altera_avalon_onchip_memory2 13.0.1]
+Progress: Parameterizing module RAM
+Progress: Adding JTAG_UART [altera_avalon_jtag_uart 13.0.1]
+Progress: Parameterizing module JTAG_UART
+Progress: Adding Green_LEDs [altera_avalon_pio 13.0.1]
+Progress: Parameterizing module Green_LEDs
+Progress: Adding Red_LEDs [altera_avalon_pio 13.0.1]
+Progress: Parameterizing module Red_LEDs
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: soc_simple_de1.JTAG_UART: Interrupt sender JTAG_UART.irq is not connected to an interrupt receiver
+Info: soc_simple_de1: Generating soc_simple_de1 "soc_simple_de1" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 6 modules, 15 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 12 modules, 33 connections
+Info: merlin_domain_transform: After transform: 23 modules, 90 connections
+Info: merlin_router_transform: After transform: 29 modules, 108 connections
+Info: reset_adaptation_transform: After transform: 30 modules, 110 connections
+Info: merlin_network_to_switch_transform: After transform: 41 modules, 132 connections
+Info: merlin_pipeline_transform: After transform: 49 modules, 156 connections
+Info: merlin_mm_transform: After transform: 49 modules, 156 connections
+Info: rv32i_core: "soc_simple_de1" instantiated risac "rv32i_core"
+Info: RAM: Starting RTL generation for module 'soc_simple_de1_RAM'
+Info: RAM:   Generation command is [exec /media/saad/Softs/laltera/13.0sub/quartus/linux/perl/bin/perl -I /media/saad/Softs/laltera/13.0sub/quartus/common/ip/altera/common/perl/5.8.3 -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/europa -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/perl_lib -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/common -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_simple_de1_RAM --dir=/tmp/alt8233_4503308945965237490.dir/0002_RAM_gen/ --quartus_dir=/media/saad/Softs/laltera/13.0sub/quartus --verilog --config=/tmp/alt8233_4503308945965237490.dir/0002_RAM_gen//soc_simple_de1_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM: Done RTL generation for module 'soc_simple_de1_RAM'
+Info: RAM: "soc_simple_de1" instantiated altera_avalon_onchip_memory2 "RAM"
+Info: JTAG_UART: Starting RTL generation for module 'soc_simple_de1_JTAG_UART'
+Info: JTAG_UART:   Generation command is [exec /media/saad/Softs/laltera/13.0sub/quartus/linux/perl/bin/perl -I /media/saad/Softs/laltera/13.0sub/quartus/common/ip/altera/common/perl/5.8.3 -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/europa -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/perl_lib -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/common -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_simple_de1_JTAG_UART --dir=/tmp/alt8233_4503308945965237490.dir/0003_JTAG_UART_gen/ --quartus_dir=/media/saad/Softs/laltera/13.0sub/quartus --verilog --config=/tmp/alt8233_4503308945965237490.dir/0003_JTAG_UART_gen//soc_simple_de1_JTAG_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: JTAG_UART: Done RTL generation for module 'soc_simple_de1_JTAG_UART'
+Info: JTAG_UART: "soc_simple_de1" instantiated altera_avalon_jtag_uart "JTAG_UART"
+Info: Green_LEDs: Starting RTL generation for module 'soc_simple_de1_Green_LEDs'
+Info: Green_LEDs:   Generation command is [exec /media/saad/Softs/laltera/13.0sub/quartus/linux/perl/bin/perl -I /media/saad/Softs/laltera/13.0sub/quartus/common/ip/altera/common/perl/5.8.3 -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/europa -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/perl_lib -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/common -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_simple_de1_Green_LEDs --dir=/tmp/alt8233_4503308945965237490.dir/0004_Green_LEDs_gen/ --quartus_dir=/media/saad/Softs/laltera/13.0sub/quartus --verilog --config=/tmp/alt8233_4503308945965237490.dir/0004_Green_LEDs_gen//soc_simple_de1_Green_LEDs_component_configuration.pl  --do_build_sim=0  ]
+Info: Green_LEDs: Done RTL generation for module 'soc_simple_de1_Green_LEDs'
+Info: Green_LEDs: "soc_simple_de1" instantiated altera_avalon_pio "Green_LEDs"
+Info: Red_LEDs: Starting RTL generation for module 'soc_simple_de1_Red_LEDs'
+Info: Red_LEDs:   Generation command is [exec /media/saad/Softs/laltera/13.0sub/quartus/linux/perl/bin/perl -I /media/saad/Softs/laltera/13.0sub/quartus/common/ip/altera/common/perl/5.8.3 -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/europa -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin/perl_lib -I /media/saad/Softs/laltera/13.0sub/quartus/sopc_builder/bin -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/common -I /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /media/saad/Softs/laltera/13.0sub/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_simple_de1_Red_LEDs --dir=/tmp/alt8233_4503308945965237490.dir/0005_Red_LEDs_gen/ --quartus_dir=/media/saad/Softs/laltera/13.0sub/quartus --verilog --config=/tmp/alt8233_4503308945965237490.dir/0005_Red_LEDs_gen//soc_simple_de1_Red_LEDs_component_configuration.pl  --do_build_sim=0  ]
+Info: Red_LEDs: Done RTL generation for module 'soc_simple_de1_Red_LEDs'
+Info: Red_LEDs: "soc_simple_de1" instantiated altera_avalon_pio "Red_LEDs"
+Info: rv32i_core_instruction_master_translator: "soc_simple_de1" instantiated altera_merlin_master_translator "rv32i_core_instruction_master_translator"
+Info: RAM_s1_translator: "soc_simple_de1" instantiated altera_merlin_slave_translator "RAM_s1_translator"
+Info: rv32i_core_instruction_master_translator_avalon_universal_master_0_agent: "soc_simple_de1" instantiated altera_merlin_master_agent "rv32i_core_instruction_master_translator_avalon_universal_master_0_agent"
+Info: RAM_s1_translator_avalon_universal_slave_0_agent: "soc_simple_de1" instantiated altera_merlin_slave_agent "RAM_s1_translator_avalon_universal_slave_0_agent"
+Info: RAM_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: "soc_simple_de1" instantiated altera_avalon_sc_fifo "RAM_s1_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "soc_simple_de1" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "soc_simple_de1" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "soc_simple_de1" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "soc_simple_de1" instantiated altera_merlin_router "id_router_001"
+Info: rst_controller: "soc_simple_de1" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "soc_simple_de1" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "soc_simple_de1" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "soc_simple_de1" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "soc_simple_de1" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux_001: "soc_simple_de1" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file /home/saad/trashcan/risac/qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: agent_pipeline: "soc_simple_de1" instantiated altera_avalon_st_pipeline_stage "agent_pipeline"
+Info: soc_simple_de1: Done soc_simple_de1" with 22 modules, 61 files, 860584 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

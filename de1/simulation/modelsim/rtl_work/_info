@@ -1,0 +1,932 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/saad/trashcan/risac/de1/simulation/modelsim
+valtera_avalon_sc_fifo
+IEUU<8Uh`LY;<oEZ:KUh1j1
+VjOzUMS5nAQIa6?lLKEfID0
+S1
+Z1 d/home/saad/trashcan/risac/de1/simulation/modelsim
+Z2 w1575389026
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_sc_fifo.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_sc_fifo.v
+L0 21
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-vlog01compat -work work -O0
+Z5 tSvlog 1
+Z6 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules -O0
+!i10b 1
+!s100 AS<6YGR4:DzcPiME`EcQh0
+!s105 altera_avalon_sc_fifo_v_unit
+!s85 0
+!s108 1575389037.079555
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_sc_fifo.v|
+!s101 -O0
+valtera_avalon_st_pipeline_base
+I3fZn;:C<BMWOm9gYid1L]3
+VzC;0]nBLKo0Q[zO07mJ[H0
+S1
+R1
+Z7 w1575389027
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_st_pipeline_base.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_st_pipeline_base.v
+L0 22
+R3
+r1
+31
+R4
+R6
+R5
+!i10b 1
+!s100 _?dS92<YEg<87iUK8@^I00
+!s105 altera_avalon_st_pipeline_base_v_unit
+!s85 0
+!s108 1575389037.120905
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_st_pipeline_base.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_st_pipeline_base.v|
+!s101 -O0
+valtera_avalon_st_pipeline_stage
+Z8 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+I]>WSeJ<MWHeO2>Y2IWMmA3
+Vk]g8:JIWVfAXP<nCX=^TU3
+S1
+R1
+R7
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+L0 22
+R3
+r1
+31
+Z9 o-sv -work work -O0
+R5
+Z10 !s92 -sv -work work +incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules -O0
+!i10b 1
+!s100 =6lKW;fRdznYnH25c=<IO2
+!s105 altera_avalon_st_pipeline_stage_sv_unit
+!s85 0
+!s108 1575389037.153789
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_st_pipeline_stage.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_avalon_st_pipeline_stage.sv|
+!s101 -O0
+valtera_merlin_arb_adder
+R8
+IFeA1Pz]ifSoW0Q;X5ZWAP3
+VeEm48mj>0hhNR4acO5n:k1
+Z11 !s105 altera_merlin_arbitrator_sv_unit
+S1
+R1
+R2
+Z12 8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_arbitrator.sv
+Z13 F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_arbitrator.sv
+L0 228
+R3
+r1
+31
+Z14 !s108 1575389037.185299
+Z15 !s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_arbitrator.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_arbitrator.sv|
+R9
+R10
+R5
+!i10b 1
+!s100 M5``TZz[YQCd]G;<zY]WU1
+!s85 0
+!s101 -O0
+valtera_merlin_arbitrator
+R8
+I=LCC7;RBBe31]n3QUm08k3
+VkoHZHN`N_KjQAPBBQ3eh^0
+R11
+S1
+R1
+R2
+R12
+R13
+L0 103
+R3
+r1
+31
+R14
+R15
+R16
+R9
+R10
+R5
+!i10b 1
+!s100 2?AY:WVN=U1@M3Whj<[N=0
+!s85 0
+!s101 -O0
+valtera_merlin_burst_uncompressor
+R8
+IgZm6b>onY6>mh[89GagV12
+Vk1gIA`RY2OQ1N9QbTULJo2
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+L0 40
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 bem3CRUNzNF@l0Ak4A[aY0
+!s105 altera_merlin_burst_uncompressor_sv_unit
+!s85 0
+!s108 1575389037.218367
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
+!s101 -O0
+valtera_merlin_master_agent
+R8
+IMQ@O7zbjBO2@OTo10T>RA3
+VG[gHYg_J=R2@KnI_[bEjA0
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_master_agent.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_master_agent.sv
+L0 28
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 zHcU27Qn`m_4_mKlJS5Tm3
+!s105 altera_merlin_master_agent_sv_unit
+!s85 0
+!s108 1575389037.249315
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_master_agent.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_master_agent.sv|
+!s101 -O0
+valtera_merlin_master_translator
+R8
+I7a^?F>^gYfd;?lC2hcjTH2
+V0KIH7<bW[IFhHJBzB4US?0
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_master_translator.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_master_translator.sv
+L0 30
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 G5Xed1GYbL9@OdkK:K38J2
+!s105 altera_merlin_master_translator_sv_unit
+!s85 0
+!s108 1575389037.286313
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_master_translator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_master_translator.sv|
+!s101 -O0
+valtera_merlin_slave_agent
+R8
+I_c?aIk;YX1c8gc_eh8iC42
+VekU5U46jGhemBCkL?m_og2
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_slave_agent.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_slave_agent.sv
+L0 34
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 AYzZ<nUQ<2V5IFO0ELe]n1
+!s105 altera_merlin_slave_agent_sv_unit
+!s85 0
+!s108 1575389037.322913
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_slave_agent.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_slave_agent.sv|
+!s101 -O0
+valtera_merlin_slave_translator
+R8
+IRUjkj5fORB=IhNWOO=Jbh1
+VA6G6lglY;QOHbkKlTEAXC0
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_slave_translator.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_slave_translator.sv
+L0 35
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 I05b^jE32EVfVGjQnBJ5c0
+!s105 altera_merlin_slave_translator_sv_unit
+!s85 0
+!s108 1575389037.375610
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_slave_translator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_merlin_slave_translator.sv|
+!s101 -O0
+valtera_reset_controller
+I;MF5=iBmI8<9?GX:g^1V[0
+V:mR1fj3Rf>NGziDN_:U030
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_reset_controller.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_reset_controller.v
+L0 28
+R3
+r1
+31
+R4
+R6
+R5
+!i10b 1
+!s100 _O<cE=h9Y3FKcQd[ioHk92
+!s105 altera_reset_controller_v_unit
+!s85 0
+!s108 1575389037.413529
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_reset_controller.v|
+!s101 -O0
+valtera_reset_synchronizer
+Ih6MS@Ab5[:;TShZWQSS^92
+V3CjoOZCIEdzCJgPn8]D7`2
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_reset_synchronizer.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_reset_synchronizer.v
+L0 24
+R3
+r1
+31
+R4
+R6
+R5
+!i10b 1
+!s100 @^H75NIO??BcjH0bI3TR53
+!s105 altera_reset_synchronizer_v_unit
+!s85 0
+!s108 1575389037.442041
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/altera_reset_synchronizer.v|
+!s101 -O0
+vde1Top
+I<dg[n9VJRii>iK4NT<keA1
+V7K_6C<5=`i2AhLRLXkkJ^3
+Z17 !s105 de1Top_v_unit
+S1
+R1
+Z18 w1575308051
+Z19 8/home/saad/trashcan/risac/de1/verilog/de1Top.v
+Z20 F/home/saad/trashcan/risac/de1/verilog/de1Top.v
+L0 3
+R3
+r1
+31
+Z21 !s108 1575389037.051671
+Z22 !s107 /home/saad/trashcan/risac/de1/verilog/de1Top.v|
+Z23 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/verilog|/home/saad/trashcan/risac/de1/verilog/de1Top.v|
+R4
+Z24 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de1/verilog -O0
+R5
+nde1@top
+!i10b 1
+!s100 ^N<9eQoYhA7BDH5lhEXCD1
+!s85 0
+!s101 -O0
+vrisac
+I<RY8k^bM4Da`eJAJZYZB42
+Vb6fShB_Ta[ci5l9I>Ac0>3
+S1
+R1
+Z25 w1575389025
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/risac.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/risac.v
+L0 1
+R3
+r1
+31
+R4
+R6
+R5
+!i10b 1
+!s100 >o][O[FJfIlaIT4a7j>2;3
+!s105 risac_v_unit
+!s85 0
+!s108 1575389037.475109
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/risac.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/risac.v|
+!s101 -O0
+vrisac_avalon
+IZAL@KI4FOBPhMhH<<LI943
+VGbk^5QN7UKP@WPU6Mm1Z21
+S1
+R1
+R25
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/risac_avalon.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/risac_avalon.v
+L0 1
+R3
+r1
+31
+R4
+R6
+R5
+!i10b 1
+!s100 ZbDe]kkdPRg8V991R;kW40
+!s105 risac_avalon_v_unit
+!s85 0
+!s108 1575389037.510962
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/risac_avalon.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/risac_avalon.v|
+!s101 -O0
+vsoc_simple_de1
+!i10b 1
+!s100 J[FL:ET2Sa<SL30R<R_d;1
+I>]IaUn6B[BnnYEL6nglo42
+VnW0ijahESzojWNKbFziJ@1
+!s105 soc_simple_de1_v_unit
+S1
+R1
+R25
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/soc_simple_de1.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/soc_simple_de1.v
+L0 6
+R3
+r1
+!s85 0
+31
+!s108 1575389037.954826
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/soc_simple_de1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/soc_simple_de1.v|
+!s101 -O0
+R4
+!s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis -O0
+R5
+vsoc_simple_de1_addr_router
+R8
+I5Ab]N?kQEJXZ<GYA`RHBU3
+V?8:0V93<XA@3n=f=;OKKj0
+Z26 !s105 soc_simple_de1_addr_router_sv_unit
+S1
+R1
+R2
+Z27 8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_addr_router.sv
+Z28 F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_addr_router.sv
+L0 86
+R3
+r1
+31
+Z29 !s108 1575389037.541270
+Z30 !s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_addr_router.sv|
+Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_addr_router.sv|
+R9
+R10
+R5
+!i10b 1
+!s100 VzB2EMdeU>:TZ[>Uk=^W=0
+!s85 0
+!s101 -O0
+vsoc_simple_de1_addr_router_001
+R8
+IBU0eSglUI:_Xe^gg`24<O2
+VzQzI;=AN5U]2Y>GeO5X]F1
+Z32 !s105 soc_simple_de1_addr_router_001_sv_unit
+S1
+R1
+R2
+Z33 8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_addr_router_001.sv
+Z34 F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_addr_router_001.sv
+L0 86
+R3
+r1
+31
+Z35 !s108 1575389037.571939
+Z36 !s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_addr_router_001.sv|
+Z37 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_addr_router_001.sv|
+R9
+R10
+R5
+!i10b 1
+!s100 kmR5=RR64N=XNHzcB;;Th3
+!s85 0
+!s101 -O0
+vsoc_simple_de1_addr_router_001_default_decode
+R8
+IK6Jg[TaXG^ee_5MAmoMiG1
+V?@GecKW`5;INMc5554HCF1
+R32
+S1
+R1
+R2
+R33
+R34
+L0 45
+R3
+r1
+31
+R35
+R36
+R37
+R9
+R10
+R5
+!i10b 1
+!s100 GOh_NjSM040J8oin3:X782
+!s85 0
+!s101 -O0
+vsoc_simple_de1_addr_router_default_decode
+R8
+IaTNPZZFBk4d^8XH4I6=190
+VO2A^8KGBZ@PJX;dYci@e_0
+R26
+S1
+R1
+R2
+R27
+R28
+L0 45
+R3
+r1
+31
+R29
+R30
+R31
+R9
+R10
+R5
+!i10b 1
+!s100 XzjAOKmhad`^5mhWGkCP?2
+!s85 0
+!s101 -O0
+vsoc_simple_de1_cmd_xbar_demux
+R8
+I77iV2fobeH1?Z8KWLJ>ai3
+VLi2^>:j59Dj;gHbPfK_2[0
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_demux.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_demux.sv
+L0 43
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 40EaYeDzCh1M6;M8dX3SO3
+!s105 soc_simple_de1_cmd_xbar_demux_sv_unit
+!s85 0
+!s108 1575389037.605465
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_demux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_demux.sv|
+!s101 -O0
+vsoc_simple_de1_cmd_xbar_demux_001
+R8
+IZk5cQ>mZa@z4cd1W:_GFG1
+V7aUI2GO_nJQ>ECZf?5HTS1
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_demux_001.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_demux_001.sv
+L0 43
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 TYAJUzg6g@JzMf?<W;FVG2
+!s105 soc_simple_de1_cmd_xbar_demux_001_sv_unit
+!s85 0
+!s108 1575389037.635496
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_demux_001.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_demux_001.sv|
+!s101 -O0
+vsoc_simple_de1_cmd_xbar_mux
+R8
+IB;HK=WJZ593KKKde:M5=L2
+VehEeM9ZIDAoe?IWm<8h770
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_mux.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_mux.sv
+L0 38
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 JeQLV1iD:M?db@n=^iZc22
+!s105 soc_simple_de1_cmd_xbar_mux_sv_unit
+!s85 0
+!s108 1575389037.665021
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_mux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_cmd_xbar_mux.sv|
+!s101 -O0
+vsoc_simple_de1_Green_LEDs
+IF@>GVckG6LGLbCY6Qdk^c3
+Vo82eM8Z6_Daa;FAOWPl?E2
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_Green_LEDs.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_Green_LEDs.v
+L0 21
+R3
+r1
+31
+R4
+R6
+R5
+nsoc_simple_de1_@green_@l@e@ds
+!i10b 1
+!s100 UgXZLj8>KC[cFm<X@AZAR2
+!s105 soc_simple_de1_Green_LEDs_v_unit
+!s85 0
+!s108 1575389037.697254
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_Green_LEDs.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_Green_LEDs.v|
+!s101 -O0
+vsoc_simple_de1_id_router
+R8
+I4BZAeERdECb_HcTBDk^=Y1
+VH8SEdUN3:83U5mkJ2F4@20
+Z38 !s105 soc_simple_de1_id_router_sv_unit
+S1
+R1
+R2
+Z39 8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_id_router.sv
+Z40 F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_id_router.sv
+L0 86
+R3
+r1
+31
+Z41 !s108 1575389037.726876
+Z42 !s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_id_router.sv|
+Z43 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_id_router.sv|
+R9
+R10
+R5
+!i10b 1
+!s100 g5W37YM@3J<[bi_zTB8ib1
+!s85 0
+!s101 -O0
+vsoc_simple_de1_id_router_001
+R8
+I?jOe?cEec6jaUf=jJ5TJ90
+VgXAWI4iocWbdALFVE7CQS2
+Z44 !s105 soc_simple_de1_id_router_001_sv_unit
+S1
+R1
+R2
+Z45 8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_id_router_001.sv
+Z46 F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_id_router_001.sv
+L0 86
+R3
+r1
+31
+Z47 !s108 1575389037.760083
+Z48 !s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_id_router_001.sv|
+Z49 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_id_router_001.sv|
+R9
+R10
+R5
+!i10b 1
+!s100 `hkklW`cnm^Gd7DIdce8o2
+!s85 0
+!s101 -O0
+vsoc_simple_de1_id_router_001_default_decode
+R8
+IGI749n6dbdJk0E<kRkK[c1
+VD4dcI5]NWS4V2TPJ>6?T<3
+R44
+S1
+R1
+R2
+R45
+R46
+L0 45
+R3
+r1
+31
+R47
+R48
+R49
+R9
+R10
+R5
+!i10b 1
+!s100 CYjz[H0zfzLm9RY2eQBgf1
+!s85 0
+!s101 -O0
+vsoc_simple_de1_id_router_default_decode
+R8
+I`3PQa1W:Wb]A;ZGQk=OHb3
+VCFG2H]SO4CbIiG7`8?[hV0
+R38
+S1
+R1
+R2
+R39
+R40
+L0 45
+R3
+r1
+31
+R41
+R42
+R43
+R9
+R10
+R5
+!i10b 1
+!s100 22@bgUB?K0`QAGQj8AETM3
+!s85 0
+!s101 -O0
+vsoc_simple_de1_JTAG_UART
+I<_W2[PnCf_OK^I93e;_XC3
+VaJA8aBTO`IG;[22ZKbAmR3
+Z50 !s105 soc_simple_de1_JTAG_UART_v_unit
+S1
+R1
+R2
+Z51 8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_JTAG_UART.v
+Z52 F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_JTAG_UART.v
+L0 327
+R3
+r1
+31
+Z53 !s108 1575389037.791732
+Z54 !s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_JTAG_UART.v|
+Z55 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_JTAG_UART.v|
+R4
+R6
+R5
+nsoc_simple_de1_@j@t@a@g_@u@a@r@t
+!i10b 1
+!s100 GM8AV@o:LZmKH]FKeTcD>1
+!s85 0
+!s101 -O0
+vsoc_simple_de1_JTAG_UART_scfifo_r
+IVjZo=UUGejL@D;E;_41^23
+VknNoP_o7RiVkoP3;:cTJ[3
+R50
+S1
+R1
+R2
+R51
+R52
+L0 240
+R3
+r1
+31
+R53
+R54
+R55
+R4
+R6
+R5
+nsoc_simple_de1_@j@t@a@g_@u@a@r@t_scfifo_r
+!i10b 1
+!s100 76OLB@cSa:RzCo2RfZKU40
+!s85 0
+!s101 -O0
+vsoc_simple_de1_JTAG_UART_scfifo_w
+IFV^OjG[FUAK72FbF^[@^B2
+VjCEmd;70M4OSJiZb?4iEc0
+R50
+S1
+R1
+R2
+R51
+R52
+L0 77
+R3
+r1
+31
+R53
+R54
+R55
+R4
+R6
+R5
+nsoc_simple_de1_@j@t@a@g_@u@a@r@t_scfifo_w
+!i10b 1
+!s100 SX6A;S=L=fGQa=faF]3df1
+!s85 0
+!s101 -O0
+vsoc_simple_de1_JTAG_UART_sim_scfifo_r
+IU;k^`B`8g:nl[JefhB][F3
+Ve4h]da@gN>8E2R<0M90aD1
+R50
+S1
+R1
+R2
+R51
+R52
+L0 162
+R3
+r1
+31
+R53
+R54
+R55
+R4
+R6
+R5
+nsoc_simple_de1_@j@t@a@g_@u@a@r@t_sim_scfifo_r
+!i10b 1
+!s100 7X7dMP4KQN3Qe<>`eC>591
+!s85 0
+!s101 -O0
+vsoc_simple_de1_JTAG_UART_sim_scfifo_w
+IR?QVf9RUIBBQ8PCR?eL`_3
+VHWbeZ0;z3J@K;k=Mn0:LX0
+R50
+S1
+R1
+R2
+R51
+R52
+L0 21
+R3
+r1
+31
+R53
+R54
+R55
+R4
+R6
+R5
+nsoc_simple_de1_@j@t@a@g_@u@a@r@t_sim_scfifo_w
+!i10b 1
+!s100 BdnaohE`CP?7A`WYz;58l3
+!s85 0
+!s101 -O0
+vsoc_simple_de1_RAM
+Ill4?W064CS?;QZA9MkTzQ1
+VT>C3;feaIWJ:`iPG^^Eh[2
+S1
+R1
+R25
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_RAM.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_RAM.v
+L0 21
+R3
+r1
+31
+R4
+R6
+R5
+nsoc_simple_de1_@r@a@m
+!i10b 1
+!s100 AgbUUD6USLQ_DUR55o4;Z0
+!s105 soc_simple_de1_RAM_v_unit
+!s85 0
+!s108 1575389037.831052
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_RAM.v|
+!s101 -O0
+vsoc_simple_de1_Red_LEDs
+IX?i[f:<hf90K]zAk16^lO1
+VcS0D0>Y`ccNlIjVEB[z5C2
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_Red_LEDs.v
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_Red_LEDs.v
+L0 21
+R3
+r1
+31
+R4
+R6
+R5
+nsoc_simple_de1_@red_@l@e@ds
+!i10b 1
+!s100 ?PG]gMF]eGkOmKZYIR=2:1
+!s105 soc_simple_de1_Red_LEDs_v_unit
+!s85 0
+!s108 1575389037.859377
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_Red_LEDs.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_Red_LEDs.v|
+!s101 -O0
+vsoc_simple_de1_rsp_xbar_demux
+R8
+Ij<coeM4WP;IAC_eIoO2F@3
+VGR7@>9=BKSG4X`7:^4NkW3
+S1
+R1
+R2
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_rsp_xbar_demux.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_rsp_xbar_demux.sv
+L0 43
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 9HUF;IDkN0]>LLVB2mJ@a2
+!s105 soc_simple_de1_rsp_xbar_demux_sv_unit
+!s85 0
+!s108 1575389037.890045
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_rsp_xbar_demux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_rsp_xbar_demux.sv|
+!s101 -O0
+vsoc_simple_de1_rsp_xbar_mux_001
+R8
+IBR:6:?[ez>0W=NJ`f=]8F2
+VfE]WD9PbZ1n@?CQWCKbHE2
+S1
+R1
+R7
+8/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_rsp_xbar_mux_001.sv
+F/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_rsp_xbar_mux_001.sv
+L0 38
+R3
+r1
+31
+R9
+R10
+R5
+!i10b 1
+!s100 oH7LTG2=YA1<6oP1DJPF?0
+!s105 soc_simple_de1_rsp_xbar_mux_001_sv_unit
+!s85 0
+!s108 1575389037.921661
+!s107 /home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_rsp_xbar_mux_001.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules|/home/saad/trashcan/risac/de1/../qsys_systems/soc_simple_de1/synthesis/submodules/soc_simple_de1_rsp_xbar_mux_001.sv|
+!s101 -O0
+vsystem_pll
+IWb;I5<4Qz096Hi<=gA=0C3
+V3NdRJMn]aRg4fQeZLL7o13
+S1
+R1
+w1575303693
+8/home/saad/trashcan/risac/de1/ip/system_pll.v
+F/home/saad/trashcan/risac/de1/ip/system_pll.v
+L0 39
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 kZR>3b@?81@PUk_X60b1@0
+!s105 system_pll_v_unit
+!s85 0
+!s108 1575389036.388708
+!s107 /home/saad/trashcan/risac/de1/ip/system_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de1/ip|/home/saad/trashcan/risac/de1/ip/system_pll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de1/ip -O0
+vtb
+IMcRMkXSQbd:ESkA4Z72W`3
+VV@Xn<HnSRM[I5c1?BH]3a3
+R17
+S1
+R1
+R18
+R19
+R20
+L0 24
+R3
+r1
+31
+R21
+R22
+R23
+R4
+R24
+R5
+!i10b 1
+!s100 C?[zQ]7hY:PZzAM07@QS93
+!s85 0
+!s101 -O0
