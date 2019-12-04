@@ -69,12 +69,13 @@ int main () {
 	volatile char *leds = (volatile char *)0x2000000;
 	*leds = 0x50;
 	volatile char *uart = (volatile char *)0x1000000;
-	
-	for (int i = 0xff; i < 0xff + 2; ++i) {
+	_puts (uart, "Now running: Count from -1 to 9\r\n", 34);
+	for (int i = -1; i < 10; ++i) {
 		putnum32(uart, i);
 		_puts(uart, "\r\n", 2);
 	}
 	// loopback uart 
+	_puts (uart, "Now running: UART Loopback\r\n", 29);
 	while (1) {
 		// if read data is available, write it for loopback
 		volatile unsigned *data = (volatile unsigned *)uart;

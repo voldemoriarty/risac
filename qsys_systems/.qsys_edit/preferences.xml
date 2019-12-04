@@ -3,15 +3,15 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="95" />
+   <connections preferredWidth="143" />
    <irq preferredWidth="34" />
    <name preferredWidth="285" />
    <inputclock preferredWidth="168" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library,Library/Peripherals,Library/Peripherals/Microcontroller Peripherals,Project" />
- <window width="1386" height="764" x="-10" y="14" />
+   expandedCategories="Project,Library/Basic Functions/Bridges and Adaptors,Library/Basic Functions,Library/Interface Protocols,Library,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Basic Functions/Simulation; Debug and Verification,Library/Interface Protocols/Serial" />
+ <window width="1366" height="746" x="-10" y="14" />
  <hdlexample language="VERILOG" />
  <clocktable>
   <columns>

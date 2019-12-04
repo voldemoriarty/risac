@@ -61,7 +61,7 @@ agreement for further details.
 		(text "export" (rect 146 67 328 144)(font "Arial" (color 0 0 0)))
 		(text "reset" (rect 67 123 164 259)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "reset_n" (rect 101 147 244 304)(font "Arial" (color 0 0 0)))
-		(text " soc_simple " (rect 221 168 514 346)(font "Arial" ))
+		(text " system " (rect 237 168 522 346)(font "Arial" ))
 		(line (pt 96 32)(pt 176 32)(line_width 1))
 		(line (pt 176 32)(pt 176 168)(line_width 1))
 		(line (pt 96 168)(pt 176 168)(line_width 1))

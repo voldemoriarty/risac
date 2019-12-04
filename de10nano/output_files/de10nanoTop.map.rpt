@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de10nanoTop
-Wed Dec  4 10:11:34 2019
+Wed Dec  4 10:51:34 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -112,9 +112,10 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 104. Port Connectivity Checks: "soc_simple:rV_system|soc_simple_PLL_50_150:pll_50_150|altera_pll:altera_pll_i"
 105. Port Connectivity Checks: "soc_simple:rV_system"
 106. Post-Synthesis Netlist Statistics for Top Partition
-107. Elapsed Time Per Partition
-108. Analysis & Synthesis Messages
-109. Analysis & Synthesis Suppressed Messages
+107. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
+108. Elapsed Time Per Partition
+109. Analysis & Synthesis Messages
+110. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -141,7 +142,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Dec  4 10:11:34 2019       ;
+; Analysis & Synthesis Status     ; Successful - Wed Dec  4 10:51:34 2019       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; de10nanoTop                                 ;
 ; Top-level Entity Name           ; de10nanoTop                                 ;
@@ -262,7 +263,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -354,9 +355,9 @@ agreement for further details.
 ;                                             ;                                                                                              ;
 ; Combinational ALUT usage for logic          ; 1413                                                                                         ;
 ;     -- 7 input functions                    ; 6                                                                                            ;
-;     -- 6 input functions                    ; 340                                                                                          ;
-;     -- 5 input functions                    ; 286                                                                                          ;
-;     -- 4 input functions                    ; 253                                                                                          ;
+;     -- 6 input functions                    ; 339                                                                                          ;
+;     -- 5 input functions                    ; 288                                                                                          ;
+;     -- 4 input functions                    ; 252                                                                                          ;
 ;     -- <=3 input functions                  ; 528                                                                                          ;
 ;                                             ;                                                                                              ;
 ; Dedicated logic registers                   ; 1231                                                                                         ;
@@ -1068,46 +1069,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_mm_interconnect_2:mm_interconnect_2|altera_merlin_slave_translator:leds_s1_translator|wait_latency_counter[0]     ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|count[6]                             ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:pio_pipeline_bridge_s0_agent_rsp_fifo|mem_used[3]       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_pipeline_bridge_s0_agent_rsp_fifo|mem_used[2] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|pc[0]                                                                                  ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|pc[17]                                                                                 ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|sourceEqual[1]                                                                         ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[5]                                                                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[31]                                                                             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|td_shift[9]                          ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|rs2Data[9]                                                                             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[22]                                                                             ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|td_shift[3]                          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|td_shift[5]                          ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[10]                                                                             ;
-; 14:1               ; 6 bits    ; 54 LEs        ; 6 LEs                ; 48 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|immDec[9]                                                                              ;
-; 15:1               ; 8 bits    ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|immDec[19]                                                                             ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|immDec[1]                                                                              ;
-; 10:1               ; 11 bits   ; 66 LEs        ; 0 LEs                ; 66 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|immDec[26]                                                                             ;
-; 15:1               ; 8 bits    ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[20]                                                                             ;
-; 14:1               ; 5 bits    ; 45 LEs        ; 40 LEs               ; 5 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[7]                                                                              ;
-; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[12]                                                                             ;
-; 18:1               ; 3 bits    ; 36 LEs        ; 33 LEs               ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[30]                                                                             ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[25]                                                                             ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[3]                                                                              ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 18 LEs               ; 2 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[10]                                                                             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                             ;
-; 4:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftRight1                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftRight0                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                             ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|rs1Data                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_mm_interconnect_2:mm_interconnect_2|altera_merlin_slave_translator:leds_s1_translator|wait_latency_counter[0]                                                                                                                                                                                                            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|count[6]                                                                                                                                                                                                                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:pio_pipeline_bridge_s0_agent_rsp_fifo|mem_used[3]                                                                                                                                                                                                              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_pipeline_bridge_s0_agent_rsp_fifo|mem_used[2]                                                                                                                                                                                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|pc[0]                                                                                                                                                                                                                                                                                         ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|pc[17]                                                                                                                                                                                                                                                                                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|sourceEqual[1]                                                                                                                                                                                                                                                                                ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[5]                                                                                                                                                                                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[31]                                                                                                                                                                                                                                                                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|td_shift[9]                                                                                                                                                                                                                                 ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|rs2Data[9]                                                                                                                                                                                                                                                                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[22]                                                                                                                                                                                                                                                                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|td_shift[3]                                                                                                                                                                                                                                 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|soc_simple_jtag_uart:jtag_uart|alt_jtag_atlantic:soc_simple_jtag_uart_alt_jtag_atlantic|td_shift[5]                                                                                                                                                                                                                                 ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|lsuRes[10]                                                                                                                                                                                                                                                                                    ;
+; 14:1               ; 6 bits    ; 54 LEs        ; 6 LEs                ; 48 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|immDec[9]                                                                                                                                                                                                                                                                                     ;
+; 15:1               ; 8 bits    ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|immDec[19]                                                                                                                                                                                                                                                                                    ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|immDec[1]                                                                                                                                                                                                                                                                                     ;
+; 10:1               ; 11 bits   ; 66 LEs        ; 0 LEs                ; 66 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|immDec[26]                                                                                                                                                                                                                                                                                    ;
+; 15:1               ; 8 bits    ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[20]                                                                                                                                                                                                                                                                                    ;
+; 14:1               ; 5 bits    ; 45 LEs        ; 40 LEs               ; 5 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[7]                                                                                                                                                                                                                                                                                     ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[12]                                                                                                                                                                                                                                                                                    ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 33 LEs               ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[30]                                                                                                                                                                                                                                                                                    ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[25]                                                                                                                                                                                                                                                                                    ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[3]                                                                                                                                                                                                                                                                                     ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 18 LEs               ; 2 LEs                  ; Yes        ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|aluRes[10]                                                                                                                                                                                                                                                                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                                                                                                                                                                                                                                    ;
+; 4:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                                                                                                                                                                                                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftRight1                                                                                                                                                                                                                                                                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftRight0                                                                                                                                                                                                                                                                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                                                                                                                                                                                                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                                                                                                                                                                                                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|ShiftLeft4                                                                                                                                                                                                                                                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |de10nanoTop|soc_simple:rV_system|risac_avalon:rv32i_core|risac:u_risac|rs1Data                                                                                                                                                                                                                                                                                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[2]                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[3]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[1] ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[1]                      ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |de10nanoTop|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1252,7 +1260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; deserialization_factor               ; 4                      ; Signed Integer                                             ;
 ; data_rate                            ; 0                      ; Signed Integer                                             ;
 ; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                                             ;
-; output_clock_frequency0              ; 50.000000 MHz          ; String                                                     ;
+; output_clock_frequency0              ; 140.000000 MHz         ; String                                                     ;
 ; phase_shift0                         ; 0 ps                   ; String                                                     ;
 ; duty_cycle0                          ; 50                     ; Signed Integer                                             ;
 ; output_clock_frequency1              ; 0 MHz                  ; String                                                     ;
@@ -3307,13 +3315,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:05     ;
-+----------------+--------------+
++------------------------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
++-----------------------+------------------------------------------+
+; Type                  ; Count                                    ;
++-----------------------+------------------------------------------+
+; arriav_ff             ; 75                                       ;
+;     CLR               ; 5                                        ;
+;     ENA               ; 30                                       ;
+;     ENA CLR           ; 17                                       ;
+;     SCLR              ; 7                                        ;
+;     plain             ; 16                                       ;
+; arriav_lcell_comb     ; 92                                       ;
+;     normal            ; 92                                       ;
+;         0 data inputs ; 1                                        ;
+;         1 data inputs ; 4                                        ;
+;         2 data inputs ; 23                                       ;
+;         3 data inputs ; 15                                       ;
+;         4 data inputs ; 11                                       ;
+;         5 data inputs ; 22                                       ;
+;         6 data inputs ; 16                                       ;
+; boundary_port         ; 89                                       ;
+;                       ;                                          ;
+; Max LUT depth         ; 3.00                                     ;
+; Average LUT depth     ; 1.51                                     ;
++-----------------------+------------------------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:04     ;
+; sld_hub:auto_hub ; 00:00:00     ;
++------------------+--------------+
 
 
 +-------------------------------+
@@ -3322,7 +3358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Wed Dec  4 10:10:31 2019
+    Info: Processing started: Wed Dec  4 10:50:45 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de10nanoTop -c de10nanoTop
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -3416,7 +3452,7 @@ Info (12133): Instantiated megafunction "soc_simple:rV_system|soc_simple_PLL_50_
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
     Info (12134): Parameter "number_of_clocks" = "1"
-    Info (12134): Parameter "output_clock_frequency0" = "50.000000 MHz"
+    Info (12134): Parameter "output_clock_frequency0" = "140.000000 MHz"
     Info (12134): Parameter "phase_shift0" = "0 ps"
     Info (12134): Parameter "duty_cycle0" = "50"
     Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
@@ -3641,7 +3677,7 @@ Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "soc_si
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "soc_simple:rV_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: /home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "soc_simple:rV_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: /home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/altera_reset_controller.v Line: 220
 Info (11170): Start IP generation for the debug fabric within sld_hub.
-Info (11172): 2019.12.04.10:11:14 Progress: Loading slda2caf71c/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2019.12.04.10:51:09 Progress: Loading slda2caf71c/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -3667,6 +3703,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 46 registers lost all their fanouts during netlist optimizations.
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (144001): Generated suppressed messages file /home/saad/trashcan/risac/de10nano/output_files/de10nanoTop.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 14 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -3677,10 +3714,10 @@ Info (21057): Implemented 2350 device resources after synthesis - the final reso
     Info (21064): Implemented 112 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1412 megabytes
-    Info: Processing ended: Wed Dec  4 10:11:34 2019
-    Info: Elapsed time: 00:01:03
-    Info: Total CPU time (on all processors): 00:01:18
+    Info: Peak virtual memory: 1404 megabytes
+    Info: Processing ended: Wed Dec  4 10:51:34 2019
+    Info: Elapsed time: 00:00:49
+    Info: Total CPU time (on all processors): 00:01:27
 
 
 +------------------------------------------+
