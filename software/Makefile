@@ -28,6 +28,7 @@ BM = ./bin2hex/bin2hex
 .PHONY: elf
 .PHONY: asm
 .PHONY: sim
+.PHONY: de10Flash
 
 %.o: %.c
 	$(CC) $(CFLAGS) $<
@@ -61,6 +62,8 @@ sim: $(TGT).vh
 
 all: $(TGT).elf $(TGT).bin $(TGT).mif $(TGT).vh
 
+de10Flash: $(TGT).mif
+	make --directory=../de10nano/ all
 
 clean:
 	rm *.mif *.bin *.elf *.o *.s
