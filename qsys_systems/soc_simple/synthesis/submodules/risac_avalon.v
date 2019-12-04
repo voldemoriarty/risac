@@ -50,7 +50,12 @@ module risac_avalon (
       ibusdata_old <= avIB_readdata;
     end
   end
-  
+
+  wire [3:0] byten;
+  wire [31:0] wdata;
+
+  assign avDB_byteenable = byten << avDB_address[1:0];
+  assign avDB_writedata = wdata << (avDB_address[1:0] * 8);
   risac u_risac (
     .clk        (clk),
     .rst_n      (rst_n),
@@ -63,9 +68,9 @@ module risac_avalon (
 
     .oDbusAddr  (avDB_address),
     .oDbusWe    (avDB_write),
-    .oDbusData  (avDB_writedata),
+    .oDbusData  (wdata),
     .oDbusRead  (avDB_read),
-    .oDbusByteEn(avDB_byteenable),
+    .oDbusByteEn(byten),
     .iDbusData  (avDB_readdata >> (avDB_address[1:0] * 8)),
     .iDbusWait	(avDB_waitrequest)
   );

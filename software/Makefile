@@ -6,7 +6,7 @@
 LFLAGS =  -T link_simple.ld
 LFLAGS += -nostdlib
 CFLAGS =  -nostdlib
-CFLAGS += -O3 -march=rv32i -mabi=ilp32 -c
+CFLAGS += -Os -march=rv32i -mabi=ilp32 -c
 
 CSRC = start.c test.c
 OBJS = $(CSRC:.c=.o)

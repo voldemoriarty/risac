@@ -9,9 +9,8 @@
    <inputclock preferredWidth="168" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Project,Library/Basic Functions/Bridges and Adaptors,Library/Basic Functions,Library/Interface Protocols,Library,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Basic Functions/Simulation; Debug and Verification,Library/Interface Protocols/Serial" />
- <window width="1366" height="746" x="-10" y="14" />
+ <library expandedCategories="Project,Library" />
+ <window width="1093" height="746" x="-10" y="14" />
  <hdlexample language="VERILOG" />
  <clocktable>
   <columns>

@@ -13,7 +13,7 @@
  * @param msg:	string to write
  * @param len:	length in bytes
  */
-void _puts (volatile char* uart, const char* msg, const int len) {
+static void _puts (volatile char* uart, const char* msg, const int len) {
 	volatile unsigned int *status = (volatile unsigned int *)uart;
 	for (int i = 0; i < len; ++i) {
 		while (status[1] >> 16 == 0);
@@ -27,14 +27,13 @@ void _puts (volatile char* uart, const char* msg, const int len) {
  * @param buff:	buffer to store the ascii characters
  * @param num:	32bit number to convert
  */
-void _itoa (char *buff, int num) {
+static void _itoa (char *buff, int num) {
 	union {
 		char 	bytes[4];
 		int 	word;
 	} number;
 
 	number.word = num;
-
 	const char lut[] = "0123456789abcdef";
 
 	// first char is msn of msb
@@ -57,7 +56,7 @@ void _itoa (char *buff, int num) {
  * @param num:	32bit number
  */
 
-void putnum32(volatile char* uart, int num) {
+static void putnum32(volatile char* uart, int num) {
 	char buffer[8];
 	_itoa(buffer, num);
 	_puts(uart, "0x", 2);
@@ -65,7 +64,7 @@ void putnum32(volatile char* uart, int num) {
 }
 
 // the (fake) entry point
-int main () {
+static int main () {
 	volatile char *leds = (volatile char *)0x2000000;
 	*leds = 0x50;
 	volatile char *uart = (volatile char *)0x1000000;
@@ -82,10 +81,20 @@ int main () {
 		unsigned d = data[0];
 		if (d & (1 << 15)) {
 			_puts(uart, (char*)&d, 1);
+			*leds = *(char*)&d;
 		}
 	}
 }
 
 void _start () {
 	main();
+}
+
+void *memcpy (void *dst, const void *src, unsigned len) {
+	char *d = (char*)dst;
+	const char *s = (const char *)src;
+	for (unsigned i = 0; i < len; ++i) {
+		d[i] = s[i];
+	}
+	return dst;
 }
