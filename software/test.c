@@ -74,7 +74,15 @@ int main () {
 		putnum32(uart, i);
 		_puts(uart, "\r\n", 2);
 	}
-	while (1);
+	// loopback uart 
+	while (1) {
+		// if read data is available, write it for loopback
+		volatile unsigned *data = (volatile unsigned *)uart;
+		unsigned d = data[0];
+		if (d & (1 << 15)) {
+			_puts(uart, (char*)&d, 1);
+		}
+	}
 }
 
 void _start () {

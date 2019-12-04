@@ -63,7 +63,7 @@ sim: $(TGT).vh
 all: $(TGT).elf $(TGT).bin $(TGT).mif $(TGT).vh
 
 de10Flash: $(TGT).mif
-	make --directory=../de10nano/ all
+	make --directory=../de10nano/ prog
 
 clean:
 	rm *.mif *.bin *.elf *.o *.s
