@@ -220,12 +220,13 @@ module risac (
           csrRs1Need  <= ~iIbusData[14];
         end
         // ecall, ebreak
-        2'b00:
+        2'b00: begin 
           csrReadDec  <= 1'b0;
           csrWriteDec <= 1'b0;
           csrSetDec   <= 1'b0;
           csrRs1Need  <= 1'b0;
           csrClrDec   <= 1'b0;
+        end
         endcase
       end else begin 
         {csrDec, csrReadDec, csrWriteDec, csrSetDec, csrClrDec, csrRs1Need} <= 'b0;
