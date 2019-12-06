@@ -93,13 +93,17 @@ module risac (
   reg         branchType;
   reg					jalr;
   reg [4:0]		rdEx;
-  reg					validOf, rdWeOf, immSelOf;	
+  reg					validOf, rdWeOf, immSelOf;
+  reg         csrReadDec, csrWriteDec, csrSetDec, csrClrDec, csrImmSelDec;
+  reg [11:0]  csrAddrDec;
+  reg         csrRs1Need, csrDec;
 
   always @ (posedge clk or negedge rst_n) begin: DEC
     if (!rst_n) begin 
       {aluOpDec, rs1Dec, rs2Dec, immDec, validDec, immSelDec, rdShiftDec} <= 'b0;
       {rdWeDec, illegalDec, pcDec, lDec, sDec, rs1ShiftDec, rs2ShiftDec} <= 'b0; 
       {luipcDec, luiDec, branchDec, branchType, jalr} <= 'b0;
+      {csrDec, csrReadDec, csrRs1Need, csrAddrDec, csrWriteDec, csrSetDec, csrClrDec, csrImmSelDec} <= 'b0;
     end else if (!stallPipe && !dataHazard) begin 
       // the address of the currently being decoded instruction
       pcDec			<= iIbusIAddr;
@@ -138,7 +142,8 @@ module risac (
       // always write to rd except when storing or conditional branching
       // all instructions except stores and conditional branches have 4:2 
       // not equal to zero
-      rdWeDec		<= (iIbusData[4:2] != 3'b000) | (iIbusData[6:2] == 5'b00000);
+      rdWeDec		<= ((iIbusData[4:2] != 3'b000) | (iIbusData[6:2] == 5'b00000)) & 
+                    (iIbusData[11:7] != 5'b0);
       
       // select imm when instr[6:4] == 001
       // in rv32i, no other instruction has opcode[6:4] == 001 other than those
@@ -173,11 +178,58 @@ module risac (
       // btype, all conditional branches
       5'b11000: immDec <= { {20{iIbusData[31]}}, iIbusData[7], iIbusData[30:25], iIbusData[11:8], 1'b0 };
 
+      // system opcode, csrs
+      5'b11100: immDec <= { 27'b0, iIbusData[19:15] };
       endcase
 
       // load when all zero opcode
       lDec <= iIbusData[6:2] == 5'b00000;
       sDec <= iIbusData[6:2] == 5'b01000;
+
+      // csr instructions
+      // read, write info encoded in funct3
+      csrAddrDec <= iIbusData[31:20];
+
+      if (iIbusData[6:2] == 5'b11100) begin
+        csrImmSelDec     <= iIbusData[14]; 
+        csrDec           <= 1'b1;
+        case (iIbusData[13:12])
+        // csrrw
+        2'b01: begin 
+          csrReadDec  <= (iIbusData[11:7] != 5'b0);
+          csrWriteDec <= 1'b1;
+          csrSetDec   <= 1'b0;
+          csrClrDec   <= 1'b0;
+          csrRs1Need  <= ~iIbusData[14];
+        end
+        // csrrs
+        2'b10: begin 
+          csrReadDec  <= 1'b1;
+          csrWriteDec <= 1'b0;
+          csrSetDec   <= (iIbusData[19:15] != 5'b0);
+          csrClrDec   <= 1'b0;
+          csrImmSelDec   <= 1'b0;
+          csrRs1Need  <= ~iIbusData[14];
+        end
+        // csrrc
+        2'b11: begin 
+          csrReadDec  <= 1'b1;
+          csrWriteDec <= 1'b0;
+          csrSetDec   <= 1'b0;
+          csrClrDec   <= (iIbusData[19:15] != 5'b0);
+          csrRs1Need  <= ~iIbusData[14];
+        end
+        // ecall, ebreak
+        2'b00:
+          csrReadDec  <= 1'b0;
+          csrWriteDec <= 1'b0;
+          csrSetDec   <= 1'b0;
+          csrRs1Need  <= 1'b0;
+          csrClrDec   <= 1'b0;
+        endcase
+      end else begin 
+        {csrDec, csrReadDec, csrWriteDec, csrSetDec, csrClrDec, csrRs1Need} <= 'b0;
+      end
 
       // for now ignore the illegal instruction
       // TODO: add illegal indication
@@ -288,11 +340,11 @@ module risac (
     // check if rs1 and rs2 are 'booked'
     // TODO: maybe take a look at this again
     // rs1 is booked if rat[0] is set and the instruction is not
-    // lui, auipc
-    rs1booked = |(rs1ShiftDec & rat[0]) && ~luipcDec;
+    // lui, auipc or csr with imm
+    rs1booked = |(rs1ShiftDec & rat[0]) && ~luipcDec && ~csrImmSelDec;
     // rs2 is booked if rat[1] is set and the instruction is not 
-    // one that uses imm
-    rs2booked = |(rs2ShiftDec & rat[1]) && ~immSelDec;
+    // one that uses imm or csr
+    rs2booked = |(rs2ShiftDec & rat[1]) && ~immSelDec && ~csrDec;
 
     
     // data hazard occurs when rs1 or rs2 is booked and nothing is being written
@@ -310,12 +362,17 @@ module risac (
   reg 				lOf, sOf, luipcOf;
   reg         branchOf, compareOf;
   reg [31:0]	bTargetOf, branchOffset;
+  reg [31:0]  csrWdataROf;
+  reg [31:0]  csrWdataIOf;
+  reg [11:0]  csrAddrOf;
+  reg         csrIOf, csrImmSelOf, csrReadOf, csrWriteOf, csrSetOf, csrClrOf;
 
   always @ (posedge clk or negedge rst_n) begin: OF
     if (!rst_n) begin 
       {rs1Data, rs2Data, validOf, rdWeOf, immOf} <= 'b0;
       {pcOf, immSelOf, aluOpOf, rdOf, lOf, sOf, luipcOf, branchOf} <= 'b0;
       {compareOf, bTargetOf, branchOffset} <= 'b0;
+      {csrIOf, csrImmSelOf, csrWdataIOf, csrWdataROf, csrAddrOf, csrReadOf, csrWriteOf, csrSetOf, csrClrOf} <= 'b0;
       // !do not reset the registers!!
 
     end else if (!stallPipe) begin 
@@ -323,6 +380,17 @@ module risac (
       {rdWeOf} <= {rdWeDec};
       {immSelOf, rdOf} <= {immSelDec, rdDec};
       {lOf, sOf, luipcOf} <= {lDec, sDec, luipcDec};
+      
+      csrReadOf   <= csrReadDec & validDec;
+      csrWriteOf  <= csrWriteDec & validDec;
+      csrSetOf    <= csrSetDec & validDec;
+      csrClrOf    <= csrClrDec & validDec;
+      csrImmSelOf <= csrImmSelDec;
+      csrIOf      <= csrDec & validDec;
+
+      csrWdataROf <= (rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec]);
+      csrWdataIOf <= immDec;
+      csrAddrOf   <= csrAddrDec;
 
       // branch handles
       // branchOf signal is high when the branch is unconditional
@@ -397,14 +465,27 @@ module risac (
     end
   end
 	
+  reg [31:0] csrWdata;
+  reg [11:0] csrAddr;
+  reg csrIOs, csrRead, csrWrite, csrSet, csrClr;
+
   always @ (posedge clk or negedge rst_n) begin: OS
     if (!rst_n) begin 
       {pcOs, aluOpOs, validOs, rdWeOs, rdOs} <= 'b0;
       {aluIn1, aluIn2, lOs, sOs, lsuAddrOs, lsuDataOs} <= 'b0;
       {branch, branchTarget} <= 'b0;
+      {csrIOs, csrRead, csrWrite, csrSet, csrClr} <= 'b0;
     end else if (!stallPipe) begin 
       {pcOs, rdWeOs, rdOs} <= {pcOf, rdWeOf, rdOf};
       {lOs, sOs} <= {lOf, sOf};
+
+      csrRead   <= csrReadOf & validOf;
+      csrWrite  <= csrWriteOf & validOf;
+      csrClr    <= csrClrOf & validOf;
+      csrSet    <= csrSetOf & validOf;
+      csrAddr   <= csrAddrOf;
+      csrWdata  <= csrImmSelOf ? csrWdataIOf : csrWdataROf;
+      csrIOs    <= csrIOf & validOf;
 
       // the branch unit
       // branch only if instruction was unconditional branch
@@ -438,18 +519,39 @@ module risac (
   // ============================================================
   // the execute stage
   // can have multiple units in paralell
-  // for now we only have the alu and lsu 
+  // for now we only have the alu, csr and lsu
+
+
+  wire [31:0] csrRes;
+  wire csr_ins_ret;
+
+  csr_unit u_csr_unit (
+    .clk         (clk),
+    .rst_n       (rst_n),
+    .read        (csrRead & validOs),
+    .addr        (csrAddr),
+    .write       (csrWrite & validOs),
+    .clr         (csrClr & validOs),
+    .set         (csrSet & validOs),
+    .wdata       (csrWdata),
+    .time_clk    (1'b0),
+    .ins_ret     (csr_ins_ret),
+    .rdata       (csrRes)
+  );
+
   reg [31:0] exRes;
 
   // propogate the valid, pc, rdWe
   reg [31:0]	pcEx;
+  reg         csrEx;
 
   always @ (posedge clk or negedge rst_n) begin: EX
     if (!rst_n) begin 
-      {pcEx, validEx, rdWeEx, rdEx, rdShiftEx} <= 'b0;
+      {csrEx, pcEx, validEx, rdWeEx, rdEx, rdShiftEx} <= 'b0;
     end else if (!stallPipe) begin
       {pcEx, validEx, rdWeEx, rdEx} <= {pcOs, validOs, rdWeOs, rdOs};
-      rdShiftEx <= 1 << rdOs;			
+      rdShiftEx <= 1 << rdOs;
+      csrEx <= csrIOs;			
     end
   end
 
@@ -542,7 +644,12 @@ module risac (
   // mux the result from various stages
   // for now, if load instruction, then select lsuRes
   always @ (*) begin: WB_MUX
-    exRes	= lEx ? lsuRes : aluRes;
+    if (lEx)
+      exRes = lsuRes;
+    else if (csrEx)
+      exRes = csrRes;
+    else 
+      exRes = aluRes;
   end
 
   always @ (posedge clk) begin: WB_REGISTER_FILE
