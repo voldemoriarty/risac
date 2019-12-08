@@ -9,26 +9,26 @@ z2
 cModel Technology
 Z0 d/home/saad/trashcan/risac/de10nano/simulation/modelsim
 valtera_avalon_mm_bridge
-Z1 !s110 1575483047
+Z1 !s110 1575823400
 !i10b 1
 !s100 `eCPo@iPkKz1CWZaUGYD=3
 I9PW=ozX;Z;hX8HFO5R@:m2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1575483017
+Z3 w1575617443
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_mm_bridge.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_mm_bridge.v
-L0 25
-Z4 OV;L;10.4d;61
+Z4 L0 25
+Z5 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z5 !s108 1575483047.000000
+Z6 !s108 1575823400.000000
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_mm_bridge.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_mm_bridge.v|
 !i113 1
-Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules
 valtera_avalon_sc_fifo
 R1
 !i10b 1
@@ -36,44 +36,44 @@ R1
 Ike]Ym1lU^ORE<Bof`DgFh3
 R2
 R0
-Z8 w1575483019
+Z9 w1575617445
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_sc_fifo.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_sc_fifo.v
-Z9 L0 21
-R4
+Z10 L0 21
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_sc_fifo.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_sc_fifo.v|
 !i113 1
-R6
 R7
+R8
 valtera_avalon_st_pipeline_base
-Z10 !s110 1575483049
+Z11 !s110 1575823401
 !i10b 1
 !s100 SP[<U8JVkW?]RHOS`DzPF1
 IDe@RM_li;=@f58DMOIWiV1
 R2
 R0
-Z11 w1575291294
+Z12 w1575291294
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_base.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_base.v
-Z12 L0 22
-R4
+Z13 L0 22
+R5
 r1
 !s85 0
 31
-Z13 !s108 1575483048.000000
+Z14 !s108 1575823401.000000
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_base.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_base.v|
 !i113 1
-R6
 R7
+R8
 valtera_avalon_st_pipeline_stage
-Z14 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-R10
+Z15 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+R11
 !i10b 1
 !s100 0[eR^H<[LF9R7ZA?d`HaW2
 ITF=T[:KneYRJ=[62;8mD91
@@ -81,70 +81,70 @@ R2
 !s105 altera_avalon_st_pipeline_stage_sv_unit
 S1
 R0
-R11
+R12
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
-R12
-R4
+R13
+R5
 r1
 !s85 0
 31
-!s108 1575483049.000000
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_stage.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_stage.sv|
 !i113 1
-Z15 o-sv -work work
-Z16 !s92 -sv -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules
+Z16 o-sv -work work
+Z17 !s92 -sv -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules
 valtera_merlin_arb_adder
-R14
+R15
 R1
 !i10b 1
 !s100 1Jn[a;@5nZmTN?DFKQNzj2
 I=H_lLbR5RKP;RO`?BX_EB1
 R2
-Z17 !s105 altera_merlin_arbitrator_sv_unit
+Z18 !s105 altera_merlin_arbitrator_sv_unit
 S1
 R0
-R8
-Z18 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_arbitrator.sv
-Z19 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_arbitrator.sv
+R9
+Z19 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_arbitrator.sv
+Z20 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_arbitrator.sv
 L0 228
-R4
+R5
 r1
 !s85 0
 31
-R5
-Z20 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_arbitrator.sv|
-Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_arbitrator.sv|
+R6
+Z21 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_arbitrator.sv|
+Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_arbitrator.sv|
 !i113 1
-R15
 R16
+R17
 valtera_merlin_arbitrator
-R14
+R15
 R1
 !i10b 1
 !s100 NQTehjm2fNQROUMUzShGa1
 I[:EFg1@]00n:Ti4BVPzI_3
 R2
-R17
+R18
 S1
 R0
-R8
-R18
+R9
 R19
+R20
 L0 103
-R4
+R5
 r1
 !s85 0
 31
-R5
-R20
+R6
 R21
+R22
 !i113 1
-R15
 R16
+R17
 valtera_merlin_burst_uncompressor
-R14
+R15
 R1
 !i10b 1
 !s100 f1?Rb<=9U?R9LJoHl;7>T3
@@ -153,22 +153,22 @@ R2
 !s105 altera_merlin_burst_uncompressor_sv_unit
 S1
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 L0 40
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
 !i113 1
-R15
 R16
+R17
 valtera_merlin_master_agent
-R14
+R15
 R1
 !i10b 1
 !s100 _CJm:YX=>U2LQKH;8=@cb0
@@ -177,22 +177,22 @@ R2
 !s105 altera_merlin_master_agent_sv_unit
 S1
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_master_agent.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_master_agent.sv
 L0 28
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_master_agent.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_master_agent.sv|
 !i113 1
-R15
 R16
+R17
 valtera_merlin_master_translator
-R14
+R15
 R1
 !i10b 1
 !s100 NdRk@]3fC2C@V7Rm;dQM31
@@ -201,22 +201,22 @@ R2
 !s105 altera_merlin_master_translator_sv_unit
 S1
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_master_translator.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_master_translator.sv
 L0 32
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_master_translator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_master_translator.sv|
 !i113 1
-R15
 R16
+R17
 valtera_merlin_slave_agent
-R14
+R15
 R1
 !i10b 1
 !s100 ePZN1d?B062J`OBb?blff3
@@ -225,22 +225,22 @@ R2
 !s105 altera_merlin_slave_agent_sv_unit
 S1
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_slave_agent.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_slave_agent.sv
 L0 34
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_slave_agent.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_slave_agent.sv|
 !i113 1
-R15
 R16
+R17
 valtera_merlin_slave_translator
-R14
+R15
 R1
 !i10b 1
 !s100 k`9[YAn_dLTkg;GE`mOb61
@@ -249,20 +249,20 @@ R2
 !s105 altera_merlin_slave_translator_sv_unit
 S1
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_slave_translator.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_slave_translator.sv
 L0 35
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_slave_translator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_merlin_slave_translator.sv|
 !i113 1
-R15
 R16
+R17
 valtera_reset_controller
 R1
 !i10b 1
@@ -270,20 +270,20 @@ R1
 IG^im[AjlJFPO^KmS=YAIY3
 R2
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_reset_controller.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_reset_controller.v
 L0 42
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_reset_controller.v|
 !i113 1
-R6
 R7
+R8
 valtera_reset_synchronizer
 R1
 !i10b 1
@@ -291,104 +291,146 @@ R1
 IhGGa2aFffeAI37mBFz1dI1
 R2
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_reset_synchronizer.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_reset_synchronizer.v
 L0 24
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_reset_synchronizer.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_reset_synchronizer.v|
 !i113 1
-R6
 R7
+R8
+vcsr_register
+R11
+!i10b 1
+!s100 X^45U:k?i9I?4?:@z<AY90
+I]JNbVFj6mLYLV<183_;Yl3
+R2
+R0
+R3
+Z23 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/csr_unit.v
+Z24 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/csr_unit.v
+Z25 L0 162
+R5
+r1
+!s85 0
+31
+R14
+Z26 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/csr_unit.v|
+Z27 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/csr_unit.v|
+!i113 1
+R7
+R8
+vcsr_unit
+R11
+!i10b 1
+!s100 fc5RNB_ifDeWQA^IFKe=U2
+Iliz2AdJJjl_CC;kgkjInT0
+R2
+R0
+R3
+R23
+R24
+R4
+R5
+r1
+!s85 0
+31
+R14
+R26
+R27
+!i113 1
+R7
+R8
 vde10nanoTop
-Z22 !s110 1575483046
+Z28 !s110 1575823399
 !i10b 1
 !s100 aP8VWleXOg`RfgfOfj<I@0
 I_?Md@B_YiFDfnm7DV3EOc0
 R2
 R0
-Z23 w1573890617
+Z29 w1573890617
 8/home/saad/trashcan/risac/de10nano/verilog/de10nanoTop.v
 F/home/saad/trashcan/risac/de10nano/verilog/de10nanoTop.v
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-Z24 !s108 1575483046.000000
+Z30 !s108 1575823399.000000
 !s107 /home/saad/trashcan/risac/de10nano/verilog/de10nanoTop.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/verilog|/home/saad/trashcan/risac/de10nano/verilog/de10nanoTop.v|
 !i113 1
-R6
-Z25 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/verilog
+R7
+Z31 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/verilog
 nde10nano@top
 vrisac
 R1
 !i10b 1
-!s100 CUC[0D[6P@Ai>SoGCiVZ90
-IekVgHA<3m`EeJ43@PbD`Z3
+!s100 T0=7dSZUcJnPl=G@HEGNi2
+Iz:OJldmZ=Y<gL:cAS<:`C3
 R2
 R0
 R3
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac.v
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac.v|
 !i113 1
-R6
 R7
+R8
 vrisac_avalon
-!s110 1575487206
+R1
 !i10b 1
 !s100 VQjcYFjkR3<Pjhznmg=:B3
-I[j^PH>LO95FWDQV;Y<>Q[3
+IPkef^RT=E8Ea5kanecJf^0
 R2
 R0
-w1575487196
-8/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v
-F/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v
+R3
+8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v
+F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-!s108 1575487206.000000
-!s107 /home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v|
-!i113 1
 R6
+!s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v|
+!i113 1
 R7
+R8
 vsoc_simple
-R22
+R28
 !i10b 1
 !s100 :oAlM_cEj^6OXYz`n<49;0
 IdQ_[R<jlozn<;A7:OKVKO1
 R2
 R0
-Z26 w1575483016
+Z32 w1575617441
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/soc_simple.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/soc_simple.v
 L0 6
-R4
+R5
 r1
 !s85 0
 31
-R24
+R30
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/soc_simple.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/soc_simple.v|
 !i113 1
-R6
+R7
 !s92 -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis
 vsoc_simple_jtag_uart
 R1
@@ -398,19 +440,19 @@ I]kl?82jiaJc1ThWGogK]f1
 R2
 R0
 R3
-Z27 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_jtag_uart.v
-Z28 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_jtag_uart.v
+Z33 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_jtag_uart.v
+Z34 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_jtag_uart.v
 L0 327
-R4
+R5
 r1
 !s85 0
 31
-R5
-Z29 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_jtag_uart.v|
-Z30 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_jtag_uart.v|
-!i113 1
 R6
+Z35 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_jtag_uart.v|
+Z36 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_jtag_uart.v|
+!i113 1
 R7
+R8
 vsoc_simple_jtag_uart_scfifo_r
 R1
 !i10b 1
@@ -419,19 +461,19 @@ Ib2AK?Gl4z8B=_BP3CP9[]0
 R2
 R0
 R3
-R27
-R28
+R33
+R34
 L0 240
-R4
+R5
 r1
 !s85 0
 31
-R5
-R29
-R30
-!i113 1
 R6
+R35
+R36
+!i113 1
 R7
+R8
 vsoc_simple_jtag_uart_scfifo_w
 R1
 !i10b 1
@@ -440,19 +482,19 @@ I[k5M7U=gKRgT]IN>?JR]b2
 R2
 R0
 R3
-R27
-R28
+R33
+R34
 L0 77
-R4
+R5
 r1
 !s85 0
 31
-R5
-R29
-R30
-!i113 1
 R6
+R35
+R36
+!i113 1
 R7
+R8
 vsoc_simple_jtag_uart_sim_scfifo_r
 R1
 !i10b 1
@@ -461,19 +503,19 @@ IQU[9NHgZfg1BlMIOKYS``3
 R2
 R0
 R3
-R27
-R28
-L0 162
-R4
+R33
+R34
+R25
+R5
 r1
 !s85 0
 31
-R5
-R29
-R30
-!i113 1
 R6
+R35
+R36
+!i113 1
 R7
+R8
 vsoc_simple_jtag_uart_sim_scfifo_w
 R1
 !i10b 1
@@ -482,21 +524,21 @@ I:a[f2DJzh>=5NNKdMo<gZ2
 R2
 R0
 R3
-R27
-R28
-R9
-R4
+R33
+R34
+R10
+R5
 r1
 !s85 0
 31
-R5
-R29
-R30
-!i113 1
 R6
+R35
+R36
+!i113 1
 R7
+R8
 vsoc_simple_leds
-Z31 !s110 1575483048
+R1
 !i10b 1
 !s100 C_O3Tg3ARlBe9FzXGkh6?3
 IOm1ScfPRLV@RH5]6i9`KA2
@@ -505,62 +547,62 @@ R0
 R3
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_leds.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_leds.v
-R9
-R4
+R10
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_leds.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_leds.v|
 !i113 1
-R6
 R7
+R8
 vsoc_simple_mm_interconnect_0
-R31
+R1
 !i10b 1
 !s100 3neGKSi@^M`3P]mW3liao0
 Ig`@>gXa9Oh?Ui71QNCzL90
 R2
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0.v
 L0 9
-R4
+R5
 r1
 !s85 0
 31
-R13
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0.v|
 !i113 1
-R6
 R7
+R8
 vsoc_simple_mm_interconnect_0_avalon_st_adapter
-R31
+R1
 !i10b 1
 !s100 ^]ZCdkh3OPk]k[T>SkYzl1
 I=>6POW?n9AQCTM9BKhfaR0
 R2
 R0
-R8
+Z37 w1575617446
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_avalon_st_adapter.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_avalon_st_adapter.v
 L0 9
-R4
+R5
 r1
 !s85 0
 31
-R13
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_avalon_st_adapter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_avalon_st_adapter.v|
 !i113 1
-R6
 R7
+R8
 vsoc_simple_mm_interconnect_0_avalon_st_adapter_error_adapter_0
-R14
-R31
+R15
+R1
 !i10b 1
 !s100 QLRgHG[Hho?>E?>14V]X`2
 IZ`gfOG=TY1^e2QKb:7A072
@@ -568,23 +610,23 @@ R2
 !s105 soc_simple_mm_interconnect_0_avalon_st_adapter_error_adapter_0_sv_unit
 S1
 R0
-R8
+R37
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
 L0 66
-R4
+R5
 r1
 !s85 0
 31
-R13
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv|
 !i113 1
-R15
 R16
+R17
 vsoc_simple_mm_interconnect_0_cmd_demux
-R14
-R31
+R15
+R11
 !i10b 1
 !s100 e]@z9fZ;ZD@blCZJGzP2l0
 Ihk:=AnARc54zIiMa<Qcna3
@@ -592,23 +634,23 @@ R2
 !s105 soc_simple_mm_interconnect_0_cmd_demux_sv_unit
 S1
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_demux.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_demux.sv
-Z32 L0 43
-R4
+Z38 L0 43
+R5
 r1
 !s85 0
 31
-R13
+R6
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_demux.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_demux.sv|
 !i113 1
-R15
 R16
+R17
 vsoc_simple_mm_interconnect_0_cmd_demux_001
-R14
-R31
+R15
+R11
 !i10b 1
 !s100 C21cTX2R>VCRmfo4Tilk^2
 I_dh?XBK_4H[TnI0GCgD8J0
@@ -616,23 +658,23 @@ R2
 !s105 soc_simple_mm_interconnect_0_cmd_demux_001_sv_unit
 S1
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_demux_001.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_demux_001.sv
-R32
-R4
+R38
+R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_demux_001.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_demux_001.sv|
 !i113 1
-R15
 R16
+R17
 vsoc_simple_mm_interconnect_0_cmd_mux
-R14
-R31
+R15
+R11
 !i10b 1
 !s100 Bzl>fXzC;dPLCDjePI>0`3
 I<90EE>]TmjUdDfacoEka[3
@@ -640,23 +682,23 @@ R2
 !s105 soc_simple_mm_interconnect_0_cmd_mux_sv_unit
 S1
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux.sv
-Z33 L0 51
-R4
+Z39 L0 51
+R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux.sv|
 !i113 1
-R15
 R16
+R17
 vsoc_simple_mm_interconnect_0_cmd_mux_002
-R14
-R31
+R15
+R11
 !i10b 1
 !s100 JMCm4bVkb5Rkceh^h1deI1
 Ig]jO3E`6XD]EKT3@?<NCg0
@@ -664,215 +706,215 @@ R2
 !s105 soc_simple_mm_interconnect_0_cmd_mux_002_sv_unit
 S1
 R0
-R8
+R37
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux_002.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux_002.sv
-R33
-R4
+R39
+R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux_002.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux_002.sv|
 !i113 1
-R15
 R16
+R17
 vsoc_simple_mm_interconnect_0_router
-R14
-R31
+R15
+R11
 !i10b 1
 !s100 jCaJgAi`;9IM[z8K4W9j[1
 Ikk4Dca]D]^dP^zm;fE=bf1
 R2
-Z34 !s105 soc_simple_mm_interconnect_0_router_sv_unit
+Z40 !s105 soc_simple_mm_interconnect_0_router_sv_unit
 S1
 R0
-R8
-Z35 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router.sv
-Z36 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router.sv
-Z37 L0 84
-R4
+R9
+Z41 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router.sv
+Z42 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router.sv
+Z43 L0 84
+R5
 r1
 !s85 0
 31
-R13
-Z38 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router.sv|
-Z39 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router.sv|
-!i113 1
-R15
-R16
-vsoc_simple_mm_interconnect_0_router_001
 R14
-R31
+Z44 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router.sv|
+Z45 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router.sv|
+!i113 1
+R16
+R17
+vsoc_simple_mm_interconnect_0_router_001
+R15
+R11
 !i10b 1
 !s100 aN7zSF_oio1nkjSCnFD7F3
 I6hmj5m;fWcJTS1?ACCnzS0
 R2
-Z40 !s105 soc_simple_mm_interconnect_0_router_001_sv_unit
+Z46 !s105 soc_simple_mm_interconnect_0_router_001_sv_unit
 S1
 R0
-R8
-Z41 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_001.sv
-Z42 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_001.sv
-R37
-R4
+R9
+Z47 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_001.sv
+Z48 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_001.sv
+R43
+R5
 r1
 !s85 0
 31
-R13
-Z43 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_001.sv|
-Z44 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_001.sv|
-!i113 1
-R15
-R16
-vsoc_simple_mm_interconnect_0_router_001_default_decode
 R14
-R31
+Z49 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_001.sv|
+Z50 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_001.sv|
+!i113 1
+R16
+R17
+vsoc_simple_mm_interconnect_0_router_001_default_decode
+R15
+R11
 !i10b 1
 !s100 [?n?UXnMWR]>0nJNJdMlJ1
 If3<j=SIl=?lnHZDzAGaLf1
 R2
-R40
+R46
 S1
 R0
-R8
-R41
-R42
-Z45 L0 45
-R4
+R9
+R47
+R48
+Z51 L0 45
+R5
 r1
 !s85 0
 31
-R13
-R43
-R44
-!i113 1
-R15
-R16
-vsoc_simple_mm_interconnect_0_router_002
 R14
-R31
+R49
+R50
+!i113 1
+R16
+R17
+vsoc_simple_mm_interconnect_0_router_002
+R15
+R11
 !i10b 1
 !s100 >U?8mbnJcf=?E6ghKAI8U2
 I]Q<U9minmY_o3[TIJo^KQ3
 R2
-Z46 !s105 soc_simple_mm_interconnect_0_router_002_sv_unit
+Z52 !s105 soc_simple_mm_interconnect_0_router_002_sv_unit
 S1
 R0
-R8
-Z47 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_002.sv
-Z48 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_002.sv
-R37
-R4
+R9
+Z53 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_002.sv
+Z54 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_002.sv
+R43
+R5
 r1
 !s85 0
 31
-R13
-Z49 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_002.sv|
-Z50 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_002.sv|
-!i113 1
-R15
-R16
-vsoc_simple_mm_interconnect_0_router_002_default_decode
 R14
-R31
+Z55 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_002.sv|
+Z56 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_002.sv|
+!i113 1
+R16
+R17
+vsoc_simple_mm_interconnect_0_router_002_default_decode
+R15
+R11
 !i10b 1
 !s100 GkAjkPXC<b25:N?QZlLc`3
 IXLQoGU:gn36e`d3QEW5b70
 R2
-R46
+R52
 S1
 R0
-R8
-R47
-R48
-R45
-R4
+R9
+R53
+R54
+R51
+R5
 r1
 !s85 0
 31
-R13
-R49
-R50
-!i113 1
-R15
-R16
-vsoc_simple_mm_interconnect_0_router_004
 R14
-R31
+R55
+R56
+!i113 1
+R16
+R17
+vsoc_simple_mm_interconnect_0_router_004
+R15
+R11
 !i10b 1
 !s100 A]0KfETkKD:Mj2LFCdEl[1
 I<lKKZ@W6U2?f_;^D4JVKC3
 R2
-Z51 !s105 soc_simple_mm_interconnect_0_router_004_sv_unit
+Z57 !s105 soc_simple_mm_interconnect_0_router_004_sv_unit
 S1
 R0
-R8
-Z52 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_004.sv
-Z53 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_004.sv
-R37
-R4
+R9
+Z58 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_004.sv
+Z59 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_004.sv
+R43
+R5
 r1
 !s85 0
 31
-R13
-Z54 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_004.sv|
-Z55 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_004.sv|
-!i113 1
-R15
-R16
-vsoc_simple_mm_interconnect_0_router_004_default_decode
 R14
-R31
+Z60 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_004.sv|
+Z61 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_004.sv|
+!i113 1
+R16
+R17
+vsoc_simple_mm_interconnect_0_router_004_default_decode
+R15
+R11
 !i10b 1
 !s100 a;XK7<`o[4O9JN<n_R3ol0
 I<z96]Eg8OJU<iVK4Nde2b1
 R2
-R51
+R57
 S1
 R0
-R8
-R52
-R53
-R45
-R4
+R9
+R58
+R59
+R51
+R5
 r1
 !s85 0
 31
-R13
-R54
-R55
-!i113 1
-R15
-R16
-vsoc_simple_mm_interconnect_0_router_default_decode
 R14
-R31
+R60
+R61
+!i113 1
+R16
+R17
+vsoc_simple_mm_interconnect_0_router_default_decode
+R15
+R11
 !i10b 1
 !s100 H_Z9]QA4bcMV6Jb]LKKQ53
 Izk@J:=YfIHEdge57RcMMV0
 R2
-R34
+R40
 S1
 R0
-R8
-R35
-R36
-R45
-R4
+R9
+R41
+R42
+R51
+R5
 r1
 !s85 0
 31
-R13
-R38
-R39
-!i113 1
-R15
-R16
-vsoc_simple_mm_interconnect_0_rsp_demux_002
 R14
-R31
+R44
+R45
+!i113 1
+R16
+R17
+vsoc_simple_mm_interconnect_0_rsp_demux_002
+R15
+R11
 !i10b 1
 !s100 k=W>CGQmJFgeVD^LFo<FV1
 IfX`@NWYQ3?[E9TZ]jQalM3
@@ -880,23 +922,23 @@ R2
 !s105 soc_simple_mm_interconnect_0_rsp_demux_002_sv_unit
 S1
 R0
-R8
+R37
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_demux_002.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_demux_002.sv
-R32
-R4
+R38
+R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_demux_002.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_demux_002.sv|
 !i113 1
-R15
 R16
+R17
 vsoc_simple_mm_interconnect_0_rsp_mux
-R14
-R31
+R15
+R11
 !i10b 1
 !s100 fLAFXlnaG^;`FXb9hob=M0
 I@?C<V8LflmJOMO07VdZD?0
@@ -904,23 +946,23 @@ R2
 !s105 soc_simple_mm_interconnect_0_rsp_mux_sv_unit
 S1
 R0
-R8
+R37
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_mux.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_mux.sv
-R33
-R4
+R39
+R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_mux.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_mux.sv|
 !i113 1
-R15
 R16
+R17
 vsoc_simple_mm_interconnect_0_rsp_mux_001
-R14
-R31
+R15
+R11
 !i10b 1
 !s100 biZOkRTQGh0A7ST3d:]CR1
 Ii92=U<HibAMhYmCgSK5?K3
@@ -928,62 +970,62 @@ R2
 !s105 soc_simple_mm_interconnect_0_rsp_mux_001_sv_unit
 S1
 R0
-R8
+R37
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_mux_001.sv
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_mux_001.sv
-R33
-R4
+R39
+R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_mux_001.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_mux_001.sv|
 !i113 1
-R15
 R16
+R17
 vsoc_simple_mm_interconnect_1
-R31
+R11
 !i10b 1
 !s100 XmY7X_<l3?nT<^@<odC402
 IcOIOW0JNU731ETZJl>QeJ3
 R2
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_1.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_1.v
 L0 9
-R4
+R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_1.v|
 !i113 1
-R6
 R7
+R8
 vsoc_simple_mm_interconnect_2
-R31
+R11
 !i10b 1
 !s100 Q<7:kJ;PzDPVFgVco;7_U2
 I8TBlJYbb`UPC3KY1enV8E1
 R2
 R0
-R8
+R9
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_2.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_2.v
 L0 9
-R4
+R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_2.v|
 !i113 1
-R6
 R7
+R8
 vsoc_simple_on_chip_memory
 R1
 !i10b 1
@@ -994,85 +1036,85 @@ R0
 R3
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_on_chip_memory.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_on_chip_memory.v
-R9
-R4
+R10
+R5
 r1
 !s85 0
 31
-R5
+R30
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_on_chip_memory.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_on_chip_memory.v|
 !i113 1
-R6
 R7
+R8
 vsoc_simple_PLL_50_150
-R1
+R28
 !i10b 1
 !s100 2_ZnK<ccUiV:L9bj8c8Gh1
 I8c:ABgbN;P03k9C?1f<MY1
 R2
 R0
-R26
+R32
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_150.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_150.v
 L0 2
-R4
+R5
 r1
 !s85 0
 31
-R5
+R30
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_150.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_150.v|
 !i113 1
-R6
 R7
+R8
 nsoc_simple_@p@l@l_50_150
 vsoc_simple_PLL_50_160
-R1
+R28
 !i10b 1
 !s100 I>DM3Gk6HY:cGXO3^gn>o1
 IEBB=fWlUo<zh3V<;F`2LN0
 R2
 R0
-R23
+R29
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_160.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_160.v
 L0 2
-R4
+R5
 r1
 !s85 0
 31
-R24
+R30
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_160.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_160.v|
 !i113 1
-R6
 R7
+R8
 nsoc_simple_@p@l@l_50_160
 vsoc_simple_PLL_50_200
-R22
+R28
 !i10b 1
 !s100 z:ifEnG85KHTC;JEM3OzO2
 IgaBiM@Q]Fn]B]bQ``6QLf0
 R2
 R0
-R23
+R29
 8/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_200.v
 F/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_200.v
 L0 2
-R4
+R5
 r1
 !s85 0
 31
-R24
+R30
 !s107 /home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_200.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules|/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_PLL_50_200.v|
 !i113 1
-R6
 R7
+R8
 nsoc_simple_@p@l@l_50_200
 vtb
-R22
+R28
 !i10b 1
 !s100 VQD^ob2kHBh:VVQ58eb7a2
 ISa6>KG[m4L65WNF8Z_DU_0
@@ -1082,13 +1124,13 @@ w1574881937
 8/home/saad/trashcan/risac/de10nano/verilog/tb.v
 F/home/saad/trashcan/risac/de10nano/verilog/tb.v
 L0 3
-R4
+R5
 r1
 !s85 0
 31
-R24
+R30
 !s107 /home/saad/trashcan/risac/de10nano/verilog/tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/saad/trashcan/risac/de10nano/verilog|/home/saad/trashcan/risac/de10nano/verilog/tb.v|
 !i113 1
-R6
-R25
+R7
+R31
