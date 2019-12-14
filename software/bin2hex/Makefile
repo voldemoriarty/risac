@@ -1,7 +1,7 @@
 bin2hex.o: bin2hex.cc
-	g++ -g $< -c
+	g++ -O3 $< -c
 bin2hex: bin2hex.o
-	g++ -g $< -o $@
+	g++ -O3 $< -o $@
 clean:
 	rm bin2hex.o
 

@@ -24,16 +24,18 @@ int main(int argc, char **argv) {
 		int		word;
 	} buffer;
 
+	const int numBytes = 128 * 1024;
+
 	fout << "-- This file was generated using bin2hex utility\n"
 					"-- bin file: "
 			 << argv[1] << 
 			 		"\nWIDTH=32;\n"
-					"DEPTH=1024;\n"
+					"DEPTH="<< numBytes / 4 <<";\n"
 					"ADDRESS_RADIX=HEX;\n"
 					"DATA_RADIX=HEX;\n"
 					"CONTENT BEGIN\n";
 
-	const int total_size = 1024 - 1;
+	const int total_size = numBytes / 4 - 1;
 
 	int num_values = 0;
 	while (fin.read(buffer.bytes, 4)) {
@@ -49,4 +51,7 @@ int main(int argc, char **argv) {
 	fout.close();
 
 	std::cout << std::dec << num_values << " words read, total " << num_values * 4 << " bytes" << std::endl;
+	std::cout << std::dec << (float)(num_values * 4) / (float)numBytes * 100.0f << "% space used." << std::endl;
+
+	return 0; 
 }
