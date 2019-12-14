@@ -3,12 +3,12 @@
 
 # to use stdlib, just use link_stdlib.ld
 # and comment the -nostdlib line
-LFLAGS =  -T link_simple.ld
-LFLAGS += -nostdlib
-CFLAGS =  -nostdlib
-CFLAGS += -Os -march=rv32i -mabi=ilp32 -c
+LFLAGS =  -Os -Wall -T link_stdlib.ld
+#LFLAGS += -nostdlib
+#CFLAGS =  -nostdlib
+CFLAGS += -Os -march=rv32i -mabi=ilp32 -c -Wall
 
-CSRC = start.c test.c
+CSRC = start.c test.c io.c
 OBJS = $(CSRC:.c=.o)
 ASMS = $(CSRC:.c=.s)
 

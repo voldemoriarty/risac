@@ -1,25 +1,4 @@
-/**
- * A simple test code to check how gcc works with our cpu
- * goals:
- * 1. write code, begin at _start(); use -nostdlib
- * 2. use a linker script to link it together
- * 3. use objcopy to get an intel hex format file
- */
-
-
-/**
- * Write a string of characters to the ALTERA JTAG UART IP
- * @param uart: contains address of jtag uart peripheral
- * @param msg:	string to write
- * @param len:	length in bytes
- */
-static void _puts (volatile char* uart, const char* msg, const int len) {
-	volatile unsigned int *status = (volatile unsigned int *)uart;
-	for (int i = 0; i < len; ++i) {
-		while (status[1] >> 16 == 0);
-		*uart = msg[i];
-	}
-}
+#include "io.h"
 
 /**
  * Convert an integer to hexadecimal string
@@ -63,18 +42,23 @@ static void putnum32(volatile char* uart, int num) {
 	_puts(uart, buffer, 8);
 }
 
+#include <stdio.h>
+#include <stdint.h>
+
+
+
 // the (fake) entry point
-static int main () {
+int main () {
 	volatile char *leds = (volatile char *)0x2000000;
 	*leds = 0x50;
 	volatile char *uart = (volatile char *)0x1000000;
-	_puts (uart, "Now running: Count from -1 to 9\r\n", 34);
+	puts("Now running: Count from -1 to 9");
 	for (int i = -1; i < 10; ++i) {
 		putnum32(uart, i);
 		_puts(uart, "\r\n", 2);
 	}
 	// loopback uart 
-	_puts (uart, "Now running: UART Loopback\r\n", 29);
+	puts ("Now running: UART Loopback");
 	while (1) {
 		// if read data is available, write it for loopback
 		volatile unsigned *data = (volatile unsigned *)uart;
@@ -84,17 +68,4 @@ static int main () {
 			*leds = *(char*)&d;
 		}
 	}
-}
-
-void _start () {
-	main();
-}
-
-void *memcpy (void *dst, const void *src, unsigned len) {
-	char *d = (char*)dst;
-	const char *s = (const char *)src;
-	for (unsigned i = 0; i < len; ++i) {
-		d[i] = s[i];
-	}
-	return dst;
 }
