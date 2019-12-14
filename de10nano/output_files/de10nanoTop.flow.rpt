@@ -1,5 +1,5 @@
 Flow report for de10nanoTop
-Mon Dec  9 00:37:18 2019
+Sat Dec 14 17:14:56 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Dec  9 00:37:18 2019       ;
+; Flow Status                     ; Successful - Sat Dec 14 17:14:56 2019       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; de10nanoTop                                 ;
 ; Top-level Entity Name           ; de10nanoTop                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,353 / 41,910 ( 3 % )                      ;
-; Total registers                 ; 1823                                        ;
+; Logic utilization (in ALMs)     ; 1,402 / 41,910 ( 3 % )                      ;
+; Total registers                 ; 1717                                        ;
 ; Total pins                      ; 10 / 314 ( 3 % )                            ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 35,840 / 5,662,720 ( < 1 % )                ;
+; Total block memory bits         ; 1,051,648 / 5,662,720 ( 19 % )              ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/08/2019 21:49:45 ;
+; Start date & time ; 12/14/2019 17:08:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de10nanoTop         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                              ; Value                                                                                                             ; Default Value ; Entity Name ; Section Id                        ;
 +----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                        ; 0.157582378503044                                                                                                 ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                        ; 0.157632529327268                                                                                                 ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME                     ; NA                                                                                                                ; --            ; --          ; tb                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST              ; Off                                                                                                               ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST              ; Off                                                                                                               ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -160,7 +160,7 @@ agreement for further details.
 ; SLD_FILE                                     ; ../qsys_systems/soc_simple/synthesis/soc_simple.regmap                                                            ; --            ; --          ; --                                ;
 ; SLD_FILE                                     ; ../qsys_systems/soc_simple/synthesis/soc_simple.debuginfo                                                         ; --            ; --          ; --                                ;
 ; SLD_FILE                                     ; db/signalTap_auto_stripped.stp                                                                                    ; --            ; --          ; --                                ;
-; SLD_INFO                                     ; QSYS_NAME soc_simple HAS_SOPCINFO 1 GENERATION_ID 1575823596                                                      ; --            ; soc_simple  ; --                                ;
+; SLD_INFO                                     ; QSYS_NAME soc_simple HAS_SOPCINFO 1 GENERATION_ID 1576316204                                                      ; --            ; soc_simple  ; --                                ;
 ; SOPCINFO_FILE                                ; ../qsys_systems/soc_simple/synthesis/../../soc_simple.sopcinfo                                                    ; --            ; --          ; --                                ;
 ; SYNTHESIS_ONLY_QIP                           ; On                                                                                                                ; --            ; --          ; --                                ;
 ; USE_SIGNALTAP_FILE                           ; signalTap.stp                                                                                                     ; --            ; --          ; --                                ;
@@ -172,14 +172,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:09     ; 1.0                     ; 1382 MB             ; 00:01:32                           ;
-; Fitter                    ; 00:02:04     ; 1.1                     ; 2468 MB             ; 00:03:26                           ;
-; Assembler                 ; 00:00:14     ; 1.0                     ; 1227 MB             ; 00:00:13                           ;
-; TimeQuest Timing Analyzer ; 00:00:26     ; 1.4                     ; 1641 MB             ; 00:00:32                           ;
-; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 1520 MB             ; 00:00:06                           ;
-; MIF/HEX Update            ; 00:00:13     ; 1.0                     ; 1581 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:15     ; 1.0                     ; 1228 MB             ; 00:00:11                           ;
-; Total                     ; 00:04:27     ; --                      ; --                  ; 00:06:07                           ;
+; Analysis & Synthesis      ; 00:01:52     ; 1.0                     ; 1395 MB             ; 00:01:39                           ;
+; Fitter                    ; 00:03:20     ; 1.1                     ; 2485 MB             ; 00:05:15                           ;
+; Assembler                 ; 00:00:17     ; 1.0                     ; 1254 MB             ; 00:00:14                           ;
+; TimeQuest Timing Analyzer ; 00:00:28     ; 1.4                     ; 1657 MB             ; 00:00:33                           ;
+; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 1530 MB             ; 00:00:06                           ;
+; Total                     ; 00:06:03     ; --                      ; --                  ; 00:07:47                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -193,8 +191,6 @@ agreement for further details.
 ; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
 ; TimeQuest Timing Analyzer ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
 ; EDA Netlist Writer        ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
 +---------------------------+------------------+--------------+------------+----------------+
 
 
@@ -206,8 +202,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off de10nanoTop -c 
 quartus_asm --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
 quartus_sta de10nanoTop -c de10nanoTop
 quartus_eda --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
 
 
 
