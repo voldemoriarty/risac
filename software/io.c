@@ -6,8 +6,8 @@
  * @param len:	length
  */
 ssize_t _write(int fd, const void* ptr, size_t len) {
-	volatile char *uart = (volatile char *)0x1000000;
 	if (fd == STDOUT_FILENO) {
+		volatile char *uart = (volatile char *)0x1000000;
 		_puts(uart, (const char *)ptr, len);
 		return 0;
 	}
