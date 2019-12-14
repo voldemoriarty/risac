@@ -30,7 +30,7 @@ module soc_simple_mm_interconnect_0 (
 		input  wire        jtag_uart_pipeline_bridge_s0_readdatavalid,        //                                            .readdatavalid
 		input  wire        jtag_uart_pipeline_bridge_s0_waitrequest,          //                                            .waitrequest
 		output wire        jtag_uart_pipeline_bridge_s0_debugaccess,          //                                            .debugaccess
-		output wire [9:0]  on_chip_memory_s1_address,                         //                           on_chip_memory_s1.address
+		output wire [14:0] on_chip_memory_s1_address,                         //                           on_chip_memory_s1.address
 		output wire        on_chip_memory_s1_write,                           //                                            .write
 		input  wire [31:0] on_chip_memory_s1_readdata,                        //                                            .readdata
 		output wire [31:0] on_chip_memory_s1_writedata,                       //                                            .writedata
@@ -538,7 +538,7 @@ module soc_simple_mm_interconnect_0 (
 	);
 
 	altera_merlin_slave_translator #(
-		.AV_ADDRESS_W                   (10),
+		.AV_ADDRESS_W                   (15),
 		.AV_DATA_W                      (32),
 		.UAV_DATA_W                     (32),
 		.AV_BURSTCOUNT_W                (1),

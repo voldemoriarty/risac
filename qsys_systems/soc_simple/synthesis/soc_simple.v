@@ -44,7 +44,7 @@ module soc_simple (
 	wire   [0:0] mm_interconnect_0_pio_pipeline_bridge_s0_burstcount;          // mm_interconnect_0:pio_pipeline_bridge_s0_burstcount -> pio_pipeline_bridge:s0_burstcount
 	wire         mm_interconnect_0_on_chip_memory_s1_chipselect;               // mm_interconnect_0:on_chip_memory_s1_chipselect -> on_chip_memory:chipselect
 	wire  [31:0] mm_interconnect_0_on_chip_memory_s1_readdata;                 // on_chip_memory:readdata -> mm_interconnect_0:on_chip_memory_s1_readdata
-	wire   [9:0] mm_interconnect_0_on_chip_memory_s1_address;                  // mm_interconnect_0:on_chip_memory_s1_address -> on_chip_memory:address
+	wire  [14:0] mm_interconnect_0_on_chip_memory_s1_address;                  // mm_interconnect_0:on_chip_memory_s1_address -> on_chip_memory:address
 	wire   [3:0] mm_interconnect_0_on_chip_memory_s1_byteenable;               // mm_interconnect_0:on_chip_memory_s1_byteenable -> on_chip_memory:byteenable
 	wire         mm_interconnect_0_on_chip_memory_s1_write;                    // mm_interconnect_0:on_chip_memory_s1_write -> on_chip_memory:write
 	wire  [31:0] mm_interconnect_0_on_chip_memory_s1_writedata;                // mm_interconnect_0:on_chip_memory_s1_writedata -> on_chip_memory:writedata
