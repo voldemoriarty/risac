@@ -3,10 +3,10 @@
 
 # to use stdlib, just use link_stdlib.ld
 # and comment the -nostdlib line
-LFLAGS =  -Os -Wall -T link_stdlib.ld
-#LFLAGS += -nostdlib
-#CFLAGS =  -nostdlib
-CFLAGS += -Os -march=rv32i -mabi=ilp32 -c -Wall
+LFLAGS =  -O3 -Wall -T link_simple.ld
+LFLAGS += -nostdlib
+CFLAGS =  -nostdlib
+CFLAGS += -O3 -march=rv32i -mabi=ilp32 -c -Wall
 
 CSRC = start.c test.c io.c
 OBJS = $(CSRC:.c=.o)

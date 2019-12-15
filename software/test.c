@@ -1,4 +1,5 @@
 #include "io.h"
+#include "csr.h"
 
 /**
  * Convert an integer to hexadecimal string
@@ -42,30 +43,32 @@ static void putnum32(volatile char* uart, int num) {
 	_puts(uart, buffer, 8);
 }
 
-#include <stdio.h>
-#include <stdint.h>
-
-
-
 // the (fake) entry point
 int main () {
 	volatile char *leds = (volatile char *)0x2000000;
 	*leds = 0x50;
 	volatile char *uart = (volatile char *)0x1000000;
-	puts("Now running: Count from -1 to 9");
-	for (int i = -1; i < 10; ++i) {
-		putnum32(uart, i);
-		_puts(uart, "\r\n", 2);
-	}
-	// loopback uart 
-	puts ("Now running: UART Loopback");
-	while (1) {
-		// if read data is available, write it for loopback
-		volatile unsigned *data = (volatile unsigned *)uart;
-		unsigned d = data[0];
-		if (d & (1 << 15)) {
-			_puts(uart, (char*)&d, 1);
-			*leds = *(char*)&d;
-		}
-	}
+	// for (int i = -1; i < 10; ++i) {
+	// 	putnum32(uart, i);
+	// 	_puts(uart, "\r\n", 2);
+	// }
+	// // loopback uart 
+	// while (1) {
+	// 	// if read data is available, write it for loopback
+	// 	volatile unsigned *data = (volatile unsigned *)uart;
+	// 	unsigned d = data[0];
+	// 	if (d & (1 << 15)) {
+	// 		_puts(uart, (char*)&d, 1);
+	// 		*leds = *(char*)&d;
+	// 	}
+	// }
+	_puts(uart, "MTVEC: ", 7);
+	writeCSR(CSR_MTVEC, 0x69);
+	setCSR(CSR_MTVEC, 1 << 31);
+	putnum32(uart, readCSR(CSR_MTVEC));
+	while (1);
+}
+
+void _start() {
+	main();
 }

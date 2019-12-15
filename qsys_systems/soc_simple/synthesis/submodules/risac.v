@@ -25,7 +25,31 @@ module risac (
   reg stallPipe;
   reg pcChanged;
   reg [4:0]		rdOf;
+
+  // the interrupt logic
+  // interrupts are handled like branches
+  // if an interrupt comes, all the instructions before
+  // the OS stage will be flushed. This is to ensure
+  // that any branches in the pipeline won't mess up
   
+  // in the OS, pc+4 or branchTarget will be saved in
+  // mepc for returning from interrupt
+  // if the branch was supposed to be taken, save branchTarget
+  // else save pc+4
+  reg   [31:0] mepc;
+
+  // the address to jump to when an interrupt happens
+  wire  [31:0] mtvec;
+
+  // the individual interrupt enable
+  wire  [31:0] mie;
+
+  // the interrupt sources
+  wire  [31:0] mip;
+
+  // interrupt occurs when a source is high and is enabled
+  wire its_a_trap = |(mip & mie);
+
 
   assign oIbusAddr = pc;
   // wait for waitrequest to fall before zeroing
@@ -476,6 +500,7 @@ module risac (
       {aluIn1, aluIn2, lOs, sOs, lsuAddrOs, lsuDataOs} <= 'b0;
       {branch, branchTarget} <= 'b0;
       {csrIOs, csrRead, csrWrite, csrSet, csrClr} <= 'b0;
+      mepc <= 'b0;
     end else if (!stallPipe) begin 
       {pcOs, rdWeOs, rdOs} <= {pcOf, rdWeOf, rdOf};
       {lOs, sOs} <= {lOf, sOf};
@@ -492,8 +517,13 @@ module risac (
       // branch only if instruction was unconditional branch
       // and if it was conditional then branch if the condition met
       
-      branch <= (branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2);
-			branchTarget <= bTargetOf + branchOffset;
+      branch <= its_a_trap | ((branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2));
+			branchTarget <= its_a_trap ? mtvec : bTargetOf + branchOffset;
+      
+      if (its_a_trap) begin 
+        mepc <= ((branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2)) ? bTargetOf + branchOffset : pcOf + 3'd4;
+      end
+
 			validOs <= (|invalidRegister) ? 1'b0 : validOf;
 
       lsuAddrOs <= rs1Data + immOf;
@@ -535,8 +565,11 @@ module risac (
     .clr         (csrClr & validOs),
     .set         (csrSet & validOs),
     .wdata       (csrWdata),
-    .time_clk    (1'b0),
-    .ins_ret     (csr_ins_ret),
+    .mepc        (mepc),
+    .timer_overflow(1'b0),
+    .mtvec       (mtvec),
+    .mie         (mie),
+    .mip         (mip),
     .rdata       (csrRes)
   );
 

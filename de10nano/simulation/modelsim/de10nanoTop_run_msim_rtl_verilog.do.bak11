@@ -17,6 +17,7 @@ vlog -vlog01compat -work soc_simple +incdir+/home/saad/trashcan/risac/qsys_syste
 vlog -vlog01compat -work soc_simple +incdir+/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/altera_avalon_sc_fifo.v}
 vlog -vlog01compat -work soc_simple +incdir+/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac.v}
 vlog -vlog01compat -work soc_simple +incdir+/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/risac_avalon.v}
+vlog -vlog01compat -work soc_simple +incdir+/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/csr_unit.v}
 vlog -vlog01compat -work soc_simple +incdir+/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/soc_simple_on_chip_memory.v}
 vlog -vlog01compat -work soc_simple +incdir+/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/soc_simple_leds.v}
 vlog -vlog01compat -work soc_simple +incdir+/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/qsys_systems/soc_simple/synthesis/submodules/altera_avalon_mm_bridge.v}
