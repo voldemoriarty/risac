@@ -10,7 +10,7 @@ module soc_simple (
 		input  wire       reset_reset_n  //  reset.reset_n
 	);
 
-	wire         pll_50_150_outclk0_clk;                                       // PLL_50_150:outclk_0 -> [jtag_uart:clk, jtag_uart_pipeline_bridge:clk, leds:clk, mm_interconnect_0:PLL_50_150_outclk0_clk, mm_interconnect_1:PLL_50_150_outclk0_clk, mm_interconnect_2:PLL_50_150_outclk0_clk, on_chip_memory:clk, pio_pipeline_bridge:clk, rst_controller:clk, rv32i_core:clk]
+	wire         pll_50_150_outclk0_clk;                                       // PLL_50_150:outclk_0 -> [jtag_uart:clk, jtag_uart_pipeline_bridge:clk, leds:clk, mm_interconnect_0:PLL_50_150_outclk0_clk, mm_interconnect_1:PLL_50_150_outclk0_clk, mm_interconnect_2:PLL_50_150_outclk0_clk, mtime:clk, on_chip_memory:clk, pio_pipeline_bridge:clk, rst_controller:clk, rv32i_core:clk]
 	wire  [31:0] rv32i_core_data_master_readdata;                              // mm_interconnect_0:rv32i_core_data_master_readdata -> rv32i_core:avDB_readdata
 	wire         rv32i_core_data_master_waitrequest;                           // mm_interconnect_0:rv32i_core_data_master_waitrequest -> rv32i_core:avDB_waitrequest
 	wire  [31:0] rv32i_core_data_master_address;                               // rv32i_core:avDB_address -> mm_interconnect_0:rv32i_core_data_master_address
@@ -22,6 +22,11 @@ module soc_simple (
 	wire         rv32i_core_instruction_master_waitrequest;                    // mm_interconnect_0:rv32i_core_instruction_master_waitrequest -> rv32i_core:avIB_waitrequest
 	wire  [31:0] rv32i_core_instruction_master_address;                        // rv32i_core:avIB_address -> mm_interconnect_0:rv32i_core_instruction_master_address
 	wire         rv32i_core_instruction_master_read;                           // rv32i_core:avIB_read -> mm_interconnect_0:rv32i_core_instruction_master_read
+	wire  [31:0] mm_interconnect_0_mtime_avmm_slave_readdata;                  // mtime:readdata -> mm_interconnect_0:mtime_avMM_slave_readdata
+	wire   [1:0] mm_interconnect_0_mtime_avmm_slave_address;                   // mm_interconnect_0:mtime_avMM_slave_address -> mtime:addr
+	wire         mm_interconnect_0_mtime_avmm_slave_read;                      // mm_interconnect_0:mtime_avMM_slave_read -> mtime:read
+	wire         mm_interconnect_0_mtime_avmm_slave_write;                     // mm_interconnect_0:mtime_avMM_slave_write -> mtime:write
+	wire  [31:0] mm_interconnect_0_mtime_avmm_slave_writedata;                 // mm_interconnect_0:mtime_avMM_slave_writedata -> mtime:writedata
 	wire  [31:0] mm_interconnect_0_jtag_uart_pipeline_bridge_s0_readdata;      // jtag_uart_pipeline_bridge:s0_readdata -> mm_interconnect_0:jtag_uart_pipeline_bridge_s0_readdata
 	wire         mm_interconnect_0_jtag_uart_pipeline_bridge_s0_waitrequest;   // jtag_uart_pipeline_bridge:s0_waitrequest -> mm_interconnect_0:jtag_uart_pipeline_bridge_s0_waitrequest
 	wire         mm_interconnect_0_jtag_uart_pipeline_bridge_s0_debugaccess;   // mm_interconnect_0:jtag_uart_pipeline_bridge_s0_debugaccess -> jtag_uart_pipeline_bridge:s0_debugaccess
@@ -81,7 +86,7 @@ module soc_simple (
 	wire   [1:0] mm_interconnect_2_leds_s1_address;                            // mm_interconnect_2:leds_s1_address -> leds:address
 	wire         mm_interconnect_2_leds_s1_write;                              // mm_interconnect_2:leds_s1_write -> leds:write_n
 	wire  [31:0] mm_interconnect_2_leds_s1_writedata;                          // mm_interconnect_2:leds_s1_writedata -> leds:writedata
-	wire         rst_controller_reset_out_reset;                               // rst_controller:reset_out -> [jtag_uart:rst_n, jtag_uart_pipeline_bridge:reset, leds:reset_n, mm_interconnect_0:rv32i_core_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_1:jtag_uart_pipeline_bridge_reset_reset_bridge_in_reset_reset, mm_interconnect_2:pio_pipeline_bridge_reset_reset_bridge_in_reset_reset, on_chip_memory:reset, pio_pipeline_bridge:reset, rst_translator:in_reset, rv32i_core:rst_n]
+	wire         rst_controller_reset_out_reset;                               // rst_controller:reset_out -> [jtag_uart:rst_n, jtag_uart_pipeline_bridge:reset, leds:reset_n, mm_interconnect_0:rv32i_core_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_1:jtag_uart_pipeline_bridge_reset_reset_bridge_in_reset_reset, mm_interconnect_2:pio_pipeline_bridge_reset_reset_bridge_in_reset_reset, mtime:rst_n, on_chip_memory:reset, pio_pipeline_bridge:reset, rst_translator:in_reset, rv32i_core:rst_n]
 	wire         rst_controller_reset_out_reset_req;                           // rst_controller:reset_req -> [on_chip_memory:reset_req, rst_translator:reset_req_in]
 
 	soc_simple_PLL_50_150 pll_50_150 (
@@ -147,6 +152,17 @@ module soc_simple (
 		.chipselect (mm_interconnect_2_leds_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_2_leds_s1_readdata),   //                    .readdata
 		.out_port   (leds_export)                           // external_connection.export
+	);
+
+	timer mtime (
+		.clk            (pll_50_150_outclk0_clk),                       //        clock.clk
+		.rst_n          (~rst_controller_reset_out_reset),              //   rst_n_sink.reset_n
+		.addr           (mm_interconnect_0_mtime_avmm_slave_address),   //   avMM_slave.address
+		.read           (mm_interconnect_0_mtime_avmm_slave_read),      //             .read
+		.write          (mm_interconnect_0_mtime_avmm_slave_write),     //             .write
+		.writedata      (mm_interconnect_0_mtime_avmm_slave_writedata), //             .writedata
+		.readdata       (mm_interconnect_0_mtime_avmm_slave_readdata),  //             .readdata
+		.timer_overflow ()                                              // tim_overflow.timer_overflow
 	);
 
 	soc_simple_on_chip_memory on_chip_memory (
@@ -236,6 +252,11 @@ module soc_simple (
 		.jtag_uart_pipeline_bridge_s0_readdatavalid        (mm_interconnect_0_jtag_uart_pipeline_bridge_s0_readdatavalid), //                                            .readdatavalid
 		.jtag_uart_pipeline_bridge_s0_waitrequest          (mm_interconnect_0_jtag_uart_pipeline_bridge_s0_waitrequest),   //                                            .waitrequest
 		.jtag_uart_pipeline_bridge_s0_debugaccess          (mm_interconnect_0_jtag_uart_pipeline_bridge_s0_debugaccess),   //                                            .debugaccess
+		.mtime_avMM_slave_address                          (mm_interconnect_0_mtime_avmm_slave_address),                   //                            mtime_avMM_slave.address
+		.mtime_avMM_slave_write                            (mm_interconnect_0_mtime_avmm_slave_write),                     //                                            .write
+		.mtime_avMM_slave_read                             (mm_interconnect_0_mtime_avmm_slave_read),                      //                                            .read
+		.mtime_avMM_slave_readdata                         (mm_interconnect_0_mtime_avmm_slave_readdata),                  //                                            .readdata
+		.mtime_avMM_slave_writedata                        (mm_interconnect_0_mtime_avmm_slave_writedata),                 //                                            .writedata
 		.on_chip_memory_s1_address                         (mm_interconnect_0_on_chip_memory_s1_address),                  //                           on_chip_memory_s1.address
 		.on_chip_memory_s1_write                           (mm_interconnect_0_on_chip_memory_s1_write),                    //                                            .write
 		.on_chip_memory_s1_readdata                        (mm_interconnect_0_on_chip_memory_s1_readdata),                 //                                            .readdata

@@ -86,6 +86,27 @@
          type = "String";
       }
    }
+   element mtime
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element mtime.avMM_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "50331648";
+         type = "String";
+      }
+   }
    element on_chip_memory
    {
       datum _sortIndex
@@ -415,6 +436,7 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="8" />
  </module>
+ <module name="mtime" kind="RVTimer" version="1.0" enabled="1" />
  <module
    name="on_chip_memory"
    kind="altera_avalon_onchip_memory2"
@@ -465,6 +487,15 @@
   <parameter name="USE_RESPONSE" value="0" />
  </module>
  <module name="rv32i_core" kind="risac" version="1.0" enabled="1" />
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="rv32i_core.data_master"
+   end="mtime.avMM_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x03000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection
    kind="avalon"
    version="16.0"
@@ -547,6 +578,11 @@
    start="PLL_50_150.outclk0"
    end="rv32i_core.clock" />
  <connection
+   kind="clock"
+   version="16.0"
+   start="PLL_50_150.outclk0"
+   end="mtime.clock" />
+ <connection
    kind="reset"
    version="16.0"
    start="clock.clk_reset"
@@ -577,6 +613,11 @@
    version="16.0"
    start="clock.clk_reset"
    end="rv32i_core.reset_sink" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clock.clk_reset"
+   end="mtime.rst_n_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
