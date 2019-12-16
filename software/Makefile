@@ -66,4 +66,4 @@ de10Flash: $(TGT).mif
 	make --directory=../de10nano/ prog
 
 clean:
-	rm *.mif *.bin *.elf *.o *.s
+	rm *.mif *.bin *.elf *.o *.s *.vh
