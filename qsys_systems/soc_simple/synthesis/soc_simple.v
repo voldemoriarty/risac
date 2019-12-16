@@ -11,6 +11,7 @@ module soc_simple (
 	);
 
 	wire         pll_50_150_outclk0_clk;                                       // PLL_50_150:outclk_0 -> [jtag_uart:clk, jtag_uart_pipeline_bridge:clk, leds:clk, mm_interconnect_0:PLL_50_150_outclk0_clk, mm_interconnect_1:PLL_50_150_outclk0_clk, mm_interconnect_2:PLL_50_150_outclk0_clk, mtime:clk, on_chip_memory:clk, pio_pipeline_bridge:clk, rst_controller:clk, rv32i_core:clk]
+	wire         mtime_tim_overflow_timer_overflow;                            // mtime:timer_overflow -> rv32i_core:con_tim_overflow
 	wire  [31:0] rv32i_core_data_master_readdata;                              // mm_interconnect_0:rv32i_core_data_master_readdata -> rv32i_core:avDB_readdata
 	wire         rv32i_core_data_master_waitrequest;                           // mm_interconnect_0:rv32i_core_data_master_waitrequest -> rv32i_core:avDB_waitrequest
 	wire  [31:0] rv32i_core_data_master_address;                               // rv32i_core:avDB_address -> mm_interconnect_0:rv32i_core_data_master_address
@@ -162,7 +163,7 @@ module soc_simple (
 		.write          (mm_interconnect_0_mtime_avmm_slave_write),     //             .write
 		.writedata      (mm_interconnect_0_mtime_avmm_slave_writedata), //             .writedata
 		.readdata       (mm_interconnect_0_mtime_avmm_slave_readdata),  //             .readdata
-		.timer_overflow ()                                              // tim_overflow.timer_overflow
+		.timer_overflow (mtime_tim_overflow_timer_overflow)             // tim_overflow.timer_overflow
 	);
 
 	soc_simple_on_chip_memory on_chip_memory (
@@ -225,7 +226,8 @@ module soc_simple (
 		.avDB_writedata   (rv32i_core_data_master_writedata),          //                   .writedata
 		.avDB_byteenable  (rv32i_core_data_master_byteenable),         //                   .byteenable
 		.avDB_write       (rv32i_core_data_master_write),              //                   .write
-		.avDB_waitrequest (rv32i_core_data_master_waitrequest)         //                   .waitrequest
+		.avDB_waitrequest (rv32i_core_data_master_waitrequest),        //                   .waitrequest
+		.con_tim_overflow (mtime_tim_overflow_timer_overflow)          //       tim_overflow.timer_overflow
 	);
 
 	soc_simple_mm_interconnect_0 mm_interconnect_0 (

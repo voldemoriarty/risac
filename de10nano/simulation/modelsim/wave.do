@@ -3,6 +3,9 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate -radix hexadecimal /tb/clk
 add wave -noupdate -radix hexadecimal /tb/rstn
 add wave -noupdate -radix ascii /tb/str
+add wave -noupdate -divider Timers
+add wave -noupdate -label count -radix unsigned /tb/uut/rV_system/mtime/count
+add wave -noupdate -label cmp -radix unsigned /tb/uut/rV_system/mtime/cmp
 add wave -noupdate -divider CSR_Dec
 add wave -noupdate -label csrReadDec -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/csrReadDec
 add wave -noupdate -label csrWriteDec -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/csrWriteDec
@@ -49,7 +52,7 @@ add wave -noupdate -label Res -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_
 add wave -noupdate -label lEx /tb/uut/rV_system/rv32i_core/u_risac/lEx
 add wave -noupdate -divider Dec
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {9590000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {25889261 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -65,4 +68,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {29316458 ps} {30035976 ps}
+WaveRestoreZoom {25520833 ps} {26240351 ps}

@@ -12,7 +12,10 @@ module risac (
   output					oDbusRead,
   output	[3:0]		oDbusByteEn,
   input		[31:0]	iDbusData,
-  input						iDbusWait
+  input						iDbusWait,
+
+  // timer interrupt
+  input           tim_overflow
 );
 
   // ===========================================================
@@ -49,6 +52,11 @@ module risac (
 
   // interrupt occurs when a source is high and is enabled
   wire its_a_trap = |(mip & mie);
+
+  // we need some way to know if cpu has taken the trap
+  // right now, trap line is high and pc is stuck at mtvec
+  // or we could use an edge detector on trap line
+  reg  its_a_trap_old;
 
 
   assign oIbusAddr = pc;
@@ -484,7 +492,7 @@ module risac (
     if (!rst_n) begin 
       invalidRegister <= 'b0;
     end else if (!stallPipe) begin 
-      invalidRegister[0] <= ((compareResult & compareOf) | branchOf) & validOf;
+      invalidRegister[0] <= (its_a_trap & ~its_a_trap_old) | ((compareResult & compareOf) | branchOf) & validOf;
       invalidRegister[1] <= invalidRegister[0];
       invalidRegister[2] <= invalidRegister[1];
     end
@@ -500,7 +508,8 @@ module risac (
       {aluIn1, aluIn2, lOs, sOs, lsuAddrOs, lsuDataOs} <= 'b0;
       {branch, branchTarget} <= 'b0;
       {csrIOs, csrRead, csrWrite, csrSet, csrClr} <= 'b0;
-      mepc <= 'b0;
+      {mepc, its_a_trap_old} <= 'b0;
+
     end else if (!stallPipe) begin 
       {pcOs, rdWeOs, rdOs} <= {pcOf, rdWeOf, rdOf};
       {lOs, sOs} <= {lOf, sOf};
@@ -517,10 +526,12 @@ module risac (
       // branch only if instruction was unconditional branch
       // and if it was conditional then branch if the condition met
       
-      branch <= its_a_trap | ((branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2));
-			branchTarget <= its_a_trap ? mtvec : bTargetOf + branchOffset;
+      its_a_trap_old <= its_a_trap;
+
+      branch <= (its_a_trap & ~its_a_trap_old) | ((branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2));
+			branchTarget <= (its_a_trap & ~its_a_trap_old) ? mtvec : bTargetOf + branchOffset;
       
-      if (its_a_trap) begin 
+      if (its_a_trap & ~its_a_trap_old) begin 
         mepc <= ((branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2)) ? bTargetOf + branchOffset : pcOf + 3'd4;
       end
 
@@ -566,7 +577,7 @@ module risac (
     .set         (csrSet & validOs),
     .wdata       (csrWdata),
     .mepc        (mepc),
-    .timer_overflow(1'b0),
+    .timer_overflow(tim_overflow),
     .mtvec       (mtvec),
     .mie         (mie),
     .mip         (mip),

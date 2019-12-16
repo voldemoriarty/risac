@@ -15,7 +15,10 @@ module risac_avalon (
   output  [31:0] avDB_writedata,
   output  [03:0] avDB_byteenable,
   output  [00:0] avDB_write,
-  input		[00:0] avDB_waitrequest
+  input		[00:0] avDB_waitrequest,
+
+  // timer overflow conduit
+  input   [00:0] con_tim_overflow
 );
   reg   read;
   wire  cpu_read;
@@ -56,6 +59,7 @@ module risac_avalon (
 
   assign avDB_byteenable = byten << avDB_address[1:0];
   assign avDB_writedata = wdata << (avDB_address[1:0] * 8);
+  
   risac u_risac (
     .clk        (clk),
     .rst_n      (rst_n),
@@ -72,7 +76,9 @@ module risac_avalon (
     .oDbusRead  (avDB_read),
     .oDbusByteEn(byten),
     .iDbusData  (avDB_readdata >> (avDB_address[1:0] * 8)),
-    .iDbusWait	(avDB_waitrequest)
+    .iDbusWait	(avDB_waitrequest),
+
+    .tim_overflow(con_tim_overflow)
   );
   
 endmodule 

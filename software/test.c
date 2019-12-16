@@ -43,6 +43,8 @@ static void putnum32(volatile char* uart, int num) {
 	_puts(uart, buffer, 8);
 }
 
+void trap();
+
 // the (fake) entry point
 int main () {
 	volatile char *leds = (volatile char *)0x2000000;
@@ -62,10 +64,19 @@ int main () {
 	// 		*leds = *(char*)&d;
 	// 	}
 	// }
-	_puts(uart, "MTVEC: ", 7);
-	writeCSR(CSR_MTVEC, 0x69);
-	setCSR(CSR_MTVEC, 1 << 31);
+	volatile unsigned *timer_base = (volatile unsigned *)0x3000000;
+	writeCSR(CSR_MTVEC, (unsigned)trap);
+	setCSR(CSR_MIE, 1 << 7);
 	putnum32(uart, readCSR(CSR_MTVEC));
+	timer_base[2] = 0x500;
+	timer_base[3] = 0;
+
+	while (1);
+}
+
+void trap () {
+	volatile char *uart = (volatile char *)0x1000000;
+	_puts(uart, "ITS A TRAP", 11);
 	while (1);
 }
 
