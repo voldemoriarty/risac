@@ -43,7 +43,12 @@ static void putnum32(volatile char* uart, int num) {
 	_puts(uart, buffer, 8);
 }
 
-void trap();
+void trap (void) __attribute__ ((interrupt ("machine")));
+
+void trap () {
+	volatile char *uart = (volatile char *)0x1000000;
+	_puts(uart, "ITS A TRAP", 11);
+}
 
 // the (fake) entry point
 int main () {
@@ -71,12 +76,6 @@ int main () {
 	timer_base[2] = 0x500;
 	timer_base[3] = 0;
 
-	while (1);
-}
-
-void trap () {
-	volatile char *uart = (volatile char *)0x1000000;
-	_puts(uart, "ITS A TRAP", 11);
 	while (1);
 }
 

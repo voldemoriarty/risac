@@ -129,14 +129,17 @@ module risac (
   reg         csrReadDec, csrWriteDec, csrSetDec, csrClrDec, csrImmSelDec;
   reg [11:0]  csrAddrDec;
   reg         csrRs1Need, csrDec;
+  reg         mretDec;
 
   always @ (posedge clk or negedge rst_n) begin: DEC
     if (!rst_n) begin 
       {aluOpDec, rs1Dec, rs2Dec, immDec, validDec, immSelDec, rdShiftDec} <= 'b0;
       {rdWeDec, illegalDec, pcDec, lDec, sDec, rs1ShiftDec, rs2ShiftDec} <= 'b0; 
       {luipcDec, luiDec, branchDec, branchType, jalr} <= 'b0;
-      {csrDec, csrReadDec, csrRs1Need, csrAddrDec, csrWriteDec, csrSetDec, csrClrDec, csrImmSelDec} <= 'b0;
+      {mretDec, csrDec, csrReadDec, csrRs1Need, csrAddrDec, csrWriteDec, csrSetDec, csrClrDec, csrImmSelDec} <= 'b0;
     end else if (!stallPipe && !dataHazard) begin 
+      // mretDec, the one and only
+      mretDec      <= (iIbusData == 32'h30200073);
       // the address of the currently being decoded instruction
       pcDec			<= iIbusIAddr;
 
@@ -428,13 +431,13 @@ module risac (
       // branch handles
       // branchOf signal is high when the branch is unconditional
       // e.g. jal, jalr
-      branchOf <= branchDec & ~branchType;
+      branchOf <= (branchDec & ~branchType) | mretDec;
       // compareOf is high when the branch is a conditional branch
       // e.g. bne, ...
       compareOf<= branchDec & branchType;
       
-      bTargetOf<= jalr ? (rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec]) : pcDec;
-      branchOffset <= immDec;
+      bTargetOf<= mretDec ? mepc : (jalr ? (rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec]) : pcDec);
+      branchOffset <= mretDec ? 32'b0 : immDec;
 
       if (falseAlarm) begin 
         validOf <= validDec & ~(branch | use2);
