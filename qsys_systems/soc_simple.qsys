@@ -147,6 +147,14 @@
          type = "int";
       }
    }
+   element soc_simple
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -582,6 +590,17 @@
    version="16.0"
    start="PLL_50_150.outclk0"
    end="mtime.clock" />
+ <connection
+   kind="conduit"
+   version="16.0"
+   start="rv32i_core.tim_overflow"
+   end="mtime.tim_overflow">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
  <connection
    kind="reset"
    version="16.0"
