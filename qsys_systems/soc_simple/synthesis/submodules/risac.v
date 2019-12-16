@@ -535,7 +535,7 @@ module risac (
 			branchTarget <= (its_a_trap & ~its_a_trap_old) ? mtvec : bTargetOf + branchOffset;
       
       if (its_a_trap & ~its_a_trap_old) begin 
-        mepc <= ((branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2)) ? bTargetOf + branchOffset : pcOf + 3'd4;
+        mepc <= ((branchOf | (compareResult & compareOf)) & validOf & ~(branch | use2)) ? bTargetOf + branchOffset : pcOs;
       end
 
 			validOs <= (|invalidRegister) ? 1'b0 : validOf;

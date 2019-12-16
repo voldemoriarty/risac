@@ -83,6 +83,10 @@ vlog -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys
 vlog -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_base.v}
 vlog -sv -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/altera_avalon_st_pipeline_stage.sv}
 vlog -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/csr_unit.v}
+vlog -sv -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_cmd_mux_003.sv}
+vlog -sv -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_router_005.sv}
+vlog -sv -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/soc_simple_mm_interconnect_0_rsp_demux_003.sv}
+vlog -vlog01compat -work work +incdir+/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules {/home/saad/trashcan/risac/de10nano/../qsys_systems/soc_simple/synthesis/submodules/timer.v}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L soc_simple -voptargs="+acc"  tb
 

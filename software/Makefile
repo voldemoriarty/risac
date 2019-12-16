@@ -21,6 +21,7 @@ TOOLCHAIN = riscv32-unknown-elf-
 CC = $(TOOLCHAIN)gcc
 OC = $(TOOLCHAIN)objcopy
 SZ = $(TOOLCHAIN)size
+OD = $(TOOLCHAIN)objdump
 BM = ./bin2hex/bin2hex
 
 .PHONY: all
@@ -29,6 +30,7 @@ BM = ./bin2hex/bin2hex
 .PHONY: asm
 .PHONY: sim
 .PHONY: de10Flash
+.PHONY: dump
 
 %.o: %.c
 	$(CC) $(CFLAGS) $<
@@ -44,8 +46,8 @@ $(TGT).bin: $(TGT).elf
 
 $(TGT).mif: $(TGT).bin
 	$(BM) $< $@
-	cp $@ -v ../de10nano/hex/
-	cp $@ -v ../de10nano/simulation/modelsim/hex/
+	cp $@ ../de10nano/hex/
+	cp $@ ../de10nano/simulation/modelsim/hex/
 
 $(TGT).vh: $(TGT).elf 
 	$(OC) -O verilog $< $@
@@ -56,6 +58,9 @@ size: $(TGT).elf
 elf: $(TGT).elf
 
 asm: $(ASMS)
+
+dump: $(TGT).elf
+	$(OD) -d $< | less
 
 sim: $(TGT).vh
 	cp $< ../testbench/
