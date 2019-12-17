@@ -23,8 +23,16 @@ ssize_t _write(int fd, const void* ptr, size_t len) {
  */
 void _puts (volatile char* uart, const char* msg, const size_t len) {
 	volatile unsigned int *status = (volatile unsigned int *)uart;
+
 	for (int i = 0; i < len; ++i) {
 		while (status[1] >> 16 == 0);
 		*uart = msg[i];
 	}
+}
+
+void putnum32(volatile char* uart, int num) {
+	char buffer[8];
+	_itoa(buffer, num);
+	_puts(uart, "0x", 2);
+	_puts(uart, buffer, 8);
 }
