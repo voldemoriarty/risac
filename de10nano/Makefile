@@ -5,3 +5,4 @@ all:
 
 prog: all
 	quartus_pgm -m jtag -o "p;output_files/de10nanoTop.sof@2"
+	nios2-terminal

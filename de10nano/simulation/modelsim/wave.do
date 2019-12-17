@@ -3,6 +3,7 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate -radix hexadecimal /tb/clk
 add wave -noupdate -radix hexadecimal /tb/rstn
 add wave -noupdate -radix ascii /tb/str
+add wave -noupdate /tb/leds
 add wave -noupdate -divider Timers
 add wave -noupdate -label count -radix unsigned /tb/uut/rV_system/mtime/count
 add wave -noupdate -label cmp -radix unsigned /tb/uut/rV_system/mtime/cmp
@@ -35,6 +36,7 @@ add wave -noupdate -label address -radix hexadecimal /tb/uut/rV_system/rv32i_cor
 add wave -noupdate -label waitrequest -radix hexadecimal /tb/uut/rV_system/rv32i_core/avIB_waitrequest
 add wave -noupdate -label read -radix hexadecimal /tb/uut/rV_system/rv32i_core/avIB_read
 add wave -noupdate -label bT2 -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/branchTarget2
+add wave -noupdate -label branch /tb/uut/rV_system/rv32i_core/u_risac/branch
 add wave -noupdate -label u2 /tb/uut/rV_system/rv32i_core/u_risac/use2
 add wave -noupdate -divider {Data Bus}
 add wave -noupdate -label address -radix hexadecimal /tb/uut/rV_system/rv32i_core/avDB_address
@@ -50,9 +52,23 @@ add wave -noupdate -label valid -radix hexadecimal /tb/uut/rV_system/rv32i_core/
 add wave -noupdate -label We -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/rdWeEx
 add wave -noupdate -label Res -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/exRes
 add wave -noupdate -label lEx /tb/uut/rV_system/rv32i_core/u_risac/lEx
-add wave -noupdate -divider Dec
+add wave -noupdate -divider Comparator
+add wave -noupdate -label compareResult /tb/uut/rV_system/rv32i_core/u_risac/compareResult
+add wave -noupdate -divider {Register File}
+add wave -noupdate -label rs1booked -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/rs1booked
+add wave -noupdate -label rs2booked -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/rs2booked
+add wave -noupdate -label rs1Dec -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/rs1Dec
+add wave -noupdate -label rs2Dec -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/rs2Dec
+add wave -noupdate -label rs1Data -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/rs1Data
+add wave -noupdate -label rs2Data -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/rs2Data
+add wave -noupdate -label exRes -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/exRes
+add wave -noupdate -divider ALU
+add wave -noupdate -label In1 -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/aluIn1
+add wave -noupdate -label In2 -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/aluIn2
+add wave -noupdate -label aluRes -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/aluRes
+add wave -noupdate -label aluOp -radix hexadecimal /tb/uut/rV_system/rv32i_core/u_risac/aluOpOs
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {25889261 ps} 0}
+WaveRestoreCursors {{Cursor 1} {2005325694 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -68,4 +84,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {25520833 ps} {26240351 ps}
+WaveRestoreZoom {2999405674 ps} {3000031281 ps}
