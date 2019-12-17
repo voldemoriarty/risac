@@ -281,6 +281,7 @@ module risac (
   // till clean value arrives and invalidate all the instructions
   // that are sent forward 
 
+  reg [31:0] exRes;
   reg [31:0]	registers [0:31];
   reg [31:0]	rs1Data, rs2Data, rdShiftEx;
   
@@ -393,6 +394,7 @@ module risac (
   // when the data hazard occurs, set valid to zero and stall previous stages
 
   // propogate the rdWe, valid, aluOp, immSel, pc and imm signals
+  reg 				lEx;
   reg [31:0]	immOf, pcOf;
   reg [3:0]		aluOpOf;
   reg 				lOf, sOf, luipcOf;
@@ -445,8 +447,25 @@ module risac (
         validOf <= validDec & ~dataHazard & ~(branch | use2);
       end 
 
-      rs1Data <= rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec];
-      rs2Data	<= rs2Dec == 5'b0 ? 32'b0 : registers [rs2Dec];
+      // rs1Data <= rs1Dec == 5'b0 ? 32'b0 : registers [rs1Dec];
+      // rs2Data	<= rs2Dec == 5'b0 ? 32'b0 : registers [rs2Dec];
+
+      if (rs1Dec == 5'b0) begin
+        rs1Data <= 32'b0; 
+      end else if ((rs1Dec == rdEx) & (validEx && (rdWeEx | lEx))) begin 
+        rs1Data <= exRes;
+      end else begin 
+        rs1Data <= registers[rs1Dec];
+      end
+
+      if (rs2Dec == 5'b0) begin
+        rs2Data <= 32'b0; 
+      end else if ((rs2Dec == rdEx) & (validEx && (rdWeEx | lEx))) begin 
+        rs2Data <= exRes;
+      end else begin 
+        rs2Data <= registers[rs2Dec];
+      end
+
       aluOpOf <= luipcDec | (branchDec & ~branchType) ? 4'b0 : aluOpDec;
       pcOf    <= luiDec ? 32'b0 : pcDec;
       immOf   <= (branchDec & ~branchType) ? 32'd4 : immDec;
@@ -587,7 +606,6 @@ module risac (
     .rdata       (csrRes)
   );
 
-  reg [31:0] exRes;
 
   // propogate the valid, pc, rdWe
   reg [31:0]	pcEx;
@@ -634,7 +652,6 @@ module risac (
   reg [31:0]	lsuRes;
   reg 				lsuStall;
   reg [3:0]		lsuByteEn;
-  reg 				lEx;
 
   assign oDbusAddr 		= lsuAddrOs;
   assign oDbusRead 		= lOs & validOs;
