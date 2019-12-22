@@ -1,5 +1,5 @@
 Flow report for de10nanoTop
-Wed Dec 18 00:50:56 2019
+Wed Dec 18 12:26:16 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Dec 18 00:50:56 2019       ;
+; Flow Status                     ; Successful - Wed Dec 18 12:26:16 2019       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; de10nanoTop                                 ;
 ; Top-level Entity Name           ; de10nanoTop                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,641 / 41,910 ( 4 % )                      ;
-; Total registers                 ; 2166                                        ;
+; Logic utilization (in ALMs)     ; 1,657 / 41,910 ( 4 % )                      ;
+; Total registers                 ; 2248                                        ;
 ; Total pins                      ; 10 / 314 ( 3 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,051,648 / 5,662,720 ( 19 % )              ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/17/2019 21:51:54 ;
+; Start date & time ; 12/18/2019 12:20:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de10nanoTop         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                              ; Value                                                                                                             ; Default Value ; Entity Name ; Section Id                        ;
 +----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                        ; 0.157660151432533                                                                                                 ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                        ; 0.157665364318559                                                                                                 ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME                     ; NA                                                                                                                ; --            ; --          ; tb                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST              ; Off                                                                                                               ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST              ; Off                                                                                                               ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -164,7 +164,7 @@ agreement for further details.
 ; SLD_FILE                                     ; ../qsys_systems/soc_simple/synthesis/soc_simple.regmap                                                            ; --            ; --          ; --                                ;
 ; SLD_FILE                                     ; ../qsys_systems/soc_simple/synthesis/soc_simple.debuginfo                                                         ; --            ; --          ; --                                ;
 ; SLD_FILE                                     ; db/signalTap_auto_stripped.stp                                                                                    ; --            ; --          ; --                                ;
-; SLD_INFO                                     ; QSYS_NAME soc_simple HAS_SOPCINFO 1 GENERATION_ID 1576595470                                                      ; --            ; soc_simple  ; --                                ;
+; SLD_INFO                                     ; QSYS_NAME soc_simple HAS_SOPCINFO 1 GENERATION_ID 1576653633                                                      ; --            ; soc_simple  ; --                                ;
 ; SOPCINFO_FILE                                ; ../qsys_systems/soc_simple/synthesis/../../soc_simple.sopcinfo                                                    ; --            ; --          ; --                                ;
 ; SYNTHESIS_ONLY_QIP                           ; On                                                                                                                ; --            ; --          ; --                                ;
 ; USE_SIGNALTAP_FILE                           ; signalTap.stp                                                                                                     ; --            ; --          ; --                                ;
@@ -176,50 +176,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:18     ; 1.0                     ; 1431 MB             ; 00:01:37                           ;
-; Fitter                    ; 00:02:57     ; 1.1                     ; 2493 MB             ; 00:05:02                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 1252 MB             ; 00:00:12                           ;
-; TimeQuest Timing Analyzer ; 00:00:25     ; 1.4                     ; 1664 MB             ; 00:00:31                           ;
-; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 1537 MB             ; 00:00:06                           ;
-; MIF/HEX Update            ; 00:00:09     ; 1.0                     ; 1589 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 1268 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1591 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1261 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:09     ; 1.0                     ; 1596 MB             ; 00:00:09                           ;
-; Assembler                 ; 00:00:15     ; 1.0                     ; 1254 MB             ; 00:00:14                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1595 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:14     ; 1.0                     ; 1271 MB             ; 00:00:13                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1597 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1272 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1603 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:14     ; 1.0                     ; 1277 MB             ; 00:00:13                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1603 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 1273 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:09     ; 1.0                     ; 1605 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1273 MB             ; 00:00:13                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1607 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1276 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1613 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1279 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1618 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 1282 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1618 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 1291 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:09     ; 1.0                     ; 1620 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1284 MB             ; 00:00:13                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1624 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1290 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1626 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:16     ; 1.0                     ; 1290 MB             ; 00:00:15                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1631 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1289 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1635 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 1295 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1635 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 1290 MB             ; 00:00:12                           ;
-; MIF/HEX Update            ; 00:00:08     ; 1.0                     ; 1637 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 1297 MB             ; 00:00:12                           ;
-; Total                     ; 00:11:42     ; --                      ; --                  ; 00:13:58                           ;
+; Analysis & Synthesis      ; 00:00:39     ; 1.0                     ; 1395 MB             ; 00:01:13                           ;
+; Fitter                    ; 00:02:40     ; 1.1                     ; 2497 MB             ; 00:04:51                           ;
+; Assembler                 ; 00:00:11     ; 1.0                     ; 1245 MB             ; 00:00:10                           ;
+; TimeQuest Timing Analyzer ; 00:00:19     ; 1.5                     ; 1668 MB             ; 00:00:27                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 1536 MB             ; 00:00:05                           ;
+; Total                     ; 00:03:54     ; --                      ; --                  ; 00:06:46                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -233,44 +195,6 @@ agreement for further details.
 ; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
 ; TimeQuest Timing Analyzer ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
 ; EDA Netlist Writer        ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; MIF/HEX Update            ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; Assembler                 ; hangar           ; Ubuntu 19.04 ; 19         ; x86_64         ;
 +---------------------------+------------------+--------------+------------+----------------+
 
 
@@ -282,44 +206,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off de10nanoTop -c 
 quartus_asm --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
 quartus_sta de10nanoTop -c de10nanoTop
 quartus_eda --read_settings_files=off --write_settings_files=off de10nanoTop -c de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
-quartus_cdb --update_mif de10nanoTop
-quartus_asm de10nanoTop
 
 
 

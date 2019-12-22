@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Dec 17 21:56:34 2019
+Fitter Status : Successful - Wed Dec 18 12:24:29 2019
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : de10nanoTop
 Top-level Entity Name : de10nanoTop
 Family : Cyclone V
 Device : 5CSEBA6U23I7
 Timing Models : Final
-Logic utilization (in ALMs) : 1,641 / 41,910 ( 4 % )
-Total registers : 2166
+Logic utilization (in ALMs) : 1,657 / 41,910 ( 4 % )
+Total registers : 2248
 Total pins : 10 / 314 ( 3 % )
 Total virtual pins : 0
 Total block memory bits : 1,051,648 / 5,662,720 ( 19 % )

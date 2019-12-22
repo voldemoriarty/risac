@@ -2,6 +2,7 @@
 # 
 preplace inst soc_simple.on_chip_memory -pg 1 -lvl 5 -y 30
 preplace inst soc_simple.PLL_50_150 -pg 1 -lvl 2 -y 330
+preplace inst soc_simple.mtime -pg 1 -lvl 4 -y 330
 preplace inst soc_simple.leds -pg 1 -lvl 5 -y 210
 preplace inst soc_simple.clock -pg 1 -lvl 1 -y 270
 preplace inst soc_simple.jtag_uart -pg 1 -lvl 5 -y 110
@@ -9,15 +10,16 @@ preplace inst soc_simple.rv32i_core -pg 1 -lvl 3 -y 250
 preplace inst soc_simple.pio_pipeline_bridge -pg 1 -lvl 4 -y 250
 preplace inst soc_simple.jtag_uart_pipeline_bridge -pg 1 -lvl 4 -y 110
 preplace inst soc_simple -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)leds.external_connection,(SLAVE)soc_simple.leds) 1 0 5 NJ 240 NJ 240 NJ 240 NJ 240 NJ
-preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)soc_simple.reset,(SLAVE)clock.clk_in_reset) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>soc_simple</net_container>(MASTER)clock.clk_reset,(SLAVE)pio_pipeline_bridge.reset,(SLAVE)rv32i_core.reset_sink,(SLAVE)on_chip_memory.reset1,(SLAVE)jtag_uart.reset,(SLAVE)leds.reset,(SLAVE)PLL_50_150.reset,(SLAVE)jtag_uart_pipeline_bridge.reset) 1 1 4 280 300 460 340 750 200 1010
-preplace netloc FAN_OUT<net_container>soc_simple</net_container>(SLAVE)rv32i_core.clock,(SLAVE)pio_pipeline_bridge.clk,(SLAVE)jtag_uart.clk,(SLAVE)jtag_uart_pipeline_bridge.clk,(SLAVE)on_chip_memory.clk1,(SLAVE)leds.clk,(MASTER)PLL_50_150.outclk0) 1 2 3 440 320 730 220 990
-preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)PLL_50_150.locked,(SLAVE)soc_simple.locked) 1 0 2 NJ 340 NJ
-preplace netloc INTERCONNECT<net_container>soc_simple</net_container>(SLAVE)jtag_uart_pipeline_bridge.s0,(SLAVE)on_chip_memory.s1,(SLAVE)pio_pipeline_bridge.s0,(MASTER)rv32i_core.instruction_master,(MASTER)rv32i_core.data_master) 1 3 2 710 80 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(MASTER)clock.clk,(SLAVE)PLL_50_150.refclk) 1 1 1 260
-preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(MASTER)pio_pipeline_bridge.m0,(SLAVE)leds.s1) 1 4 1 N
+preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)soc_simple.locked,(SLAVE)PLL_50_150.locked) 1 0 2 NJ 340 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(SLAVE)PLL_50_150.refclk,(MASTER)clock.clk) 1 1 1 280
+preplace netloc FAN_OUT<net_container>soc_simple</net_container>(SLAVE)on_chip_memory.clk1,(SLAVE)leds.clk,(SLAVE)mtime.clock,(SLAVE)rv32i_core.clock,(MASTER)PLL_50_150.outclk0,(SLAVE)jtag_uart_pipeline_bridge.clk,(SLAVE)jtag_uart.clk,(SLAVE)pio_pipeline_bridge.clk) 1 2 3 440 340 770 220 990
+preplace netloc FAN_OUT<net_container>soc_simple</net_container>(SLAVE)pio_pipeline_bridge.reset,(SLAVE)on_chip_memory.reset1,(SLAVE)jtag_uart.reset,(SLAVE)jtag_uart_pipeline_bridge.reset,(SLAVE)rv32i_core.reset_sink,(SLAVE)leds.reset,(MASTER)clock.clk_reset,(SLAVE)PLL_50_150.reset,(SLAVE)mtime.rst_n_sink) 1 1 4 260 320 460 360 750 200 1010
+preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(SLAVE)leds.s1,(MASTER)pio_pipeline_bridge.m0) 1 4 1 N
+preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)soc_simple.clk,(SLAVE)clock.clk_in) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>soc_simple</net_container>(SLAVE)mtime.avMM_slave,(SLAVE)jtag_uart_pipeline_bridge.s0,(MASTER)rv32i_core.instruction_master,(SLAVE)pio_pipeline_bridge.s0,(SLAVE)on_chip_memory.s1,(MASTER)rv32i_core.data_master) 1 3 2 730 80 NJ
+preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)clock.clk_in_reset,(SLAVE)soc_simple.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)soc_simple.leds,(SLAVE)leds.external_connection) 1 0 5 NJ 240 NJ 240 NJ 240 NJ 240 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(SLAVE)rv32i_core.tim_overflow,(SLAVE)mtime.tim_overflow) 1 2 2 480 400 NJ
 preplace netloc POINT_TO_POINT<net_container>soc_simple</net_container>(MASTER)jtag_uart_pipeline_bridge.m0,(SLAVE)jtag_uart.avalon_jtag_slave) 1 4 1 970
-preplace netloc EXPORT<net_container>soc_simple</net_container>(SLAVE)clock.clk_in,(SLAVE)soc_simple.clk) 1 0 1 NJ
 levelinfo -pg 1 0 50 1210
-levelinfo -hier soc_simple 60 90 310 490 840 1050 1200
+levelinfo -hier soc_simple 60 90 310 510 840 1050 1200
