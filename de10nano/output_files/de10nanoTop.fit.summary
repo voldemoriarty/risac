@@ -1,17 +1,17 @@
-Fitter Status : Successful - Wed Dec 18 12:24:29 2019
-Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Fitter Status : Successful - Sun Feb  2 23:42:44 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : de10nanoTop
 Top-level Entity Name : de10nanoTop
 Family : Cyclone V
-Device : 5CSEBA6U23I7
+Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,657 / 41,910 ( 4 % )
-Total registers : 2248
-Total pins : 10 / 314 ( 3 % )
+Logic utilization (in ALMs) : 1,674 / 32,070 ( 5 % )
+Total registers : 2349
+Total pins : 22 / 457 ( 5 % )
 Total virtual pins : 0
-Total block memory bits : 1,051,648 / 5,662,720 ( 19 % )
-Total RAM Blocks : 132 / 553 ( 24 % )
-Total DSP Blocks : 0 / 112 ( 0 % )
+Total block memory bits : 1,051,648 / 4,065,280 ( 26 % )
+Total RAM Blocks : 132 / 397 ( 33 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
