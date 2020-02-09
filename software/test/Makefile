@@ -22,7 +22,7 @@ CC = $(TOOLCHAIN)gcc
 OC = $(TOOLCHAIN)objcopy
 SZ = $(TOOLCHAIN)size
 OD = $(TOOLCHAIN)objdump
-BM = ./bin2hex/bin2hex
+BM = ../bin2hex/bin2hex
 
 .PHONY: all
 .PHONY: clean
@@ -46,8 +46,8 @@ $(TGT).bin: $(TGT).elf
 
 $(TGT).mif: $(TGT).bin
 	$(BM) $< $@
-	cp $@ ../de10nano/hex/
-	cp $@ ../de10nano/simulation/modelsim/hex/
+	cp $@ ../../de10nano/hex/
+	cp $@ ../../de10nano/simulation/modelsim/hex/
 
 $(TGT).vh: $(TGT).elf 
 	$(OC) -O verilog $< $@
@@ -63,12 +63,12 @@ dump: $(TGT).elf
 	$(OD) -d $< | less
 
 sim: $(TGT).vh
-	cp $< ../testbench/
+	cp $< ../../testbench/
 
 all: $(TGT).elf $(TGT).bin $(TGT).mif $(TGT).vh
 
 de10Flash: $(TGT).mif
-	make --directory=../de10nano/ prog
+	make --directory=../../de10nano/ prog
 
 clean:
 	rm *.mif *.bin *.elf *.o *.s *.vh

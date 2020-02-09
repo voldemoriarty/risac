@@ -9,7 +9,8 @@ volatile int trapcount = 0;
 
 void trap () {
 	volatile char *uart = (volatile char *)0x1000000;
-	volatile char *leds = (volatile char *)0x2000000;
+	volatile int *leds = (volatile int *)  0x2000010;
+
 	volatile unsigned int *status = (volatile unsigned int *)uart;
 	// disable interrupts
 	clrCSR(CSR_MIE, 1 << 7);
@@ -34,7 +35,7 @@ void trap () {
 		}
 	}
 
-	*leds += 1;
+	*leds = *leds + 1;
 	writeMTime(0);
 	
 	// re-enable interrupts
@@ -43,17 +44,27 @@ void trap () {
 
 // the (fake) entry point
 int main () {
-	volatile char *leds = (volatile char *)0x2000000;
-	*leds = 0;
 	volatile char *uart = (volatile char *)0x1000000;
+	volatile int *switches = (volatile int *)0x2000000;
+	volatile int *leds = (volatile int *)0x2000010;
 
-	writeCSR(CSR_MTVEC, (unsigned)trap);
-	setCSR(CSR_MIE, 1 << 7);
-	putnum32(uart, readCSR(CSR_MTVEC));
-	_puts(uart, "\n", 1);
-	
-	writeMTimecmp(500000);
-
+	*leds = 0;
+	while(1)
+	{
+		if (*switches > 512)
+		{
+			*leds = 0;
+			writeCSR(CSR_MTVEC, (unsigned)trap);
+			setCSR(CSR_MIE, 1 << 7);
+			putnum32(uart, readCSR(CSR_MTVEC));
+			_puts(uart, "\n", 1);
+		
+			writeMTimecmp(50000000);
+			break;
+		}
+		else
+			*leds = *switches;
+	}
 	while (1);
 }
 
